@@ -1,0 +1,21 @@
+a.button, button {
+	height: 40px;
+	padding: 0 20px;
+	line-height: 1;
+	transition: all 100ms;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	&.ghost {
+		border: 2px solid #000;
+
+		&:hover {
+			text-decoration: none;
+			background-color: #000;
+			color: #fff;
+		}
+		
+	}
+
+}

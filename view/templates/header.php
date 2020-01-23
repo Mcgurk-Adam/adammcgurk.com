@@ -17,8 +17,7 @@
 			<a href="/about/" title="About Page">About</a>
 			<a href="/projects/" title="Projects Page">Projects</a>
 			<a href="/experience/" title="Experience Page">Experience</a>
-			<a href="/contact/" class="button" title="Contact Page">Contact</a>
+			<a href="/contact/" class="button ghost" title="Contact Page">Contact</a>
 		</nav>
 
 	</header>
-	
