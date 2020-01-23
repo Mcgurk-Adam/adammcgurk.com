@@ -9,4 +9,14 @@
 
 	</head>
 
-	<header></header>
+	<header>
+		
+		<nav>
+			<a href="/" title="Home Page">Home</a>
+			<a href="/about/" title="About Page">About</a>
+			<a href="/projects/" title="Projects Page">Projects</a>
+			<a href="/experience/" title="Experience Page">Experience</a>
+			<a href="/contact/" title="Contact Page">Contact</a>
+		</nav>
+
+	</header>

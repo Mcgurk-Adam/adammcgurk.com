@@ -4,4 +4,24 @@ header {
 	position: sticky;
 	width: 100%;
 	background-color: #fff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	nav {
+		margin-right: 40px;
+	}
+
+	a {
+		margin-right: 10px;
+		color: #000;
+		transition: all 100ms;
+		line-height: 1.25;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+	}
+
 }
