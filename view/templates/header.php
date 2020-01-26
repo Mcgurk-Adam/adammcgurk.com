@@ -11,6 +11,8 @@
 	</head>
 
 	<header>
+
+		<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 		
 		<nav>
 			<a href="/" title="Home Page">Home</a>
