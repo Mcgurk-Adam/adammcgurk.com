@@ -2,7 +2,7 @@
 
 <main>
 	
-	<figure class="polaroid">
+	<figure class="polaroid first-child">
 
 		<img src="/assets/AdamHeadshot.jpg" alt="A picture of Adam smiling into the camera on a bright, sunny day" title="Adam McGurk" id="adamPicture">
 		

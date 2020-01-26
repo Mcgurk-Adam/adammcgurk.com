@@ -4,11 +4,17 @@ figure.polaroid {
 	flex-flow: column nowrap;
 	align-items: center;
 	max-width: 285px;
-	margin: 50px auto;
 	border: 15px solid white;
 	border-radius: 15px;
 	transform: rotate(5deg);
 	box-shadow: 1px 1px 28px rgba(0,0,0,.3);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+
+	img {
+		border-radius: 2px;
+	}
 
 	figcaption {
 		width: 100%;
