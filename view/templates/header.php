@@ -14,7 +14,7 @@
 
 		<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 
-		<input type="checkbox">
+		<input type="checkbox" aria-label="Toggle this button">
 		
 		<nav>
 			<a href="/" title="Home Page">Home</a>
