@@ -12,7 +12,9 @@
 
 	<header>
 
-		<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
+		<a href="/" title="Go back to the homepage" class="main-title">McGurk</a>
+
+<!-- 		<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo"> -->
 
 		<input type="checkbox" aria-label="Toggle this button">
 		
