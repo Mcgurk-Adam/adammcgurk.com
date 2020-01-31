@@ -26,6 +26,9 @@ header {
 		text-transform: uppercase;
 		font-size: 45px;
 		font-family: 'Unica One', sans-serif;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	nav {
