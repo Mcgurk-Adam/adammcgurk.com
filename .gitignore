@@ -5,4 +5,5 @@
 *.sublime-project
 *.sublime-workspace
 *.log
+*.html
 !.gitignore
