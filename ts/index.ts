@@ -18,11 +18,16 @@ const projectTabs:Tabs = new Tabs("#projects .tab-container", (allTabs:NodeListO
 		projectTiles.forEach((tile:HTMLElement) => {
 
 			const allTags = tile.getAttribute("data-tech-tags");
+			let inTag = true;
 			selectedTags.forEach((tag:string) => {
 
-				tile.style.display = allTags.includes(tag) ? "flex" : "none";
+				if (!allTags.includes(tag)) {
+					inTag = false;
+				}
 
 			});
+
+			tile.style.display = inTag ? "flex" : "none";
 
 		})
 

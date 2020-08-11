@@ -88,7 +88,7 @@ section {
 				}
 
 				&.selected {
-					background-color: #186FAF;
+					background-color: #0c6b58;
 					color: #fff;
 				}
 
@@ -116,6 +116,8 @@ section {
 		flex-flow: column nowrap;
 		align-items: center;
 		padding: 20px;
+		position: relative;
+		margin-bottom: 20px;
 
 		img {
 			width: auto;
@@ -140,7 +142,32 @@ section {
 			font-size: 16px;
 			color: #486581;
 			text-align: left;
-			font-weight: 400;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
+
+		a.cta {
+			width: 95%;
+			height: 35px;
+			border-radius: 6px;
+			border: 1px solid #186FAF;
+			color: #186FAF;
+			font-size: 16px;
+			background-color: transparent;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			position: absolute;
+			bottom: 5px;
+			transition: 100ms all;
+
+			&:active, &:hover {
+				background-color: #186FAF;
+				color: #fff;
+			}
+
 		}
 
 	}

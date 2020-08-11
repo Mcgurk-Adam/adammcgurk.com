@@ -29,9 +29,13 @@ var projectTabs = new Tabs("#projects .tab-container", function (allTabs) {
     else {
         projectTiles.forEach(function (tile) {
             var allTags = tile.getAttribute("data-tech-tags");
+            var inTag = true;
             selectedTags.forEach(function (tag) {
-                tile.style.display = allTags.includes(tag) ? "flex" : "none";
+                if (!allTags.includes(tag)) {
+                    inTag = false;
+                }
             });
+            tile.style.display = inTag ? "flex" : "none";
         });
     }
 });
