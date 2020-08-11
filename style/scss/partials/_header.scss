@@ -27,6 +27,11 @@ header {
 
 	nav {
 		margin-right: $header_side_margin;
+
+		.main-title {
+			display: none;
+		}
+
 	}
 
 	a {
@@ -79,11 +84,17 @@ main {
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			transition: 250ms transform;
 			transform: translateX(100vw);
 			background-color: #fff;
 			z-index: 10;
+
+			.main-title {
+				display: flex;
+				padding-left: 0px;
+			}
+
 		}
 
 		input[type=checkbox] {
@@ -112,6 +123,11 @@ main {
 			font-size: 20px;
 			text-align: center;
 			width: 95%;
+
+			&:first-child {
+				margin-top: 70px;
+			}
+
 		}
 
 		nav a:not(:last-child) {

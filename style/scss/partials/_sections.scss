@@ -104,8 +104,8 @@ section {
 
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	width: fit-content;
+	justify-content: space-between;
+	width: 100%;
 
 	.tile {
 		width: 250px;
@@ -118,6 +118,8 @@ section {
 		padding: 20px;
 		position: relative;
 		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
 
 		img {
 			width: auto;

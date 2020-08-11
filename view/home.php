@@ -61,6 +61,8 @@
 					<h3>Luminary</h3>
 
 					<p>The Sales, Marketing, and Fulfillment platform that powers the business of Shine Solar.</p>
+
+					<a href="" title="Read About Luminary" target="_blank" rel="noopener" class="cta">Read about it</a>
 					
 				</div>
 				
@@ -99,6 +101,8 @@
 					<img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
 					<h3>Signature Generator</h3>
 					<p>Allows employees of Shine Solar to input their data and return a Shine Solar design-approved email signature.</p>
+
+					<a href="" title="Read About the Signature Generator" target="_blank" rel="noopener" class="cta">Read about it</a>
 					
 				</div>
 
