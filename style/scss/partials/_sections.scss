@@ -96,6 +96,19 @@ section {
 
 }
 
+.tile-container {
+	display: flex;
+	flex-flow: row wrap;
+
+	.tile {
+		width: 250px;
+		height: 250px;
+		background-color: #000;
+		cursor: pointer;
+	}
+
+}
+
 @media all and (max-width: 812px) {
 
 	.hero .content {

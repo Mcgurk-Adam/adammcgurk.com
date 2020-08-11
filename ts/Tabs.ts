@@ -2,10 +2,12 @@ class Tabs {
 
 	private tabContainer:HTMLElement;
 	private tabs:NodeListOf<HTMLButtonElement>;
+	private tabClickedFunction:Function;
 
-	constructor(tabContainerSelector:string) {
+	constructor(tabContainerSelector:string, tabClickedFunction:Function) {
 		this.tabContainer = document.querySelector(tabContainerSelector);
 		this.tabs = this.tabContainer.querySelectorAll("button.tab");
+		this.tabClickedFunction = tabClickedFunction;
 	}
 
 	addListeners(): void {
@@ -15,6 +17,7 @@ class Tabs {
 			tab.addEventListener("click", () => {
 
 				tab.classList.toggle("selected");
+				this.tabClickedFunction(this.tabs);
 
 			}, false);
 

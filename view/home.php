@@ -29,12 +29,42 @@
 				<button class="tab" name="html-css">HTML5/SCSS</button>
 				<button class="tab" name="ts">TypeScript</button>
 				<button class="tab" name="php">PHP</button>
-				<button class="tab" name="net">Netlify</button>
+				<button class="tab" name="netlify">Netlify</button>
 				<button class="tab" name="aws">AWS</button>
 				<button class="tab" name="gcp">GCP</button>
 				<button class="tab" name="pwa">PWA</button>
+				<button class="tab" name="twilio">Twilio</button>
+				<button class="tab" name="sendgrid">SendGrid</button>
 				<button class="tab" name="sql">MySQL/MariaDB</button>
 				<button class="tab" name="rn">React Native</button>
+
+			</div>
+
+			<div class="tile-container">
+				
+				<div class="tile" data-tech-tags="html-css ts php gcp pwa sql">
+					
+				</div>
+				
+				<div class="tile" data-tech-tags="html-css ts netlify">
+					
+				</div>
+				
+				<div class="tile" data-tech-tags="rn sql aws">
+					
+				</div>
+				
+				<div class="tile" data-tech-tags="html-css ts php aws">
+					
+				</div>
+				
+				<div class="tile" data-tech-tags="rn sql aws">
+					
+				</div>
+				
+				<div class="tile" data-tech-tags="html-css ts php aws">
+					
+				</div>
 
 			</div>
 
