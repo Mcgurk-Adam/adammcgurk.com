@@ -8,7 +8,7 @@
 		
 			<div class="words">
 				<h1>Hi, I'm Adam McGurk</h1>
-				<h2>Full Stack Developer, Tech manager, and lover of food</h2>
+				<h2>Full Stack Developer, Maker, and Doer</h2>
 			</div>
 
 			<img src="/assets/headerillustration.svg" alt="Illustration" title="Illustration">
@@ -17,7 +17,7 @@
 
 	</section>
 
-	<section id="projects">
+	<section id="projects" class="white">
 		
 		<div class="content">
 			

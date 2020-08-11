@@ -32,6 +32,10 @@ section {
 	align-items: center;
 	padding: 100px 0;
 
+	&.white {
+		background-color: #fff;
+	}
+
 	.content {
 
 		max-width: 850px;
@@ -60,7 +64,7 @@ section {
 			align-items: center;
 			justify-content: center;
 			height: fit-content;
-			margin-top: 20px;
+			margin: 20px 0;
 		
 			.tab {
 				height: 35px;
