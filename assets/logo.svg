@@ -34,8 +34,8 @@
 					</clipPath>
 					
 						<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="-3.5098" y1="793.2723" x2="-0.6752" y2="793.2723" gradientTransform="matrix(0 -171.8041 171.8041 0 -135973.6719 0)">
-						<stop  offset="0" style="stop-color:#000"/>
-						<stop  offset="1" style="stop-color:#000"/>
+						<stop  offset="0" style="stop-color:#014D40"/>
+						<stop  offset="1" style="stop-color:#27AB83"/>
 					</linearGradient>
 					<rect x="278.91" y="116" class="st1" width="69.67" height="487"/>
 				</g>
@@ -59,8 +59,8 @@
 					</clipPath>
 					
 						<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="-4.848" y1="793.2349" x2="-2.0134" y2="793.2349" gradientTransform="matrix(0 -113.3146 113.3146 0 -89691.3281 -29.2448)">
-						<stop  offset="0" style="stop-color:#000"/>
-						<stop  offset="1" style="stop-color:#000"/>
+						<stop  offset="0" style="stop-color:#014D40"/>
+						<stop  offset="1" style="stop-color:#27AB83"/>
 					</linearGradient>
 					<rect x="157.48" y="198.9" class="st3" width="72.57" height="321.2"/>
 				</g>
@@ -84,8 +84,8 @@
 					</clipPath>
 					
 						<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="-4.848" y1="794.6231" x2="-2.0134" y2="794.6231" gradientTransform="matrix(0 -113.3146 113.3146 0 -89608.6641 -29.2448)">
-						<stop  offset="0" style="stop-color:#000"/>
-						<stop  offset="1" style="stop-color:#000"/>
+						<stop  offset="0" style="stop-color:#014D40"/>
+						<stop  offset="1" style="stop-color:#27AB83"/>
 					</linearGradient>
 					<rect x="397.45" y="198.9" class="st5" width="72.57" height="321.2"/>
 				</g>
@@ -109,8 +109,8 @@
 					</clipPath>
 					
 						<linearGradient id="SVGID_20_" gradientUnits="userSpaceOnUse" x1="-9.2717" y1="793.1495" x2="-6.437" y2="793.1495" gradientTransform="matrix(0 -53.3146 53.3146 0 -42212.6641 -59.2448)">
-						<stop  offset="0" style="stop-color:#000"/>
-						<stop  offset="1" style="stop-color:#000"/>
+						<stop  offset="0" style="stop-color:#014D40"/>
+						<stop  offset="1" style="stop-color:#27AB83"/>
 					</linearGradient>
 					<rect x="37.5" y="283.94" class="st7" width="72.57" height="151.13"/>
 				</g>
@@ -134,8 +134,8 @@
 					</clipPath>
 					
 						<linearGradient id="SVGID_25_" gradientUnits="userSpaceOnUse" x1="-9.2717" y1="799.0502" x2="-6.437" y2="799.0502" gradientTransform="matrix(0 -53.3146 53.3146 0 -42047.332 -59.2448)">
-						<stop  offset="0" style="stop-color:#000"/>
-						<stop  offset="1" style="stop-color:#000"/>
+						<stop  offset="0" style="stop-color:#014D40"/>
+						<stop  offset="1" style="stop-color:#27AB83"/>
 					</linearGradient>
 					<rect x="517.43" y="283.94" class="st9" width="72.57" height="151.13"/>
 				</g>

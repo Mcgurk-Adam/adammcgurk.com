@@ -5,16 +5,17 @@
 	scroll-behavior: smooth;
 	border: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-overflow-scrolling: touch;
 	font-family: 'Kanit', sans-serif;
+
 	&:focus {
 		outline: none;
 	}
+	
 }
 
 html, body {
 	overflow-x: hidden;
-	background-color: #ebebeb;
+	background-color: #F0F4F8;
 }
 
 a {
