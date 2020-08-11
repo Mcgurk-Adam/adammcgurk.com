@@ -24,8 +24,8 @@
 		<input type="checkbox" aria-label="Toggle this button">
 		
 		<nav>
-			<a href="#projects" title="Projects Section">Projects</a>
-			<a href="#experience" title="Experience Section">Experience</a>
+			<a href="/#projects" title="Projects Section">Projects</a>
+			<a href="/#experience" title="Experience Section">Experience</a>
 			<a href="/about/" title="About Page">About</a>
 			<a href="/blog/" title="Blog">Blog</a>
 		</nav>
