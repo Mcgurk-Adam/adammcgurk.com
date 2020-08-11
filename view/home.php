@@ -42,28 +42,36 @@
 
 			<div class="tile-container">
 				
-				<div class="tile" data-tech-tags="html-css ts php gcp pwa sql">
+				<div class="tile" data-tech-tags="html-css ts php gcp pwa sql twilio sendgrid">
+
+					<img src="/assets/luminary-mark.svg" alt="Luminary" title="Luminary">
+
+					<h3>Luminary</h3>
 					
 				</div>
 				
-				<div class="tile" data-tech-tags="html-css ts netlify">
+				<div class="tile" data-tech-tags="rn sql php aws">
+
+					<img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="ShineSolar">
+
+					<h3>Shine Solar Mobile App</h3>
 					
 				</div>
-				
-				<div class="tile" data-tech-tags="rn sql aws">
+
+				<div class="tile" data-tech-tags="netlify html-css ts">
 					
+					<img src="/assets/optimize-mark.svg" alt="Optimize Fonts Logo" title="Optimize Fonts">
+
+					<h3>Optimize Fonts</h3>
+
 				</div>
-				
-				<div class="tile" data-tech-tags="html-css ts php aws">
+
+				<div class="tile" data-tech-tags="html-css ts php aws netlify">
 					
-				</div>
-				
-				<div class="tile" data-tech-tags="rn sql aws">
-					
-				</div>
-				
-				<div class="tile" data-tech-tags="html-css ts php aws">
-					
+					<img src="/assets/loc-mark.svg" alt="Lines of Code" title="Lines of Code">
+
+					<h3>LinesOfCode.app</h3>
+
 				</div>
 
 			</div>

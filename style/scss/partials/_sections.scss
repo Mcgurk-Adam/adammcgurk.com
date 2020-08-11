@@ -103,8 +103,24 @@ section {
 	.tile {
 		width: 250px;
 		height: 250px;
-		background-color: #000;
+		background-color: transparent;
 		cursor: pointer;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+
+		img {
+			width: 100px;
+			height: auto;
+		}
+
+		h3 {
+			color: #243B53;
+			font-size: 22px;
+		}
+
 	}
 
 }

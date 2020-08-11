@@ -27,7 +27,12 @@ var projectTabs = new Tabs("#projects .tab-container", function (allTabs) {
         projectTiles.forEach(function (tile) { return tile.style.display = "flex"; });
     }
     else {
+        projectTiles.forEach(function (tile) {
+            var allTags = tile.getAttribute("data-tech-tags");
+            selectedTags.forEach(function (tag) {
+                tile.style.display = allTags.includes(tag) ? "flex" : "none";
+            });
+        });
     }
-    console.log(selectedTags);
 });
 projectTabs.addListeners();

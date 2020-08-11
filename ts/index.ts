@@ -15,9 +15,18 @@ const projectTabs:Tabs = new Tabs("#projects .tab-container", (allTabs:NodeListO
 		projectTiles.forEach((tile:HTMLElement) => tile.style.display = "flex");
 	} else {
 
-	}
+		projectTiles.forEach((tile:HTMLElement) => {
 
-	console.log(selectedTags);
+			const allTags = tile.getAttribute("data-tech-tags");
+			selectedTags.forEach((tag:string) => {
+
+				tile.style.display = allTags.includes(tag) ? "flex" : "none";
+
+			});
+
+		})
+
+	}
 
 });
 projectTabs.addListeners();
