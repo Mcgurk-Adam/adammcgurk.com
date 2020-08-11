@@ -3,7 +3,7 @@
 	<p>&copy; Adam McGurk <?=date('Y');?></p>
 </footer>
 
-<!-- <script src="/js/build.js"></script> -->
+<script src="/js/build.js"></script>
 
 </body>
 </html>

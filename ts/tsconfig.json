@@ -5,5 +5,7 @@
         "outFile": "../js/build.js"
     },
     "files": [
+    	"Tabs.ts",
+    	"index.ts"
     ]
 }
