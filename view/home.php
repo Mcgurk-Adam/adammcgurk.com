@@ -21,6 +21,17 @@
 		
 		<div class="content">
 			
+			<h1>Experience</h1>
+			<hr>
+
+		</div>
+
+	</section>
+
+	<section id="projects">
+		
+		<div class="content">
+			
 			<h1>Projects</h1>
 			<hr>
 
@@ -93,17 +104,6 @@
 				</div>
 
 			</div>
-
-		</div>
-
-	</section>
-
-	<section id="projects">
-		
-		<div class="content">
-			
-			<h1>Experience</h1>
-			<hr>
 
 		</div>
 
