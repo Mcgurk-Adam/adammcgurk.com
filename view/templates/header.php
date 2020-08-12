@@ -30,8 +30,6 @@
 				<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 			</a>
 			
-			<a href="/#experience" title="Experience Section">Experience</a>
-			<a href="/#projects" title="Projects Section">Projects</a>
 			<a href="/about/" title="About Page">About</a>
 			<a href="/blog/" title="Blog">Blog</a>
 		</nav>
