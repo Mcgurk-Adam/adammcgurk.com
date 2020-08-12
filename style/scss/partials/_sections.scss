@@ -108,6 +108,7 @@ section {
 	width: 100%;
 
 	.tile {
+
 		width: 250px;
 		height: fit-content;
 		min-height: 400px;
@@ -189,6 +190,40 @@ section {
 
 		.words {
 			margin-bottom: 50px;
+		}
+
+	}
+
+	.tile-container {
+
+		.tile {
+
+			a.cta {
+				position: static;
+			}
+
+		}
+
+	}
+
+}
+
+@media all and (max-width: 526px) {
+
+	.tile-container {
+
+		.tile {
+
+			min-height: fit-content;
+
+			p {
+				text-align: center;
+			}
+
+			a.cta {
+				position: static;
+			}
+
 		}
 
 	}

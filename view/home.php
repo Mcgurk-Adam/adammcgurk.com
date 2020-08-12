@@ -110,17 +110,17 @@
 					
 					<img src="/assets/csv-mark.svg" alt="Parse CSV" title="Parse CSV">
 					<h3>ParseCsv.com</h3>
-					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file</p>
+					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file.</p>
 
 					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
 
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts netlify design">
+				<div class="tile" data-tech-tags="html-css ts netlify design pwa">
 					
 					<img src="/assets/money-mark.svg" alt="Money logo" title="Money logo">
 					<h3>Budget Tracker</h3>
-					<p>A simple money tracking app I use to track my discretionary expenses.</p>
+					<p>An offline and mobile first budget tracker that keeps all data on your device. (BTW - It only reacts to touch, not click!)</p>
 
 					<a href="https://money.mcgurk.app" title="Go visit the budget tracking app" target="_blank" rel="noopener" class="cta">See it</a>
 
