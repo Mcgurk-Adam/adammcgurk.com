@@ -117,12 +117,22 @@
 				
 				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql netlify design">
 
-					<img src="/assets/upvid-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
+					<img src="/assets/upvid-mark.svg" alt="Upvid Logo" title="Upvid">
 					<h3>Upvid</h3>
 					<p>Empowers someone to upload a video and get a shareable URL for that video.</p>
 
 					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
 					
+				</div>
+
+				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
+					
+					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
+					<h3>Shine PHP</h3>
+					<p>A lightweight, simple, PHP microframework for making web app development with PHP so much easier.</p>
+
+					<a href="https://shinephp.dev" title="Go to the landing page for ShinePHP" target="_blank" rel="noopener" class="cta">See it</a>
+
 				</div>
 
 				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
