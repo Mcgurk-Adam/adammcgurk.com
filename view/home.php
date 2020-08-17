@@ -79,7 +79,7 @@
 					
 					<img src="/assets/signatory-mark.svg" alt="Signatory Logo" title="Signatory Logo">
 					<h3>Signatory CRM</h3>
-					<p>The CRM that I'm making that gives more customization and options than any CRM on the market, with a sleek UI design.</p>
+					<p>The CRM that I'm building that gives more customization and options than any CRM on the market, with a sleek UI design.</p>
 
 					<a href="https://signatory.app" title="Go to the Signatory landing page" target="_blank" rel="noopener" class="cta">See it</a>
 
@@ -119,7 +119,7 @@
 
 					<img src="/assets/upvid-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
 					<h3>Upvid</h3>
-					<p>Empowers someone to upload a video and get a shareable URL from that video.</p>
+					<p>Empowers someone to upload a video and get a shareable URL for that video.</p>
 
 					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
 					
