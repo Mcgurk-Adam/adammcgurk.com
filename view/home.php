@@ -85,7 +85,7 @@
 
 				</div>
 				
-				<div class="tile" data-tech-tags="php html-css ts pwa aws">
+				<div class="tile" data-tech-tags="php html-css ts pwa gcp">
 
 					<img src="/assets/upvid-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
 					<h3>Upvid</h3>
