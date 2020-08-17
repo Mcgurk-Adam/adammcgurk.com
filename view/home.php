@@ -125,7 +125,7 @@
 					
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
+				<div class="tile" data-tech-tags="html-css ts php netlify design">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
 					<h3>Shine PHP</h3>
