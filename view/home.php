@@ -84,34 +84,14 @@
 					<a href="https://signatory.app" title="Go to the Signatory landing page" target="_blank" rel="noopener" class="cta">See it</a>
 
 				</div>
-				
-				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql">
-
-					<img src="/assets/upvid-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
-					<h3>Upvid</h3>
-					<p>Empowers someone to upload a video and get a shareable URL from that video.</p>
-
-					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
-					
-				</div>
 
 				<div class="tile" data-tech-tags="html-css ts netlify design">
 					
 					<img src="/assets/csv-mark.svg" alt="Parse CSV" title="Parse CSV">
-					<h3>ParseCsv.com</h3>
+					<h3>Parse CSV</h3>
 					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file.</p>
 
 					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
-
-				</div>
-
-				<div class="tile" data-tech-tags="html-css ts netlify design pwa">
-					
-					<img src="/assets/money-mark.svg" alt="Money logo" title="Money logo">
-					<h3>Budget Tracker</h3>
-					<p>An offline and mobile first budget tracker that keeps all data on your device. (BTW - It only reacts to touch, not click!)</p>
-
-					<a href="https://money.mcgurk.app" title="Go visit the budget tracking app" target="_blank" rel="noopener" class="cta">See it</a>
 
 				</div>
 
@@ -125,13 +105,33 @@
 
 				</div>
 
+				<div class="tile" data-tech-tags="html-css ts netlify design pwa">
+					
+					<img src="/assets/money-mark.svg" alt="Money logo" title="Money logo">
+					<h3>Budget Tracker</h3>
+					<p>An offline and mobile first budget tracker that keeps all data on your device. (BTW - It only reacts to touch, not click!)</p>
+
+					<a href="https://money.mcgurk.app" title="Go visit the budget tracking app" target="_blank" rel="noopener" class="cta">See it</a>
+
+				</div>
+				
+				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql netlify design">
+
+					<img src="/assets/upvid-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
+					<h3>Upvid</h3>
+					<p>Empowers someone to upload a video and get a shareable URL from that video.</p>
+
+					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
+					
+				</div>
+
 				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
 					
 					<img src="/assets/loc-mark.svg" alt="Lines of Code" title="Lines of Code" class="invert">
-					<h3>LinesOfCode.app</h3>
+					<h3>Count LOC</h3>
 					<p>Takes a URL to a Github repository and returns how many lines of code exist in that repository, including being able to toggle between languages.</p>
 
-					<a href="https://linesofcode.app" title="Go to the linesofcode.app app" target="_blank" rel="noopener" class="cta">See it</a>
+					<a href="https://linesofcode.app" title="Go to the count loc app" target="_blank" rel="noopener" class="cta">See it</a>
 
 				</div>
 
