@@ -95,7 +95,7 @@
 
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts php gcp netlify design twilio">
+<!-- 				<div class="tile" data-tech-tags="html-css ts php gcp netlify design twilio">
 					
 					<img src="/assets/ts-mark.svg" alt="Twilio Secrets" title="Twilio Secrets">
 					<h3>Twilio Secrets</h3>
@@ -103,7 +103,7 @@
 
 					<a href="https://twiliosecrets.com" title="Visit Twilio Secrets" target="_blank" rel="noopener" class="cta">See it</a>
 
-				</div>
+				</div> -->
 
 				<div class="tile" data-tech-tags="html-css ts netlify design pwa">
 					
@@ -125,7 +125,7 @@
 					
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts php netlify design">
+<!-- 				<div class="tile" data-tech-tags="html-css ts php netlify design">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
 					<h3>Shine PHP</h3>
@@ -133,7 +133,7 @@
 
 					<a href="https://shinephp.dev" title="Go to the landing page for ShinePHP" target="_blank" rel="noopener" class="cta">See it</a>
 
-				</div>
+				</div> -->
 
 				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
 					
