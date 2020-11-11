@@ -75,7 +75,7 @@
 
 				</div>
 
-				<div class="tile" data-tech-tags="netlify gcp html-css ts design php twilio pwa sendgrid sql">
+<!-- 				<div class="tile" data-tech-tags="netlify gcp html-css ts design php twilio pwa sendgrid sql">
 					
 					<img src="/assets/signatory-mark.svg" alt="Signatory Logo" title="Signatory Logo">
 					<h3>Signatory CRM</h3>
@@ -93,7 +93,7 @@
 
 					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
 
-				</div>
+				</div> -->
 
 <!-- 				<div class="tile" data-tech-tags="html-css ts php gcp netlify design twilio">
 					
@@ -115,7 +115,7 @@
 
 				</div>
 				
-				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql netlify design">
+<!-- 				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql netlify design">
 
 					<img src="/assets/upvid-mark.svg" alt="Upvid Logo" title="Upvid">
 					<h3>Upvid</h3>
@@ -123,9 +123,9 @@
 
 					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
 					
-				</div>
+				</div> -->
 
-<!-- 				<div class="tile" data-tech-tags="html-css ts php netlify design">
+				<div class="tile" data-tech-tags="html-css ts php netlify design">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
 					<h3>Shine PHP</h3>
@@ -133,7 +133,7 @@
 
 					<a href="https://shinephp.dev" title="Go to the landing page for ShinePHP" target="_blank" rel="noopener" class="cta">See it</a>
 
-				</div> -->
+				</div>
 
 				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
 					
