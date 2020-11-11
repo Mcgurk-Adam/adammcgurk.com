@@ -8,7 +8,7 @@
 		
 			<div class="words">
 				<h1>Hi, I'm Adam McGurk</h1>
-				<h2>Full Stack Developer, Maker, and Doer</h2>
+				<h2>Full Stack Developer, with a passion for leadership</h2>
 			</div>
 
 			<img src="/assets/headerillustration.svg" alt="Illustration" title="Illustration">
@@ -22,6 +22,8 @@
 		<div class="content">
 			
 			<h1>Projects<hr></h1>
+
+			<p class="explainer">Use the buttons below to filter on the skills you want to see! If you select a combination of buttons, it will only show projects that use <i>all</i> of your filters. By default, all projects are shown.</p>
 
 			<div class="tab-container">
 				
@@ -75,6 +77,16 @@
 
 				</div>
 
+				<div class="tile" data-tech-tags="html-css ts netlify design">
+					
+					<img src="/assets/csv-mark.svg" alt="Parse CSV" title="Parse CSV">
+					<h3>Parse CSV</h3>
+					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file.</p>
+
+					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
+
+				</div>
+
 <!-- 				<div class="tile" data-tech-tags="netlify gcp html-css ts design php twilio pwa sendgrid sql">
 					
 					<img src="/assets/signatory-mark.svg" alt="Signatory Logo" title="Signatory Logo">
@@ -85,17 +97,7 @@
 
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts netlify design">
-					
-					<img src="/assets/csv-mark.svg" alt="Parse CSV" title="Parse CSV">
-					<h3>Parse CSV</h3>
-					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file.</p>
-
-					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
-
-				</div> -->
-
-<!-- 				<div class="tile" data-tech-tags="html-css ts php gcp netlify design twilio">
+				<div class="tile" data-tech-tags="html-css ts php gcp netlify design twilio">
 					
 					<img src="/assets/ts-mark.svg" alt="Twilio Secrets" title="Twilio Secrets">
 					<h3>Twilio Secrets</h3>
@@ -114,18 +116,8 @@
 					<a href="https://money.mcgurk.app" title="Go visit the budget tracking app" target="_blank" rel="noopener" class="cta">See it</a>
 
 				</div>
-				
-<!-- 				<div class="tile" data-tech-tags="php html-css ts pwa gcp sql netlify design">
 
-					<img src="/assets/upvid-mark.svg" alt="Upvid Logo" title="Upvid">
-					<h3>Upvid</h3>
-					<p>Empowers someone to upload a video and get a shareable URL for that video.</p>
-
-					<a href="https://upvid.app" title="Visit Upvid" target="_blank" rel="noopener" class="cta">See it</a>
-					
-				</div> -->
-
-				<div class="tile" data-tech-tags="html-css ts php netlify design">
+				<div class="tile" data-tech-tags="html-css ts php netlify design sql">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
 					<h3>Shine PHP</h3>
