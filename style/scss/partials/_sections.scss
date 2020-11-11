@@ -116,11 +116,18 @@ section {
 					transform: scale(.97);
 					border: 1px solid #9FB3C8;
 					color: #243B53;
+					background-color: rgba(12, 107, 88, .2);
 				}
 
 				&.selected {
+					
 					background-color: #0c6b58;
 					color: #fff;
+
+					&:active {
+						background-color: rgba(12, 107, 88, .8);
+					}
+
 				}
 
 			}
