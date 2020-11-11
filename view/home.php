@@ -7,8 +7,10 @@
 		<div class="content">
 		
 			<div class="words">
+				
 				<h1>Hi, I'm Adam McGurk</h1>
-				<h2>Full Stack Developer, with a passion for leadership</h2>
+				<h2>Full Stack Developer, with a passion for leadership and excellent technology.</h2>
+				
 			</div>
 
 			<img src="/assets/headerillustration.svg" alt="Illustration" title="Illustration">
