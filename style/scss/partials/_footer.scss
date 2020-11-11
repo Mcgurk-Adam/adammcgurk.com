@@ -1,7 +1,40 @@
 footer {
+
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 50px 0;
+	background-color: #fff;
+
+	.icon {
+
+		transition: 100ms all;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&:active {
+			transform: scale(.95);
+		}
+
+	}
+
+	p, a {
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+	}
+
+	p {
+		color: #243B53;
+	}
+
 }
