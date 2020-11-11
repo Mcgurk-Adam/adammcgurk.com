@@ -7,10 +7,10 @@
 		<div class="content">
 		
 			<div class="words">
-				
+
 				<h1>Hi, I'm Adam McGurk</h1>
 				<h2>Full Stack Developer, with a passion for leadership and excellent technology.</h2>
-				
+
 			</div>
 
 			<img src="/assets/headerillustration.svg" alt="Illustration" title="Illustration">
@@ -140,6 +140,24 @@
 				</div>
 
 			</div>
+
+		</div>
+
+	</section>
+
+	<section id="about">
+		
+		<div class="content">
+			
+			<h1>About <hr></h1>
+
+			<figure class="polaroid">
+
+				<img src="/assets/AdamHeadshot.jpg" alt="A picture of Adam smiling into the camera on a bright, sunny day" title="Adam McGurk" id="adamPicture">
+				
+				<figcaption class="caption">Me - Adam McGurk</figcaption>
+
+			</figure>
 
 		</div>
 
