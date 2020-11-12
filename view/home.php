@@ -38,6 +38,7 @@
 				<button class="tab" name="pwa">PWA</button>
 				<button class="tab" name="design">UX/UI Design</button>
 				<button class="tab" name="twilio">Twilio</button>
+				<button class="tab" name="ci/cd">CI/CD</button>
 				<button class="tab" name="sendgrid">SendGrid</button>
 				<button class="tab" name="sql">MySQL/MariaDB</button>
 				<button class="tab" name="rn">React Native</button>
@@ -47,7 +48,7 @@
 
 			<div class="tile-container">
 				
-				<div class="tile" data-tech-tags="html-css ts php gcp pwa sql twilio sendgrid">
+				<div class="tile" data-tech-tags="html-css ts php gcp pwa sql twilio sendgrid ci/cd">
 
 					<img src="/assets/luminary-mark.svg" alt="Luminary" title="Luminary">
 
@@ -59,7 +60,7 @@
 					
 				</div>
 				
-				<div class="tile" data-tech-tags="rn sql php aws">
+				<div class="tile" data-tech-tags="rn sql php aws ci/cd">
 
 					<img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
 					<h3>Shine Solar Mobile App</h3>
@@ -119,7 +120,7 @@
 
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts php netlify design sql">
+				<div class="tile" data-tech-tags="html-css ts php netlify design sql ci/cd">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
 					<h3>Shine PHP</h3>
@@ -129,7 +130,7 @@
 
 				</div>
 
-				<div class="tile" data-tech-tags="html-css ts php aws netlify design">
+				<div class="tile" data-tech-tags="html-css ts php aws netlify design ci/cd">
 					
 					<img src="/assets/loc-mark.svg" alt="Lines of Code" title="Lines of Code" class="invert">
 					<h3>Count LOC</h3>
