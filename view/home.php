@@ -58,7 +58,7 @@
 
 					<p>The Sales, Marketing, and Fulfillment platform that powers the business of Shine Solar.</p>
 
-					<a href="" title="Read About Luminary" target="_blank" rel="noopener" class="cta">Read about it</a>
+					<a href="https://dev.to/mcgurkadam/lessons-learned-from-building-my-company-s-sales-and-marketing-platform-in-three-months-pm4" title="Read About Luminary" target="_blank" rel="noopener" class="cta">Read about it</a>
 					
 				</div>
 				
@@ -164,6 +164,9 @@
 
 			<p class="explainer left">I started in the tech industry young - maintaining  systems for a prominent radio station in the Bay Area.</p>
 			<p class="explainer left">While there, I had own on-air shift, maintained the company's office network, and built the connections that put things such as the Golden State Warriors on the air.</p>
+			<p class="explainer left">And while I had an absolute blast doing that, I decided I wanted to attend college, and further my journey there. So, I packed up and moved to Idaho where I attended Brigham Young University - Idaho. I began looking for any job I could find...and soon, I started as an engineer for BYU-Idaho radio.</p>
+			<p class="explainer left">BYU-Idaho Radio had no engineering staff, so I had the unique experience of building the department from scratch. Soon after, I got promoted to Chief Engineer. And while I was loving what I was doing, I found myself loving software even more. While at BYU-Idaho Radio, I built several internal web applications where I INSTANTLY fell in love with software.</p>
+			<p class="explainer left">I knew I had found my calling and wanted to do more with software. So I looked around my college for a startup that was looking for a young, hungry web developer. And I found one!!</p>
 
 		</div>
 
