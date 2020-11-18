@@ -54,7 +54,7 @@
 
 					<img src="/assets/luminary-mark.svg" alt="Luminary" title="Luminary">
 
-					<h3>Luminary</h3>
+					<h3>Luminary*</h3>
 
 					<p>The Sales, Marketing, and Fulfillment platform that powers the business of Shine Solar.</p>
 
@@ -65,7 +65,7 @@
 				<div class="tile" data-tech-tags="rn sql php aws ci/cd">
 
 					<img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
-					<h3>Shine Solar Mobile App</h3>
+					<h3>Shine Solar Mobile App*</h3>
 					<p>Allows customers to make referrals, and track the status of their solar system.</p>
 
 					<a href="https://shinesolar.app" title="Go to the Shine Solar App landing page" target="_blank" rel="noopener" class="cta">See it</a>
@@ -161,6 +161,9 @@
 				<figcaption class="caption">Me - Adam McGurk</figcaption>
 
 			</figure>
+
+			<p class="explainer left">I started in the tech industry young - maintaining  systems for a prominent radio station in the Bay Area.</p>
+			<p class="explainer left">While there, I had own on-air shift, maintained the company's office network, and built the connections that put things such as the Golden State Warriors on the air.</p>
 
 		</div>
 

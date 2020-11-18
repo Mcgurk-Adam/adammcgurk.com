@@ -82,6 +82,12 @@ section {
 			color: #243b53;
 			font-weight: 300;
 			margin-bottom: 20px;
+
+			&.left {
+				align-self: flex-start;
+				text-align: left;
+			}
+
 		}
 
 		.tab-container {
@@ -183,7 +189,7 @@ section {
 		p {
 			line-height: 25px;
 			font-size: 16px;
-			color: #486581;
+			color: #334E68;
 			text-align: left;
 			font-weight: 300;
 			margin-bottom: 20px;
