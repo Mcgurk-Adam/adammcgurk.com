@@ -332,12 +332,18 @@ section {
 
 	}
 
+	.tile-container {
+		grid-template-columns: 50% 50%;
+	}
+
 }
 
 @media all and (max-width: 526px) {
 
 	.tile-container {
 
+		display: flex;
+		flex-flow: column nowrap;
 		justify-content: center;
 
 		.tile {
