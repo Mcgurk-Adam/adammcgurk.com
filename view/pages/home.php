@@ -21,7 +21,7 @@
 		
 		<div class="content">
 			
-			<h1>Projects<hr></h1>
+			<h1>Experience<hr></h1>
 
 			<p class="explainer">Use the buttons below to filter on the skills you want to see! If you select a combination of buttons, it will only show projects that use <i>all</i> of your filters. By default, all projects are shown.</p>
 
