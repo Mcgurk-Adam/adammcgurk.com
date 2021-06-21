@@ -10,7 +10,7 @@ h1 {
 
 .exposition {
 	display: block;
-	font-size: 16px;
+	font-size: var(--basic-text-size);
 	max-width: 1100px;
 	width: 90%;
 	margin: 20px auto;

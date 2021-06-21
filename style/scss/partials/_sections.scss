@@ -76,7 +76,7 @@ section {
 		}
 
 		p.explainer {
-			font-size: 16px;
+			font-size: var(--basic-text-size);
 			text-align: center;
 			line-height: 1.4;
 			color: #243b53;
@@ -106,7 +106,7 @@ section {
 				border-radius: 20px;
 				border: 1px solid #BCCCDC;
 				color: #334E68;
-				font-size: 16px;
+				font-size: var(--basic-text-size);
 				padding: 0 10px;
 				display: flex;
 				align-items: center;
@@ -187,7 +187,7 @@ section {
 
 		p {
 			line-height: 25px;
-			font-size: 16px;
+			font-size: var(--basic-text-size);
 			color: #334E68;
 			text-align: left;
 			font-weight: 300;
@@ -201,7 +201,7 @@ section {
 			border-radius: 6px;
 			border: 1px solid #186FAF;
 			color: #186FAF;
-			font-size: 16px;
+			font-size: var(--basic-text-size);
 			background-color: transparent;
 			text-transform: uppercase;
 			display: flex;
@@ -249,7 +249,7 @@ section {
 		align-self: flex-end;
 
 		~ .date {
-			font-size: 16px;
+			font-size: var(--basic-text-size);
 			color: #9FB3C8;
 			align-self: flex-end;
 			margin-bottom: 10px;
