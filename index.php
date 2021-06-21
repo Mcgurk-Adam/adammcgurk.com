@@ -14,7 +14,7 @@ if (!isset($_SERVER['REQUEST_URI']) || empty($_SERVER['REQUEST_URI'])) {
 if (\file_exists($page_path)) {
 	require_once 'view/includes/header.php';
 	require_once $page_path;
-	require_once 'view/includes/foot.php';
+	require_once 'view/includes/footer.php';
 } else {
 	return false;
 }
