@@ -25,8 +25,6 @@
 
 			<p class="explainer">Use the buttons below to filter on the skills you want to see! If you select a combination of buttons, it will only show projects that use <i>all</i> of your filters. By default, all projects are shown.</p>
 
-			<p class="explainer"> * - Means still in progress...software is <i>never</i> done, right?? :)</p>
-
 			<div class="tab-container">
 				
 				<button class="tab" name="html-css">HTML5/SCSS</button>
@@ -52,7 +50,7 @@
 
 					<img src="/assets/luminary-mark.svg" alt="Luminary" title="Luminary">
 
-					<h3>Luminary*</h3>
+					<h3>Luminary</h3>
 
 					<p>The Sales, Marketing, and Fulfillment platform that powers the business of Shine Solar.</p>
 
@@ -63,7 +61,7 @@
 				<div class="tile" data-tech-tags="rn sql php aws ci/cd">
 
 					<img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar">
-					<h3>Shine Solar Mobile App*</h3>
+					<h3>Shine Solar Mobile App</h3>
 					<p>Allows customers to make referrals, and track the status of their solar system.</p>
 
 					<a href="https://shinesolar.app" title="Go to the Shine Solar App landing page" target="_blank" rel="noopener" class="cta">See it</a>
@@ -73,7 +71,7 @@
 				<div class="tile" data-tech-tags="netlify html-css ts design node">
 					
 					<img src="/assets/optimize-mark.svg" alt="Optimize Fonts Logo" title="Optimize Fonts">
-					<h3>Optimize Fonts*</h3>
+					<h3>Optimize Fonts</h3>
 					<p>Takes a Google Font URL or &lt;link&gt; tag and, using the latest techniques, optimizes it for optimal performance.</p>
 
 					<a href="https://optimizefonts.com" title="Go to Optimize Fonts" target="_blank" rel="noopener" class="cta">See it</a>
@@ -83,7 +81,7 @@
 				<div class="tile" data-tech-tags="html-css ts netlify design">
 					
 					<img src="/assets/csv-mark.svg" alt="Parse CSV" title="Parse CSV">
-					<h3>Parse CSV*</h3>
+					<h3>Parse CSV</h3>
 					<p>Parses a CSV file, and allows you to fire certain actions for each row in your CSV file.</p>
 
 					<a href="https://parsecsv.com" title="Go to the Parse CSV landing page" target="_blank" rel="noopener" class="cta">See it</a>
@@ -113,7 +111,7 @@
 				<div class="tile" data-tech-tags="html-css ts netlify design pwa">
 					
 					<img src="/assets/money-mark.svg" alt="Money logo" title="Money logo">
-					<h3>Budget Tracker*</h3>
+					<h3>Budget Tracker</h3>
 					<p>An offline and mobile first budget tracker that keeps all data on your device. (BTW - It only reacts to touch, not click!)</p>
 
 					<a href="https://money.mcgurk.app" title="Go visit the budget tracking app" target="_blank" rel="noopener" class="cta">See it</a>
@@ -123,7 +121,7 @@
 				<div class="tile" data-tech-tags="html-css ts php netlify design sql ci/cd">
 					
 					<img src="/assets/shinephp-mark.svg" alt="Shine PHP Mark" title="Shine PHP">
-					<h3>Shine PHP*</h3>
+					<h3>Shine PHP</h3>
 					<p>A lightweight, simple, PHP microframework for making web app development with PHP so much easier.</p>
 
 					<a href="https://shinephp.dev" title="Go to the landing page for ShinePHP" target="_blank" rel="noopener" class="cta">See it</a>
@@ -133,7 +131,7 @@
 				<div class="tile" data-tech-tags="html-css ts php aws netlify design ci/cd">
 					
 					<img src="/assets/loc-mark.svg" alt="Lines of Code" title="Lines of Code" class="invert">
-					<h3>Count LOC*</h3>
+					<h3>Count LOC</h3>
 					<p>Takes a URL to a Github repository and returns how many lines of code exist in that repository, including being able to toggle between languages.</p>
 
 					<a href="https://linesofcode.app" title="Go to the count loc app" target="_blank" rel="noopener" class="cta">See it</a>
