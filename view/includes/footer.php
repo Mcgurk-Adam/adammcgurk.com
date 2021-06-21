@@ -1,7 +1,7 @@
 
 <footer>
 
-	<p>&copy; Adam McGurk <?=date('Y');?></p>
+	<p>&copy; Adam McGurk <?=\date('Y');?></p>
 
 	<a href="https://twitter.com/adammmcgurk" title="Go to Adam's Twitter" class="icon" target="_blank" rel="noopener">
 		<img src="/assets/twitter.svg" alt="Twitter" title="Twitter" style="height: 27px;">

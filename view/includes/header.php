@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<title><?=$this->page_title?></title>
+		<title>Adam McGurk</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&family=Unica+One&display=swap">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&family=Unica+One&display=swap" media="print" onload="this.media='all'">
