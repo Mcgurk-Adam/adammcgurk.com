@@ -1,10 +1,16 @@
-api/
-.sass-cache/
+# basic ignores
 .*
 ~*
 *~
 *.sublime-project
 *.sublime-workspace
 *.log
+
+# build file ignores
 *.html
+*.css
+*.js
+
+# other ignores
+node_modules/
 !.gitignore
