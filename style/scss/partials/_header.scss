@@ -2,6 +2,7 @@ $header_height: 70px;
 $header_side_margin: 20px;
 
 header {
+
 	height: $header_height;
 	-webkit-position: fixed;
 	position: fixed;
@@ -26,10 +27,26 @@ header {
 	}
 
 	nav {
+
 		margin-right: $header_side_margin;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
 
 		.main-title {
 			display: none;
+		}
+
+		#nav-links {
+
+			display: flex;
+			flex-flow: row nowrap;
+
+			a:not(:last-child) {
+				margin-right: 20px;
+			}
+
 		}
 
 	}

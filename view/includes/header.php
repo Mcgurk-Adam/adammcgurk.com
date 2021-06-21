@@ -30,6 +30,13 @@
 			<a href="/" title="Go back to the homepage" class="main-title">
 				<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 			</a>
+
+			<div id="nav-links">
+				
+				<a href="/about/" title="About Adam">About</a>
+
+			</div>
+
 		</nav>
 
 	</header>
