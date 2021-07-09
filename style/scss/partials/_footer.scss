@@ -1,5 +1,7 @@
 footer {
 
+	--margin: 20px;
+
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -25,16 +27,42 @@ footer {
 
 	}
 
+	.footer-links {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		margin-left: var(--margin);
+	}
+
 	p, a {
 
 		&:not(:last-child) {
-			margin-right: 20px;
+			margin-right: var(--margin);
 		}
 
 	}
 
 	p {
 		color: #243B53;
+	}
+
+}
+
+@media all and (max-width: 350px) {
+
+	footer {
+
+		p {
+			margin-right: 0px;
+			margin-bottom: var(--margin);
+		}
+
+		flex-flow: column nowrap;
+
+		.footer-links {
+			margin-left: 0px;
+		}
+
 	}
 
 }
