@@ -34,7 +34,7 @@
 			<div id="nav-links">
 				
 				<a href="/about/" title="About Adam">About</a>
-				<a href="/blog/" title="Blog">Blog</a>
+				<a href="/blog-content/" title="Blog">Blog</a>
 
 			</div>
 
