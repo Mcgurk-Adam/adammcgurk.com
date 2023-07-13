@@ -4,7 +4,7 @@ rm -rf js
 npm install
 
 # compile css
-node_modules/.bin/node-sass --output-style compressed style/scss/style.scss > style/style.css
+node_modules/.bin/sass --style=compressed style/scss/style.scss > style/style.css
 
 # compile js
 mkdir js
