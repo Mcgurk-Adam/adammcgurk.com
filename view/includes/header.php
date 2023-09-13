@@ -32,9 +32,10 @@
 			</a>
 
 			<div id="nav-links">
-				
-				<a href="/about/" title="About Adam">About</a>
-				<a href="/blog-content/" title="Blog">Blog</a>
+
+				<a href="/writing-hub" title="Blog">Writing Hub</a>
+                <a href="/recipes" title="Adam's Recipes">Recipes</a>
+                <a href="/contact" title="Contact Adam">Contact</a>
 
 			</div>
 

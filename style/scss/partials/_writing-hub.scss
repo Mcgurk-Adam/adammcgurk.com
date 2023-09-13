@@ -1,0 +1,29 @@
+.writing-tile-container {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 420px;
+	width: 95%;
+	margin-top: 20px;
+	.writing-tile {
+		height: 200px;
+		width: 200px;
+		border-radius: 12px;
+		border: 2px solid var(--gray-5);
+		margin-bottom: 20px;
+		cursor: pointer;
+		&:nth-child(odd) {
+			margin-right: 20px;
+		}
+	}
+}
+
+@media all and (max-width: 500px) {
+	.tile-container {
+		flex-flow: column nowrap;
+		.tile {
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+		}
+	}
+}
