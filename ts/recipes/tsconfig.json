@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "target": "es2015",
+    "outFile": "../../js/recipes.js"
+  },
+  "files": [
+    "index.ts"
+  ]
+}
