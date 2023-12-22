@@ -43,6 +43,9 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
+	background-color: #fff;
+	padding: 20px 0;
+	border-radius: 12px;
 	.image {
 		height: 100%;
 		img {
@@ -52,9 +55,15 @@
 			border-bottom-left-radius: 12px;
 		}
 	}
+	&:hover {
+		h3 {
+			text-decoration: underline;
+		}
+	}
 	.words {
 		padding-left: 20px;
 		h3 {
+			color: var(--heading-color);
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
@@ -62,6 +71,20 @@
 			font-size: 16px;
 			line-height: 1.5;
 			text-align: left;
+		}
+	}
+}
+
+.blog-post {
+	figure {
+		max-width: 95%;
+		width: 350px;
+		height: auto;
+		figcaption {
+			text-align: center;
+		}
+		img {
+			border-radius: 4px;
 		}
 	}
 }
