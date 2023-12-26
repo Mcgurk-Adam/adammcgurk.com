@@ -53,12 +53,15 @@ hr {
 	align-items: center;
 	padding: 20px 0;
 	border-radius: 12px;
+	&.hidden {
+		display: none;
+	}
 	.image {
 		height: 100%;
 		margin-bottom: 10px;
 		img {
-			width: 500px;
-			height: auto;
+			width: auto;
+			height: 350px;
 			border-radius: 12px;
 		}
 	}

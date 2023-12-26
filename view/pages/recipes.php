@@ -28,7 +28,7 @@
             $implodedTitle = implode('-', explode(' ', strtolower($recipe['title'])));
             $url = '/recipes/' . $implodedTitle;
         ?>
-        <div class="blog-card">
+        <div class="blog-card" data-tags="<?=implode(' ', $recipe['tags'])?>">
             <div class="image">
                 <img src="<?=$recipe['image']?>" title="<?=$recipe['imageTitle']?>" alt="<?=$recipe['imageAlt']?>">
             </div>
@@ -36,8 +36,8 @@
                 <h3><a href="<?=$url?>" title="<?=$recipe['title']?>"><?=$recipe['title']?></a></h3>
                 <p><?=$recipe['description']?></p>
             </div>
+            <hr>
         </div>
-        <hr>
 	<?php endforeach; ?>
 </main>
 
