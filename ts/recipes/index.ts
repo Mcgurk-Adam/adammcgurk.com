@@ -1,10 +1,10 @@
-const recipeCards = document.querySelectorAll(".recipe-card");
+const recipeCards = document.querySelectorAll(".blog-card");
 const recipeSearch: HTMLInputElement = document.getElementById("recipe-search") as HTMLInputElement;
 recipeSearch.addEventListener("input", (ev:InputEvent) => {
-    const currentSearch = recipeSearch.value;
+    const currentSearch:string = recipeSearch.value ?? "";
     // match all recipes that have the search term in the title
     recipeCards.forEach((card: HTMLDivElement) => {
-        const cardTitle = card.querySelector("h2") as HTMLHeadingElement;
+        const cardTitle = card.querySelector("h3") as HTMLHeadingElement;
         const cardTitleText = cardTitle.innerText;
         let loweredTags:string;
         const cardTags = card.querySelectorAll(".tag");

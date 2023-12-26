@@ -1,0 +1,1 @@
+<main id="contact" class="page"></main>

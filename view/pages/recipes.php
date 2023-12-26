@@ -23,27 +23,22 @@
         ],
     ];
     ?>
-
-    <div class="recipe-cards">
-        <?php foreach ($recipes as $recipe): ?>
-            <?php
-                $implodedTitle = implode('-', explode(' ', strtolower($recipe['title'])));
-                $url = '/recipes/' . $implodedTitle;
-            ?>
-            <a class="recipe-card" title="<?=$recipe['title']?>" href="<?=$url?>">
-                <img src="<?= $recipe['image'] ?>" alt="<?= $recipe['imageAlt'] ?>" title="<?= $recipe['imageTitle'] ?>">
-                <div class="bottom-text">
-                    <h2><?= $recipe['title'] ?></h2>
-                    <p class="description"><?= $recipe['description'] ?></p>
-                    <div class="tags">
-						<?php foreach ($recipe['tags'] as $tag): ?>
-                            <span class="tag"><?= $tag ?></span>
-						<?php endforeach; ?>
-                    </div>
-                </div>
-            </a>
-        <?php endforeach; ?>
-    </div>
+	<?php foreach ($recipes as $recipe): ?>
+        <?php
+            $implodedTitle = implode('-', explode(' ', strtolower($recipe['title'])));
+            $url = '/recipes/' . $implodedTitle;
+        ?>
+        <div class="blog-card">
+            <div class="image">
+                <img src="<?=$recipe['image']?>" title="<?=$recipe['imageTitle']?>" alt="<?=$recipe['imageAlt']?>">
+            </div>
+            <div class="words">
+                <h3><a href="<?=$url?>" title="<?=$recipe['title']?>"><?=$recipe['title']?></a></h3>
+                <p><?=$recipe['description']?></p>
+            </div>
+        </div>
+        <hr>
+	<?php endforeach; ?>
 </main>
 
 <script src="/js/recipes.js"></script>
