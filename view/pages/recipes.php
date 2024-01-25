@@ -8,7 +8,7 @@
         [
             'title' => 'Simplest Barbecue Spice Rub',
             'description' => 'My go to barbecue rub for pulled pork and brisket.',
-            'image' => '/assets/bbq-rub.jpeg',
+            'image' => '/assets/spice-rub.png',
             'imageAlt' => 'A jar of BBQ rub with different spices.',
             'imageTitle' => 'A jar of BBQ rub with different spices.',
             'tags' => ['bbq', 'spice-rubs', 'easy'],
@@ -16,11 +16,27 @@
         [
             'title' => 'Apple Blackberry Pie',
             'description' => 'This is my all time favorite dessert. I\'m not a huge dessert guy, but this is my go to every holiday season.',
-            'image' => '/assets/recipe-placeholder.svg',
+            'image' => '/assets/apple-blackberry-pie.png',
             'imageAlt' => 'An apple blackberry pie with an oat topping',
             'imageTitle' => 'An apple blackberry pie with an oat topping',
             'tags' => ['dessert', 'holidays', 'pie'],
         ],
+		[
+			'title' => 'Instant Pot Pot Roast',
+			'description' => 'Such a delicious and simple and fast way of making pot roast',
+			'image' => '/assets/pot-roast.png',
+			'imageAlt' => 'A delicious looking pot roast and vegetables',
+			'imageTitle' => 'A delicious looking pot roast and vegetables',
+			'tags' => ['dinner', 'beef', 'instant-pot'],
+		],
+		[
+			'title' => 'Chicken Florentine',
+			'description' => 'A delicious creamy florentine sauce with crispy chicken.',
+			'image' => '/assets/chicken-florentine.png',
+			'imageAlt' => 'creamy sauce with chicken and noodles',
+			'imageTitle' => 'creamy sauce with chicken and noodles',
+			'tags' => ['dinner', 'sauce', 'pasta', 'chicken', 'italian'],
+		],
     ];
     ?>
 	<?php foreach ($recipes as $recipe): ?>
