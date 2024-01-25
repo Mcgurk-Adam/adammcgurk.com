@@ -11,6 +11,9 @@
 	background-size: 25px;
 	background-image: url(/assets/search-glass.svg);
 	margin-bottom: 40px;
+	font-size: 16px;
+	-webkit-appearance: none;
+	appearance: none;
 	&:focus {
 		&::-webkit-input-placeholder {
 			color: transparent;

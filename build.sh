@@ -8,6 +8,7 @@ node_modules/.bin/sass --style=compressed style/scss/style.scss > style/style.cs
 # compile js
 mkdir js
 node_modules/.bin/tsc -p ts/
+node_modules/.bin/tsc -p ts/recipes/
 
 # build php pages
 for f in `find view/pages -name '*.php'`
