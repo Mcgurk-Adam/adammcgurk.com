@@ -1,7 +1,6 @@
 #recipe-search {
-	width: 95%;
+	width: 1000px;
 	height: 50px;
-	max-width: 750px;
 	border-radius: 4px;
 	background-color: #fff;
 	color: var(--text-color);
@@ -28,5 +27,80 @@
 	}
 	&::-webkit-search-cancel-button {
 		display: none;
+	}
+}
+
+#recipe-card-container {
+	width: 95%;
+	max-width: 1100px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.recipe-blog-card {
+	max-width: 500px;
+	margin-right: 20px;
+	width: 95%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	.image {
+		margin-bottom: 10px;
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+		}
+	}
+	.words {
+		text-align: center;
+		padding-left: 20px;
+		h3 {
+			color: var(--heading-color);
+			font-size: 30px;
+			margin-bottom: 10px;
+			&:hover {
+				text-decoration: underline;
+			}
+			a {
+				color: var(--heading-color);
+			}
+		}
+		p {
+			text-align: center;
+			font-size: 16px;
+			line-height: 1.5;
+			max-width: 500px;
+			width: 95%;
+		}
+	}
+	&.hidden {
+		display: none;
+	}
+	hr {
+		display: none;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	#recipe-search {
+		max-width: 500px;
+		width: 95%;
+	}
+	#recipe-card-container {
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	.recipe-blog-card {
+		margin-bottom: 20px;
+		margin-right: 0;
+		hr {
+			width: 100%;
+			margin: 0 auto;
+			background-color: var(--gray-2);
+			height: 2px;
+			border-radius: 10px;
+		}
 	}
 }
