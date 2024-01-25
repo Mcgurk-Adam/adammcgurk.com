@@ -41,6 +41,13 @@
 			'imageAlt' => 'penne noodles with parsley, sausage, and a creamy sauce',
 			'tags' => ['dinner', 'sauce', 'pasta', 'sausage', 'italian', 'spicy'],
 		],
+		[
+			'title' => 'Cornbread',
+			'description' => 'A moist, sweet, delicious buttermilk cornbread',
+			'image' => '/assets/cornbread.png',
+			'imageAlt' => 'A cornbread with a slice from it in a cast iron pan with accutrements around it',
+			'tags' => ['sides', 'butter', 'bread', 'southern'],
+		],
     ];
     ?>
     <div id="recipe-card-container">
