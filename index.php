@@ -7,6 +7,17 @@ $recipes = [
 		'imageAlt' => 'A jar of BBQ rub with different spices.',
 		'imageTitle' => 'A jar of BBQ rub with different spices.',
 		'tags' => ['bbq', 'spice-rubs', 'easy'],
+		'ingredients' => [
+			'1/2 cup of sea salt',
+			'1/3 cup of coarse ground black pepper',
+			'1/4 cup of garlic powder',
+			'1/8 cup of smoked paprika',
+		],
+		'steps' => [
+			'Combine all ingredients together in your dish of choice. I like to use a mason jar.',
+			'Stir until well combined. I\'ll typically shake the jar to mix it up.',
+			'Apply liberally!',
+		],
 	],
 	[
 		'title' => 'Apple Blackberry Pie',
@@ -28,6 +39,16 @@ $recipes = [
 		'image' => '/assets/popcorn-seasoning.png',
 		'imageAlt' => 'Some popcorn surrounded by salt, pepper, paprika, and chilis',
 		'tags' => ['popcorn', 'spices', 'spice-rubs'],
+		'ingredients' => [
+			'1 tablespoon of sea salt',
+			'1 tablespoon of coarse ground black pepper',
+			'1 tablespoon of smoked paprika',
+		],
+		'steps' => [
+			'Combine all ingredients together in your dish of choice. I like to use a mason jar.',
+			'Stir until well combined. I\'ll typically shake the jar to mix it up.',
+			'Apply liberally!',
+		],
 	],
 	[
 		'title' => 'Chicken Florentine',

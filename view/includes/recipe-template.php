@@ -10,10 +10,19 @@
         <div class="tab" data-tab="steps">Steps</div>
     </div>
     <div id="mobile-ingredients" class="mobile-recipe-body active">
-        <p>ingredients</p>
+		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
+            <div class="ingredient">
+                <input type="checkbox">
+                <span><?=$ingredient?></span>
+            </div>
+		<?php endforeach; ?>
     </div>
     <div id="mobile-steps" class="mobile-recipe-body">
-        <p>steps</p>
+        <ol>
+        <?php foreach ($singleRecipe['steps'] as $step): ?>
+            <li><?=$step?></li>
+        <?php endforeach; ?>
+        </ol>
     </div>
 </div>
 
