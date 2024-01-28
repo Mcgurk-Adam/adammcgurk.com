@@ -50,6 +50,7 @@
 	align-items: center;
 	.image {
 		margin-bottom: 10px;
+		width: 100%;
 		img {
 			width: 100%;
 			height: auto;
@@ -59,10 +60,12 @@
 	.words {
 		text-align: center;
 		padding-left: 20px;
+		width: 100%;
 		h3 {
 			color: var(--heading-color);
 			font-size: 30px;
 			margin-bottom: 10px;
+			cursor: pointer;
 			&:hover {
 				text-decoration: underline;
 			}
