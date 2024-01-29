@@ -173,6 +173,7 @@
 		border-radius: 4px;
 		margin-right: 10px;
 		cursor: pointer;
+		transition: 150ms all;
 		&:checked {
 			background-repeat: no-repeat;
 			background-position: center;
@@ -186,6 +187,7 @@
 	span {
 		font-size: 16px;
 		color: var(--text-color);
+		transition: 150ms all;
 	}
 }
 
