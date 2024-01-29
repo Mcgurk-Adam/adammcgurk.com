@@ -2,7 +2,36 @@
     <h1><?=$singleRecipe['title']?></h1>
 </div>
 
-<article class="recipe-desktop"></article>
+<div class="recipe-desktop">
+    <div id="desktop-ingredients">
+        <h2>Ingredients</h2>
+		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
+			<?php if (gettype($ingredient) === 'array'): ?>
+                <h3><?=$ingredient['sectionTitle']?></h3>
+				<?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
+                    <div class="ingredient">
+                        <input type="checkbox">
+                        <span><?=$sectionIngredient?></span>
+                    </div>
+				<?php endforeach; ?>
+			<?php else: ?>
+                <div class="ingredient">
+                    <input type="checkbox">
+                    <span><?=$ingredient?></span>
+                </div>
+			<?php endif; ?>
+		<?php endforeach; ?>
+    </div>
+    <hr>
+    <div id="desktop-steps">
+        <h2>Steps</h2>
+        <ol>
+			<?php foreach ($singleRecipe['steps'] as $step): ?>
+                <li><?=$step?></li>
+			<?php endforeach; ?>
+        </ol>
+    </div>
+</div>
 
 <div class="recipe-mobile">
     <div class="tabs">

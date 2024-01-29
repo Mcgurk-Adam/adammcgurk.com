@@ -128,7 +128,7 @@ $recipes = [
 		'tags' => ['mexican', 'chicken', 'marinated', 'spicy', 'dinner'],
 	],
 	[
-		'title' => 'Skirt Steak',
+		'title' => 'Marinated Skirt Steak',
 		'description' => 'A citrus-y, mexican, marinated skirt steak',
 		'image' => '/assets/skirt-steak.png',
 		'imageAlt' => 'A sliced, seared skirt steak on a plate surrounded by different citruses and spices',
@@ -136,7 +136,7 @@ $recipes = [
 	],
 	[
 		'title' => 'Award-Winning Chili',
-		'description' => 'A deep, rich spicy chili with a variety of meats, veggies, spices, and beans',
+		'description' => 'A deep, rich, spicy chili with a variety of meats, veggies, spices, and beans',
 		'image' => '/assets/chili.png',
 		'imageAlt' => 'A pot of deep red and dark chili with vegetables and beans and surrounded by spices',
 		'tags' => ['chili', 'spicy', 'dinner'],
@@ -161,7 +161,7 @@ $recipes = [
 				'sectionIngredients' => [
 					'3 lbs good ground beef',
 					'1 lb hot breakfast sausage',
-					'3 fresh chopped jalapenos (sub one large green bell pepper if you don\'t want it too spicy)',
+					'3 fresh chopped jalapenos (sub one large green bell pepper for less spice)',
 					'6 minced garlic cloves',
 					'1 large yellow or white onion, diced',
 					'44 oz of diced tomatoes',
@@ -184,7 +184,7 @@ $recipes = [
 			'Let simmer on your stove for about an hour.',
 			'Add in the three cans of beans and stir to combine.',
 			'Let simmer another 45 minutes to an hour.',
-			'ENJOY!',
+			'Enjoy with your favorite toppings, such as cheddar cheese, sour cream, or maybe fritos corn chips!',
 		],
 	],
 ];
