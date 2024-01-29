@@ -11,10 +11,20 @@
     </div>
     <div id="mobile-ingredients" class="mobile-recipe-body active">
 		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
-            <div class="ingredient">
-                <input type="checkbox">
-                <span><?=$ingredient?></span>
-            </div>
+            <?php if (gettype($ingredient) === 'array'): ?>
+                <h3><?=$ingredient['sectionTitle']?></h3>
+                <?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
+                    <div class="ingredient">
+                        <input type="checkbox">
+                        <span><?=$sectionIngredient?></span>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="ingredient">
+                    <input type="checkbox">
+                    <span><?=$ingredient?></span>
+                </div>
+            <?php endif; ?>
 		<?php endforeach; ?>
     </div>
     <div id="mobile-steps" class="mobile-recipe-body">
