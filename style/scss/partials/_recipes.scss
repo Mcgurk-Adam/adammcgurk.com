@@ -112,6 +112,8 @@
 	display: flex;
 	width: 100%;
 	flex-flow: row nowrap;
+	max-width: 1200px;
+	margin: 0 auto;
 	#desktop-steps, #desktop-ingredients {
 		display: flex;
 		flex-flow: column nowrap;
