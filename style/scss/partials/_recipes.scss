@@ -194,6 +194,9 @@
 ol {
 	list-style-position: inside;
 	li {
+		a {
+			text-decoration: underline;
+		}
 		color: var(--text-color);
 		&::marker {
 			color: var(--heading-color);

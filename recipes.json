@@ -209,6 +209,43 @@
 			"spicy",
 			"mango",
 			"mexican"
+		],
+		"steps": [
+			"Start to prepare the mango salsa. Grab a dish, dice your mangoes and set in the dish",
+			"Dice the red onion and add to the dish",
+			"Chop the cilantro and add to the dish",
+			"Slice the lime, squeeze in, and mix the salsa",
+			"Crack in some sea salt and mix again",
+			"Optionally chop your habenero and add to the salsa and mix",
+			"Set your salsa to the side, and add some oil to a pan on medium heat",
+			"Add your shrimp to the pan, and season with your favorite <a href='/recipes/taco-seasoning' title='Taco Seasoning'>taco seasoning</a>",
+			"Sear off your shrimp and cook to done",
+			"Remove your shrimp from the pan, set to the side, and add some more oil and some more taco seasoning to the pan",
+			"Add your tortillas to the pan and toast them on both sides",
+			"Remove your tortillas from the pan, and assemble your tacos",
+			"Enjoy!"
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Mango Salsa",
+				"sectionIngredients": [
+					"3 ripe large mangoes",
+					"1/2 red onion",
+					"1/2 cup fresh cilantro",
+					"1 juicy lime (or 2 if there's not very much juice",
+					"Cracked sea salt",
+					"OPTIONAL - 1 fresh habenero pepper for heat"
+				]
+			},
+			{
+				"sectionTitle": "Shrimp Tacos",
+				"sectionIngredients": [
+					"1 lb extra small peeled, deveined shrimp (or whatever size you want, if its large, chop them up a little bit)",
+					"high smoke point oil",
+					"Taco Seasoning",
+					"Taco sized corn tortillas"
+				]
+			}
 		]
 	},
 	{
