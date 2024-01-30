@@ -42,6 +42,49 @@
 			"dinner",
 			"beef",
 			"instant-pot"
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Seasoning Mix",
+				"sectionIngredients": [
+					"1 tbsp Dark brown sugar",
+					"1 tbsp Garlic Powder",
+					"1/2 tbsp Onion Powder",
+					"1/2 tbsp Sea Salt",
+					"1 tsp Oregano",
+					"1 tsp Thyme",
+					"1 tsp Black Pepper",
+					"1/2 tsp smoked paprika (regular paprika is fine too)"
+				]
+			},
+			{
+				"sectionTitle": "Pot Roast",
+				"sectionIngredients": [
+					"Salt and Pepper",
+					"1 Chuck roast. Each pound feeds about 2 people. I usually get a 3 pound roast.",
+					"1 quart of beef broth (4 cups)",
+					"1 pound of full size carrots. Cut in about thirds",
+					"2-3 pounds of mini potatoes. If you have larger potatoes, just cut them up",
+					"1 large onion. Cut into fourths",
+					"6 stalks of full-size celery, ends cut off, cut in half",
+					"2 bay leaves"
+				]
+			}
+		],
+		"steps": [
+			"Combine all of the seasoning mix ingredients together in a dish and set aside.",
+			"Set your Instant Pot on Saute.",
+			"Season the roast liberally on all sides with salt and pepper.",
+			"Coat the bottom of the instant pot with a high smoke point oil (canola, vegetable, peanut, etc...) and sear the roast on all sides.",
+			"Remove the roast and set it aside.",
+			"Take a little bit of the beef broth and deglaze the bottom of the pot. Probably about a cup or half a cup.",
+			"Add the roast back to the pot, along with your assortment of vegetables.",
+			"Take a part of your seasoning mix and sprinkle it over the roast and vegetables.",
+			"Add the rest of your beef broth into the pot along with two bay leaves.",
+			"Add in the rest of your seasoning mix into the pot.",
+			"Close and seal your Instant Pot and set it to manual for 95 minutes.",
+			"If you have time, let it naturally release. It will probably take about 45 minutes. If not, you can force the release.",
+			"Enjoy! It also makes great leftovers heated up in the microwave."
 		]
 	},
 	{
@@ -125,6 +168,21 @@
 			"spices",
 			"spice-rubs",
 			"spicy"
+		],
+		"ingredients": [
+			"2 tsp cumin",
+			"2 tsp dark chili powder (regular is fine)",
+			"2 tsp sea salt (regular is fine)",
+			"2 tsp garlic powder",
+			"2 tsp Mexican oregano (other is fine)",
+			"2 tsp smoked paprika (regular is fine)",
+			"1 tsp black pepper",
+			"1/4 tsp cayenne pepper"
+		],
+		"steps": [
+			"Combine all ingredients together in your dish of choice. I like to use a mason jar.",
+			"Stir until well combined. I'll typically shake the jar to mix it up.",
+			"Apply liberally in taco soup, enchiladas, tacos, etc..."
 		]
 	},
 	{
