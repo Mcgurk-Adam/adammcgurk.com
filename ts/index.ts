@@ -1,4 +1,3 @@
-
 if (window.location.pathname === "/") {
 
 	const projectTabs:Tabs = new Tabs("#projects .tab-container", (allTabs:NodeListOf<HTMLButtonElement>) => {
@@ -44,4 +43,15 @@ if (window.location.pathname === "/") {
 
 	projectTabs.addListeners();
 
+}
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker.register("/sw.js")
+			.then(registration => {
+				console.log("ServiceWorker registration successful with scope: ", registration.scope);
+			})
+			.catch(error => {
+				console.log("ServiceWorker registration failed: ", error);
+			});
+	});
 }
