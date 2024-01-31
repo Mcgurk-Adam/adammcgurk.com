@@ -1,4 +1,4 @@
-<div class="recipe-header" style="background-image: url('<?=$singleRecipe['image']?>')">
+<div class="recipe-header" style="background-image: url('/assets/recipes/<?=$singleRecipe['image']?>')">
     <h1><?=$singleRecipe['title']?></h1>
 </div>
 

@@ -13,7 +13,7 @@
 			?>
             <div class="recipe-blog-card" data-tags="<?=implode(' ', $recipe['tags'])?>">
                 <div class="image">
-                    <a href="<?=$url?>" title="<?=$recipe['title']?>"><img src="<?=$recipe['image']?>" title="<?=$recipe['imageTitle'] ?? $recipe['imageAlt']?>" alt="<?=$recipe['imageAlt']?>"></a>
+                    <a href="<?=$url?>" title="<?=$recipe['title']?>"><img src="/assets/recipes/small/<?=$recipe['image']?>" title="<?=$recipe['imageTitle'] ?? $recipe['imageAlt']?>" alt="<?=$recipe['imageAlt']?>"></a>
                 </div>
                 <div class="words">
                     <h3><a href="<?=$url?>" title="<?=$recipe['title']?>"><?=$recipe['title']?></a></h3>

@@ -2,7 +2,7 @@
 	{
 		"title": "Simplest Barbecue Spice Rub",
 		"description": "My go to barbecue rub for pulled pork and brisket.",
-		"image": "/assets/spice-rub.png",
+		"image": "spice-rub.webp",
 		"imageAlt": "A jar of BBQ rub with different spices.",
 		"imageTitle": "A jar of BBQ rub with different spices.",
 		"tags": [
@@ -25,7 +25,7 @@
 	{
 		"title": "Apple Blackberry Pie",
 		"description": "This is my all-time favorite treat. A must-make every holiday season.",
-		"image": "/assets/apple-blackberry-pie.webp",
+		"image": "apple-blackberry-pie.webp",
 		"imageAlt": "An apple blackberry pie with an oat topping",
 		"tags": [
 			"dessert",
@@ -36,7 +36,7 @@
 	{
 		"title": "Instant Pot Pot Roast",
 		"description": "Such a delicious and simple and fast way of making pot roast",
-		"image": "/assets/pot-roast.png",
+		"image": "pot-roast.webp",
 		"imageAlt": "A delicious looking pot roast and vegetables",
 		"tags": [
 			"dinner",
@@ -90,7 +90,7 @@
 	{
 		"title": "Popcorn Seasoning",
 		"description": "A smoky, delicious seasoning for popcorn",
-		"image": "/assets/popcorn-seasoning.png",
+		"image": "popcorn-seasoning.webp",
 		"imageAlt": "Some popcorn surrounded by salt, pepper, paprika, and chilis",
 		"tags": [
 			"popcorn",
@@ -111,7 +111,7 @@
 	{
 		"title": "Chicken Florentine",
 		"description": "A delicious creamy florentine sauce with crispy chicken.",
-		"image": "/assets/chicken-florentine.png",
+		"image": "chicken-florentine.webp",
 		"imageAlt": "creamy sauce with chicken and noodles",
 		"tags": [
 			"dinner",
@@ -124,7 +124,7 @@
 	{
 		"title": "Cajun Pasta",
 		"description": "A delicious creamy and spicy cajun pasta",
-		"image": "/assets/cajun-pasta.png",
+		"image": "cajun-pasta.webp",
 		"imageAlt": "penne noodles with parsley, sausage, and a creamy sauce",
 		"tags": [
 			"dinner",
@@ -138,7 +138,7 @@
 	{
 		"title": "Birria Tacos",
 		"description": "Slow cooked shredded beef, cooked in a birria consomme, with pepperjack cheese",
-		"image": "/assets/birria-tacos.png",
+		"image": "birria-tacos.webp",
 		"imageAlt": "Fully stuffed tacos with beef and cheese, next to a bowl of consomme",
 		"tags": [
 			"tacos",
@@ -149,7 +149,7 @@
 	{
 		"title": "Cornbread",
 		"description": "A moist, sweet, delicious buttermilk cornbread",
-		"image": "/assets/cornbread.png",
+		"image": "cornbread.webp",
 		"imageAlt": "A cornbread with a slice from it in a cast iron pan with accouterments around it",
 		"tags": [
 			"sides",
@@ -161,7 +161,7 @@
 	{
 		"title": "Taco Seasoning",
 		"description": "A delicious, spicy, full bodied taco/mexican seasoning",
-		"image": "/assets/taco-seasoning.png",
+		"image": "taco-seasoning.webp",
 		"imageAlt": "A bunch of spices, peppers, and chilis surrounding other spices",
 		"tags": [
 			"mexican",
@@ -188,7 +188,7 @@
 	{
 		"title": "Salmon",
 		"description": "A classic oven baked salmon with a lemon garlic glaze and an avocado salsa",
-		"image": "/assets/salmon.png",
+		"image": "salmon.webp",
 		"imageAlt": "A salmon adorned with spices garlic and oil, with an avocado salsa",
 		"tags": [
 			"avocado",
@@ -201,7 +201,7 @@
 	{
 		"title": "Shrimp Tacos",
 		"description": "Shrimp tacos with a spicy rub topped with a tangy salsa",
-		"image": "/assets/shrimp-tacos.png",
+		"image": "shrimp-tacos.webp",
 		"imageAlt": "Shrimp and mango salsa in a tortilla surrounded by spices, limes, garlic, and oil",
 		"tags": [
 			"tacos",
@@ -251,7 +251,7 @@
 	{
 		"title": "Buffalo Wings",
 		"description": "Smoked, fried, or air fried chicken wings with a tangy, spicy buffalo sauce",
-		"image": "/assets/buffalo-wings.png",
+		"image": "buffalo-wings.webp",
 		"imageAlt": "fried chicken covered in a red sauce with celery and dipping sauces",
 		"tags": [
 			"fried-chicken",
@@ -263,7 +263,7 @@
 	{
 		"title": "Bacon Treats",
 		"description": "A tater tot wrapped in bacon with jalapenos and cheese",
-		"image": "/assets/bacon-treats.png",
+		"image": "bacon-treats.webp",
 		"imageAlt": "A bunch of tater tots wrapped in bacon topped with jalapenos and cracked black pepper with cheese poking out",
 		"tags": [
 			"bacon",
@@ -274,7 +274,7 @@
 	{
 		"title": "Fondant Potatoes",
 		"description": "Seared potatoes cooked off with aromatics and chicken broth",
-		"image": "/assets/fondant-potatoes.png",
+		"image": "fondant-potatoes.webp",
 		"imageAlt": "A bunch of seared potatoes in broth surrounded by aromatics in a cast iron pan",
 		"tags": [
 			"sides",
@@ -284,7 +284,7 @@
 	{
 		"title": "Chipotle Chicken",
 		"description": "A smokey, spicy, marinated chicken thigh cooked in a variety of ways",
-		"image": "/assets/chipotle-chicken.png",
+		"image": "chipotle-chicken.webp",
 		"imageAlt": "A single piece of chicken with a chipotle marinade, topped with herbs and surrounded by spices and chilis",
 		"tags": [
 			"mexican",
@@ -297,7 +297,7 @@
 	{
 		"title": "Marinated Skirt Steak",
 		"description": "A citrus-y, mexican, marinated skirt steak",
-		"image": "/assets/skirt-steak.webp",
+		"image": "skirt-steak.webp",
 		"imageAlt": "A sliced, seared skirt steak on a plate surrounded by different citruses and spices",
 		"tags": [
 			"mexican",
@@ -309,7 +309,7 @@
 	{
 		"title": "Award-Winning Chili",
 		"description": "A deep, rich, spicy chili with a variety of meats, veggies, spices, and beans",
-		"image": "/assets/chili.png",
+		"image": "chili.webp",
 		"imageAlt": "A pot of deep red and dark chili with vegetables and beans and surrounded by spices",
 		"tags": [
 			"chili",
