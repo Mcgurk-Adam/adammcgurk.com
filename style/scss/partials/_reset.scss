@@ -46,3 +46,11 @@ main a {
 		color: var(--text-color);
 	}
 }
+
+@media all and (max-width: 1100px) {
+	.page {
+		h1, p {
+			max-width: 500px;
+		}
+	}
+}
