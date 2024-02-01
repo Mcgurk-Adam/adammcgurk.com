@@ -122,7 +122,7 @@
 		]
 	},
 	{
-		"title": "Cajun Pasta",
+		"title": "One Pot Cajun Pasta",
 		"description": "A delicious creamy and spicy cajun pasta",
 		"image": "cajun-pasta.webp",
 		"imageAlt": "penne noodles with parsley, sausage, and a creamy sauce",
@@ -132,7 +132,26 @@
 			"pasta",
 			"sausage",
 			"italian",
-			"spicy"
+			"spicy",
+			"cajun"
+		],
+		"ingredients": [
+			"1 full sized andouille sausage",
+			"5 cloves garlic",
+			"1 quart chicken broth",
+			"2 1/2 cups heavy cream",
+			"1 pound penne pasta",
+			"2 tblsp cajun seasoning",
+			"4 oz (1/2 cup) fresh grated parmigano reggiano (regular parm is fine too)",
+			"1/4 cup fresh chopped flat-leaf parsley"
+		],
+		"steps": [
+			"Chop up your sausage and brown in your pan",
+			"Chop up your garlic and add when your sausage is almost done. Cook for a few minutes until garlic is fragrant",
+			"Add your chicken broth, cream, and pasta all to the pot. Stir to combine",
+			"Add in half your cajun seasoning and allow to cook until pasta is al dente",
+			"Turn off the heat and stir in the cheese until fully incorporated. Add in the rest of your cajun seasoning",
+			"Sprinkle your chopped parsley on and serve hot!"
 		]
 	},
 	{
