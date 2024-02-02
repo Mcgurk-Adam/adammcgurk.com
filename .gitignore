@@ -14,5 +14,6 @@
 
 # other ignores
 node_modules/
+vendor/
 !.gitignore
 !sw.js
