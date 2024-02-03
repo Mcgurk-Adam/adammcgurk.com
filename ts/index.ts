@@ -6,10 +6,10 @@ if (window.location.pathname === "/") {
 		const cards:NodeListOf<HTMLElement> = document.querySelectorAll('.recipe-teaser');
 		happened++;
 		cards.forEach((card: HTMLElement) => {
-			let translateX = new WebKitCSSMatrix(getComputedStyle(card).transform).m41 - 50;
+			let translateX = new WebKitCSSMatrix(getComputedStyle(card).transform).m41 - .5;
 			card.style.transform = `translate3d(${translateX}px, 0, 0)`;
 		});
-		if (happened !== 0 && happened % 2000 === 0) {
+		if (happened !== 0 && happened % 1000 === 0) {
 			const cardToClone = cards[cloneNumber];
 			const clone = cardToClone.cloneNode(true) as HTMLElement;
 			recipeCarousel.appendChild(clone);
