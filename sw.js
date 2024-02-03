@@ -1,4 +1,4 @@
-const CACHE_NAME = "v2";
+const CACHE_NAME = "v3";
 const urlsToCache = [
     "/assets/checkmark.svg",
     "/assets/twitter.svg",
@@ -6,6 +6,7 @@ const urlsToCache = [
     "/assets/github.svg",
     "/assets/menu.svg",
     "/assets/devto.svg",
+    "/assets/hero.webp",
 ];
 
 self.addEventListener("install", event => {
