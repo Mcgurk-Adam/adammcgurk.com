@@ -41,7 +41,6 @@ section.home-sections {
 	flex-flow: row nowrap;
 	border-radius: 6px;
 	.recipe-teaser {
-		will-change: transform;
 		padding: 20px;
 		width: 270px;
 		background-color: var(--gray-2);
