@@ -1,48 +1,24 @@
 if (window.location.pathname === "/") {
-
-	const projectTabs:Tabs = new Tabs("#projects .tab-container", (allTabs:NodeListOf<HTMLButtonElement>) => {
-
-		const projectTiles = document.querySelectorAll("#projects .tile");
-		const selectedTags:Array<string> = [];
-
-		allTabs.forEach((tab:HTMLButtonElement) => {
-
-			if (tab.classList.contains("selected")) {
-				selectedTags.push(tab.getAttribute("name"));
-			}
-
+	const recipeCarousel = document.getElementById("recipe-carousel");
+	let happened = 0;
+	let cloneNumber = 0;
+	const animateCards = () => {
+		const cards:NodeListOf<HTMLElement> = document.querySelectorAll('.recipe-teaser');
+		happened++;
+		cards.forEach((card: HTMLElement) => {
+			let translateX = new WebKitCSSMatrix(getComputedStyle(card).transform).m41 - 40;
+			card.style.transform = `translate3d(${translateX}px, 0, 0)`;
 		});
-
-		// if nothing is selected, it defaults back to showing everything
-		if (selectedTags.length == 0) {
-
-			projectTiles.forEach((tile:HTMLElement) => tile.style.display = "flex");
-
-		} else {
-
-			projectTiles.forEach((tile:HTMLElement) => {
-
-				const allTags = tile.getAttribute("data-tech-tags");
-				let inTag = true;
-				selectedTags.forEach((tag:string) => {
-
-					// @ts-ignore working on the includes thing
-					if (!allTags.includes(tag)) {
-						inTag = false;
-					}
-
-				});
-
-				tile.style.display = inTag ? "flex" : "none";
-
-			})
-
+		if (happened !== 0 && happened % 1000 === 0) {
+			const cardToClone = cards[cloneNumber];
+			const clone = cardToClone.cloneNode(true) as HTMLElement;
+			console.log('cloned');
+			recipeCarousel.appendChild(clone);
+			cloneNumber++;
 		}
-
-	});
-
-	projectTabs.addListeners();
-
+		requestAnimationFrame(animateCards);
+	}
+	requestAnimationFrame(animateCards);
 }
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
