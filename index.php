@@ -1,5 +1,6 @@
 <?php
-$recipes = json_decode(file_get_contents('recipes.json'), true);
+$recipes = (json_decode(file_get_contents('recipes.json'), true));
+shuffle($recipes);
 if (empty($_SERVER['REQUEST_URI']) && $argv[1] === 'recipe') {
 	$singleRecipe = json_decode($argv[2], true);
 	$pagePath = 'view/includes/recipe-template.php';
