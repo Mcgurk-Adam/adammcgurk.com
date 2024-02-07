@@ -23,7 +23,7 @@
 			<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 		</a>
 
-		<input type="checkbox" aria-label="Toggle this button">
+		<input type="checkbox" id="mobile-helper-checkbox" aria-label="Toggle this button">
 		
 		<nav>
 
@@ -38,6 +38,8 @@
                 <a href="/contact" title="Contact Adam">Contact</a>
 
 			</div>
+
+            <button type="button" class="special" id="close-mobile-button"></button>
 
 		</nav>
 

@@ -19,6 +19,8 @@ if (window.location.pathname === "/") {
 	}
 	requestAnimationFrame(animateCards);
 }
+// @ts-ignore this is a checkbox element
+document.getElementById("close-mobile-button").addEventListener("click", () => document.getElementById("mobile-helper-checkbox").checked = false);
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
 		navigator.serviceWorker.register("/sw.js")

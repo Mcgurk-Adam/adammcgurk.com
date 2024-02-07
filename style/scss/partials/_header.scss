@@ -92,6 +92,18 @@ main {
 	margin-top: 120px;
 }
 
+#close-mobile-button {
+	height: 50px;
+	width: 50px;
+	background-position: center;
+	background-image: url(/assets/close.svg);
+	background-repeat: no-repeat;
+	background-size: 50px;
+	background-color: transparent;
+	margin-top: auto;
+	margin-bottom: 50px;
+}
+
 @media all and (max-width: 500px) {
 	header {
 		input[type=checkbox] {
@@ -110,6 +122,7 @@ main {
 			justify-content: flex-start;
 			background-color: #fff;
 			transition: top 250ms;
+			z-index: 999;
 			.main-title {
 				display: flex;
 				margin-bottom: 50px;
