@@ -19,7 +19,7 @@ do
 	else
 		PAGE_NAME=${SHORT_FILENAME%%"."*}
 		if [[ ! -d "$PAGE_NAME/" ]]; then
-			mkdir $PAGE_NAME
+			mkdir -p $PAGE_NAME
 		fi
 		php index.php $f > $PAGE_NAME/index.html
 	fi
@@ -30,7 +30,7 @@ cat recipes.json | jq -c '.[]' | while read i; do
     title=$(echo $i | jq -r '.title')
     NORMALIZED_PATH=$(echo $title | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -d '\n')
 		if [[ ! -d "recipes/$NORMALIZED_PATH/" ]]; then
-			mkdir "recipes/$NORMALIZED_PATH"
+			mkdir -p "recipes/$NORMALIZED_PATH"
 		fi
     php index.php recipe "$i" > "recipes/$NORMALIZED_PATH/index.html"
 done
