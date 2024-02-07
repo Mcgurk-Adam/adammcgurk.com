@@ -102,9 +102,13 @@ main {
 	background-color: transparent;
 	margin-top: auto;
 	margin-bottom: 50px;
+	display: none;
 }
 
 @media all and (max-width: 500px) {
+	#close-mobile-button {
+		display: block;
+	}
 	header {
 		input[type=checkbox] {
 			display: block;
