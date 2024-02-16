@@ -215,7 +215,25 @@
 			"fish",
 			"easy",
 			"quick"
-		]
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Salmon",
+				"sectionIngredients": [
+					"3 Pounds of wild caught salmon (or your preference)",
+					"1/8 cup olive oil",
+					"juice from 1 lemon",
+					"1 tsp sea salt",
+					"1 tsp black pepper",
+					""
+				]
+			},
+			{
+				"sectionTitle": "Avocado Salsa",
+				"sectionIngredients": []
+			}
+		],
+		"steps": []
 	},
 	{
 		"title": "Shrimp Tacos",
