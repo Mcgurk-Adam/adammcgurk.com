@@ -44,6 +44,7 @@
 .recipe-blog-card {
 	max-width: 500px;
 	margin-right: 20px;
+	margin-bottom: 20px;
 	width: 95%;
 	display: flex;
 	flex-flow: column nowrap;
@@ -75,7 +76,7 @@
 		}
 		p {
 			text-align: center;
-			font-size: 16px;
+			font-size: 17px;
 			line-height: 1.5;
 			max-width: 500px;
 			width: 95%;
@@ -286,7 +287,6 @@ ol {
 		align-items: center;
 	}
 	.recipe-blog-card {
-		margin-bottom: 20px;
 		margin-right: 0;
 		hr {
 			width: 100%;

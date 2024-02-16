@@ -221,19 +221,45 @@
 				"sectionTitle": "Salmon",
 				"sectionIngredients": [
 					"3 Pounds of wild caught salmon (or your preference)",
+					"Olive Oil",
+					"Cracked Sea Salt",
+					"Cracked Black Pepper"
+				]
+			},
+			{
+				"sectionTitle": "Salmon Glaze",
+				"sectionIngredients": [
 					"1/8 cup olive oil",
 					"juice from 1 lemon",
 					"1 tsp sea salt",
 					"1 tsp black pepper",
-					""
+					"1 tablespoon of fresh minced garlic (can also use garlic from a jar)"
 				]
 			},
 			{
 				"sectionTitle": "Avocado Salsa",
-				"sectionIngredients": []
+				"sectionIngredients": [
+					"2 or 3 ripe avocados",
+					"Juice of 1 lime (lemon would work too)",
+					"1 tsp sea salt",
+					"1 tsp coarse black pepper",
+					"1 tablespoon of fresh minced garlic (can also use garlic from a jar",
+					"2 tsp of hot sauce",
+					"2 tablespoons of chopped cilantro"
+				]
 			}
 		],
-		"steps": []
+		"steps": [
+			"Preheat oven to 375",
+			"Take some foil and put it on a large enough oven safe pan for your salmon",
+			"Rub the fish lightly with olive oil and crack on your salt and pepper until the salmon is well seasoned",
+			"Mix all of your glaze ingredients together and pour your glaze on and over your salmon until it is fully covered and incorporated",
+			"Put the salmon in the oven and let it cook for 20-25 minutes or until fully cooked with the sides slightly burning",
+			"While the salmon cooks, mix your salsa together",
+			"Roughly chop your avocados and put them in a small bowl",
+			"Take the rest of your salsa ingredients and mix them into your avocados and mix it well, trying not to mash the avocados too much",
+			"When the salmon is done, serve with the salsa on top"
+		]
 	},
 	{
 		"title": "Shrimp Tacos",
