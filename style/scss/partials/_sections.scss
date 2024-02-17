@@ -24,7 +24,7 @@ section.home-sections {
 		font-size: 30px;
 		text-align: center;
 		text-decoration: underline;
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 	}
 	&.white {
 		background-color: #fff;
@@ -36,14 +36,17 @@ section.home-sections {
 	width: 95%;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 0 auto;
 	.experience-card {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
-		width: 500px;
-		margin-bottom: 50px;
+		width: 400px;
+		margin-bottom: 75px;
+		h3 {
+			font-size: 22px;
+		}
 		img {
 			height: 75px;
 			width: auto;
