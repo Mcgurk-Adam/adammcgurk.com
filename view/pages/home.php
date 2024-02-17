@@ -10,22 +10,22 @@
             <div class="experience-card">
                 <img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar Logo">
                 <h3>Shine Solar</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Shine Solar" data-img="/assets/shine-solar-mark.svg" data-undertext="Lead Developer">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/unbabel-mark.svg" alt="Unbabel Logo" title="Unbabel Logo">
                 <h3>Unbabel</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Unbabel" data-img="/assets/unbabel-mark.svg" data-undertext="Microsoft Integration Developer">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/onramp-mark.svg" alt="OnRamp Logo" title="OnRamp Logo">
                 <h3>OnRamp</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="OnRamp" data-img="/assets/onramp-mark.svg" data-undertext="Software Development Consultant">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/bamboohr-mark.svg" alt="BambooHR Logo Mark" title="BambooHR Logo Mark">
                 <h3>BambooHR</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="BambooHR" data-img="/assets/bamboohr-mark.svg" data-undertext="Senior Software Engineer, Backend">Learn More</button>
             </div>
         </div>
     </section>
@@ -55,9 +55,9 @@
 <div class="modal" id="experience-modal">
     <div class="inner">
         <button type="button" class="close special"></button>
-        <img src="/assets/shine-solar-mark.svg" alt="Logo" title="Logo">
-        <h3>Shine Solar</h3>
-        <p class="position">Lead Developer</p>
+        <img src="" alt="Logo" title="Logo">
+        <h3></h3>
+        <p class="undertext"></p>
         <div class="points"></div>
     </div>
 </div>

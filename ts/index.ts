@@ -25,12 +25,23 @@ modals.forEach((modal: HTMLElement) => {
 	closeButton.addEventListener("click", () => {
 		modal.classList.remove("open");
 	});
+	modal.addEventListener("click", (event: Event) => {
+		if (event.target === modal) {
+			modal.classList.remove("open");
+		}
+	});
 });
 const modalOpenButtons = document.querySelectorAll("[data-opens]");
 modalOpenButtons.forEach((button: HTMLElement) => {
 	button.addEventListener("click", () => {
 		const queryOfModal = button.getAttribute("data-opens");
 		const modal = document.querySelector(queryOfModal);
+		const title = button.getAttribute("data-title");
+		const img = button.getAttribute("data-img");
+		const undertext = button.getAttribute("data-undertext");
+		modal.querySelector("h3").innerText = title;
+		modal.querySelector("img").setAttribute("src", img);
+		modal.querySelector(".undertext").innerText = undertext;
 		modal.classList.add("open");
 	});
 });
