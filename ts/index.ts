@@ -19,6 +19,21 @@ if (window.location.pathname === "/") {
 	}
 	requestAnimationFrame(animateCards);
 }
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal: HTMLElement) => {
+	const closeButton = modal.querySelector(".close");
+	closeButton.addEventListener("click", () => {
+		modal.classList.remove("open");
+	});
+});
+const modalOpenButtons = document.querySelectorAll("[data-opens]");
+modalOpenButtons.forEach((button: HTMLElement) => {
+	button.addEventListener("click", () => {
+		const queryOfModal = button.getAttribute("data-opens");
+		const modal = document.querySelector(queryOfModal);
+		modal.classList.add("open");
+	});
+});
 // @ts-ignore this is a checkbox element
 document.getElementById("close-mobile-button").addEventListener("click", () => document.getElementById("mobile-helper-checkbox").checked = false);
 if ("serviceWorker" in navigator) {

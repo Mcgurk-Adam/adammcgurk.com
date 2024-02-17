@@ -10,22 +10,22 @@
             <div class="experience-card">
                 <img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar Logo">
                 <h3>Shine Solar</h3>
-                <button type="button" class="light-blue small">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/unbabel-mark.svg" alt="Unbabel Logo" title="Unbabel Logo">
                 <h3>Unbabel</h3>
-                <button type="button" class="light-blue small">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/onramp-mark.svg" alt="OnRamp Logo" title="OnRamp Logo">
                 <h3>OnRamp</h3>
-                <button type="button" class="light-blue small">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/bamboohr-mark.svg" alt="BambooHR Logo Mark" title="BambooHR Logo Mark">
                 <h3>BambooHR</h3>
-                <button type="button" class="light-blue small">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal">Learn More</button>
             </div>
         </div>
     </section>

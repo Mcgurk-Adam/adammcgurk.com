@@ -10,6 +10,10 @@
 	justify-content: center;
 	align-items: center;
 	transition: 200ms all;
+	transform: scale(0);
+	&.open {
+		transform: scale(1);
+	}
 	.inner {
 		background-color: #fff;
 		border-radius: 12px;
