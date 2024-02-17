@@ -51,3 +51,13 @@
     </section>
 
 </main>
+
+<div class="modal" id="experience-modal">
+    <div class="inner">
+        <button type="button" class="close special"></button>
+        <img src="/assets/shine-solar-mark.svg" alt="Logo" title="Logo">
+        <h3>Shine Solar</h3>
+        <p class="position">Lead Developer</p>
+        <div class="points"></div>
+    </div>
+</div>

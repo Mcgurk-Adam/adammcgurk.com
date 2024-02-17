@@ -1,0 +1,54 @@
+.modal {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 200ms all;
+	.inner {
+		background-color: #fff;
+		border-radius: 12px;
+		width: 500px;
+		padding: 50px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		position: relative;
+		button.close {
+			background-repeat: no-repeat;
+			background-size: 50px;
+			background-image: url(/assets/close.svg);
+			background-position: center;
+			cursor: pointer;
+			height: 50px;
+			width: 50px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background-color: transparent;
+			transition: 150ms all;
+			&:active {
+				opacity: .9;
+				transform: scale(.9);
+			}
+		}
+		img {
+			height: 75px;
+			width: auto;
+			margin-bottom: 20px;
+		}
+		h3 {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		.position {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+	}
+}
