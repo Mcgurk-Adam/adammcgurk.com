@@ -25,7 +25,7 @@
             <div class="experience-card">
                 <img src="/assets/bamboohr-mark.svg" alt="BambooHR Logo Mark" title="BambooHR Logo Mark">
                 <h3>BambooHR</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://bamboohr.com" data-title="BambooHR" data-img="/assets/bamboohr-mark.svg" data-undertext="Senior Software Engineer, Backend">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://bamboohr.com" data-title="BambooHR" data-img="/assets/bamboohr-mark.svg" data-undertext="Senior Software Engineer, Backend" data-points="Was the founding tech lead of the customer lifecycle team.|Shipped a revamped cancellation experience that decreased total customer support tickets by 15% in the company.|Pioneered AI in the product by introducing the first in product feature that used AI, a data cleaning feature for onboarding.|Led the team as we built a completely reimagined onboarding experience, allowing our customer success team to adopt 25% more customers with no increase in internal headcount.">Learn More</button>
             </div>
         </div>
     </section>
