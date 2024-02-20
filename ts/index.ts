@@ -44,12 +44,27 @@ modalOpenButtons.forEach((button: HTMLElement) => {
 		const queryOfModal = button.getAttribute("data-opens");
 		const modal = document.querySelector(queryOfModal);
 		const title = button.getAttribute("data-title");
+		const link = button.getAttribute("data-link");
 		const img = button.getAttribute("data-img");
 		const undertext = button.getAttribute("data-undertext");
-		modal.querySelector("h3").innerText = title;
+		const points = button.getAttribute("data-points").split("|");
+		const nameElement: HTMLElement = modal.querySelector(".name");
+		nameElement.innerText = title;
+		nameElement.setAttribute("href", link);
+		nameElement.setAttribute("title", title);
+		const imgATag = modal.querySelector(".img-a");
+		imgATag.setAttribute("href", link);
+		imgATag.setAttribute("title", title);
 		modal.querySelector("img").setAttribute("src", img);
 		// @ts-expect-error
 		modal.querySelector(".undertext").innerText = undertext;
+		const copiedLiElementFromPoints = modal.querySelector("ul").querySelector("li").cloneNode(true);
+		modal.querySelector("ul").innerHTML = "";
+		points.forEach((point: string) => {
+			const li = copiedLiElementFromPoints.cloneNode(true) as HTMLUListElement;
+			li.innerHTML = point;
+			modal.querySelector("ul").appendChild(li);
+		});
 		modal.classList.add("open");
 	});
 });

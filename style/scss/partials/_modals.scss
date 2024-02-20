@@ -48,14 +48,28 @@
 			width: auto;
 			margin-bottom: 20px;
 		}
-		h3 {
+		.name {
 			font-size: 30px;
 			margin-bottom: 10px;
+			text-decoration: underline;
+			color: var(--heading-color);
 		}
 		.undertext {
 			font-size: 16px;
 			margin-bottom: 20px;
-			color: var(--text-color);
+			color: var(--gray-6);
+		}
+		ul {
+			li {
+				line-height: 20px;
+				font-size: 16px;
+				color: var(--text-color);
+				margin-bottom: 10px;
+				a {
+					color: var(--heading-color);
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

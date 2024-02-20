@@ -10,22 +10,22 @@
             <div class="experience-card">
                 <img src="/assets/shine-solar-mark.svg" alt="Shine Solar Logo" title="Shine Solar Logo">
                 <h3>Shine Solar</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Shine Solar" data-img="/assets/shine-solar-mark.svg" data-undertext="Lead Developer">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://shinesolar.com" data-title="Shine Solar" data-img="/assets/shine-solar-mark.svg" data-undertext="Lead Developer" data-points="Was the first engineering hire and grew the team to seven.|Built the company's mobile app <a href='https://shinesolar.app' title='Shine Solar App' target='_blank' rel='noopener'>The Shine Solar App</a>, supporting over 1000 customers during and after their installation.|Built and maintained the company's custom CRM and ERP <a href='https://luminaryapps.io' title='Luminary' target='_blank' rel='noopener'>Luminary</a> which supported thousands of calls a day and tens of millions of dollars a month.|Built and maintained over 50 websites for the company.">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/unbabel-mark.svg" alt="Unbabel Logo" title="Unbabel Logo">
                 <h3>Unbabel</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Unbabel" data-img="/assets/unbabel-mark.svg" data-undertext="Software Development Consultant">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://unbabel.com" data-title="Unbabel" data-img="/assets/unbabel-mark.svg" data-undertext="Software Development Consultant" data-points="Built and maintained the company's <a href='https://appsource.microsoft.com/en-us/product/dynamics-365/unbabel1586431770145.unbabel' title='Microsoft Dynamics app link'>Microsoft Dynamics App</a>, powering thousands of customer emails a month.|Pioneered fully automated CI/CD for testing, building, and delivering an app source app on Github Actions.|Worked closely with Fortune 500 companies to support their specific needs and iterate on the integration build.|Built a micro blog around my learnings and findings building a Microsoft Dynamics app - <a href='https://dynamicsdevhub.com' title='DynamicsDevHub link'>DynamicsDevHub</a>.">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/onramp-mark.svg" alt="OnRamp Logo" title="OnRamp Logo">
                 <h3>OnRamp</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="OnRamp" data-img="/assets/onramp-mark.svg" data-undertext="Software Development Consultant">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://onramp.us" data-title="OnRamp" data-img="/assets/onramp-mark.svg" data-undertext="Software Development Consultant" data-points="Built and maintained the company's full integration suite, including integrating with Salesforce, Hubspot, Slack, and more.|Built and maintained the company's SSO suite, including Google SSO and SAML SSO.|Built the company's queueing system that processed emails, webhook reception, and integration processing.|Worked closely with customers on specific customer issues as they arose.">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/bamboohr-mark.svg" alt="BambooHR Logo Mark" title="BambooHR Logo Mark">
                 <h3>BambooHR</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="BambooHR" data-img="/assets/bamboohr-mark.svg" data-undertext="Senior Software Engineer, Backend">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-link="https://bamboohr.com" data-title="BambooHR" data-img="/assets/bamboohr-mark.svg" data-undertext="Senior Software Engineer, Backend">Learn More</button>
             </div>
         </div>
     </section>
@@ -78,9 +78,11 @@
 <div class="modal" id="experience-modal">
     <div class="inner">
         <button type="button" class="close special"></button>
-        <img src="" alt="Logo" title="Logo">
-        <h3></h3>
+        <a href="" title="" target="_blank" rel="noopener" class="img-a"><img src="" alt="Logo" title="Logo"></a>
+        <a href="" title="" target="_blank" rel="noopener" class="name"></a>
         <p class="undertext"></p>
-        <div class="points"></div>
+        <ul class="points">
+            <li></li>
+        </ul>
     </div>
 </div>
