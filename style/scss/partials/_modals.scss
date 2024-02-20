@@ -10,9 +10,11 @@
 	justify-content: center;
 	align-items: center;
 	transition: 200ms all;
-	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
 	&.open {
-		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
 	}
 	.inner {
 		background-color: #fff;
