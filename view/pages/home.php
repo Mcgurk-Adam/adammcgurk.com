@@ -15,7 +15,7 @@
             <div class="experience-card">
                 <img src="/assets/unbabel-mark.svg" alt="Unbabel Logo" title="Unbabel Logo">
                 <h3>Unbabel</h3>
-                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Unbabel" data-img="/assets/unbabel-mark.svg" data-undertext="Microsoft Integration Developer">Learn More</button>
+                <button type="button" class="light-blue small" data-opens="#experience-modal" data-title="Unbabel" data-img="/assets/unbabel-mark.svg" data-undertext="Software Development Consultant">Learn More</button>
             </div>
             <div class="experience-card">
                 <img src="/assets/onramp-mark.svg" alt="OnRamp Logo" title="OnRamp Logo">
@@ -31,6 +31,17 @@
     </section>
 
     <section class="home-sections white">
+        <h2>Projects</h2>
+        <div id="project-container">
+            <div class="project-card">
+                <img src="/assets/cloud-kill-switch-logo.svg" alt="Cloud Kill Switch logo" title="Cloud Kill Switch logo">
+                <h3>Cloud Kill Switch</h3>
+                <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button red">Visit Website</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-sections">
         <h2>Recipes</h2>
         <div id="recipe-carousel">
             <?php foreach ($recipes as $recipe): ?>
@@ -46,7 +57,7 @@
         </div>
     </section>
 
-    <section class="home-sections">
+    <section class="home-sections white">
         <h2>Writing Hub</h2>
     </section>
 

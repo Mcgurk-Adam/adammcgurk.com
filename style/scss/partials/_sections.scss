@@ -56,6 +56,30 @@ section.home-sections {
 	}
 }
 
+#project-container {
+	display: flex;
+	justify-content: center;
+	.project-card {
+		width: 250px;
+		border-radius: 8px;
+		background-color: var(--gray-2);
+		box-shadow: 1px 1px 15px rgba(0,0,0,.3);
+		padding: 50px 20px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		h3 {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		img {
+			height: 75px;
+			width: auto;
+			margin-bottom: 20px;
+		}
+	}
+}
+
 #recipe-carousel {
 	max-width: 600px;
 	width: 95%;
