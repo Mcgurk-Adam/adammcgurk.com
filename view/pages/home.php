@@ -38,6 +38,11 @@
                 <h3>Cloud Kill Switch</h3>
                 <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button red" target="_blank" rel="noopener">Visit Website</a>
             </div>
+            <div class="project-card">
+                <img src="/assets/dynamics-dev-hub-logo.svg" alt="DynamicsDevHub logo" title="DynamicsDevHub logo">
+                <h3>DynamicsDevHub</h3>
+                <a href="https://dynamicsdevhub.com/" title="DynamicsDevHub Link" class="button light-blue" target="_blank" rel="noopener">Visit Website</a>
+            </div>
         </div>
     </section>
 
@@ -59,7 +64,7 @@
 
     <section class="home-sections" id="writing-hub">
         <h2>Writing Hub</h2>
-        <p>One of my favorite ways to express myself is through writing. My website is where I post much of my writing. Anything from fictional stories I've created, technology articles, writing about sports, and other miscellaneous prose is all at my writing hub.</p>
+        <p>I love expressing myself through writing. My website is my canvas, featuring everything from fictional tales and tech articles to sports commentary and assorted musings. Explore my writing hub for a diverse collection of my works.</p>
         <a href="/writing-hub" title="Go to the writing hub" class="button yellow">Explore the writing hub</a>
     </section>
 
