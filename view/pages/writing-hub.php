@@ -15,7 +15,7 @@
             <img src="/assets/sports-icon.svg" alt="An icon representing sports" title="An icon representing sports">
         </a>
         <a class="writing-tile" href="/writing-hub/essays" title="The essay section of the writing hub">
-            <h3>Essays</h3>
+            <h3>Blog</h3>
             <img src="/assets/essay-icon.svg" alt="An icon representing essays" title="An icon representing essays">
         </a>
     </div>

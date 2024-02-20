@@ -9,17 +9,20 @@ a.button, button:not(.special) {
 	border-radius: 4px;
 	font-size: 16px;
 	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
 	&:active {
 		opacity: .8;
 		transform: scale(.95);
 	}
 	&.red {
 		background-color: var(--red-1);
-		color: #fff;
 	}
 	&.light-blue {
 		background-color: var(--gray-6);
-		color: #fff;
+	}
+	&.yellow {
+		background-color: var(--yellow-2);
 	}
 	&.small {
 		height: 30px;

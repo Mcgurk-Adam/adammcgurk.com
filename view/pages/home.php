@@ -4,7 +4,7 @@
         <h1>Welcome to adammcgurk.com</h1>
 	</section>
 
-    <section class="home-sections">
+    <section class="home-sections white">
         <h2>Professional Experience</h2>
         <div id="pro-experience-container">
             <div class="experience-card">
@@ -30,18 +30,18 @@
         </div>
     </section>
 
-    <section class="home-sections white">
+    <section class="home-sections">
         <h2>Projects</h2>
         <div id="project-container">
             <div class="project-card">
                 <img src="/assets/cloud-kill-switch-logo.svg" alt="Cloud Kill Switch logo" title="Cloud Kill Switch logo">
                 <h3>Cloud Kill Switch</h3>
-                <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button red">Visit Website</a>
+                <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button red" target="_blank" rel="noopener">Visit Website</a>
             </div>
         </div>
     </section>
 
-    <section class="home-sections">
+    <section class="home-sections white">
         <h2>Recipes</h2>
         <div id="recipe-carousel">
             <?php foreach ($recipes as $recipe): ?>
@@ -57,8 +57,10 @@
         </div>
     </section>
 
-    <section class="home-sections white">
+    <section class="home-sections" id="writing-hub">
         <h2>Writing Hub</h2>
+        <p>One of my favorite ways to express myself is through writing. My website is where I post much of my writing. Anything from fictional stories I've created, technology articles, writing about sports, and other miscellaneous prose is all at my writing hub.</p>
+        <a href="/writing-hub" title="Go to the writing hub" class="button yellow">Explore the writing hub</a>
     </section>
 
 </main>
