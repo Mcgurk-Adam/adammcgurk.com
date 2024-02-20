@@ -20,6 +20,13 @@ if (window.location.pathname === "/") {
 	requestAnimationFrame(animateCards);
 }
 const modals = document.querySelectorAll(".modal");
+document.addEventListener("keydown", (event: KeyboardEvent) => {
+	if (event.key === "Escape") {
+		modals.forEach((modal: HTMLElement) => {
+			modal.classList.remove("open");
+		});
+	}
+});
 modals.forEach((modal: HTMLElement) => {
 	const closeButton = modal.querySelector(".close");
 	closeButton.addEventListener("click", () => {
@@ -41,6 +48,7 @@ modalOpenButtons.forEach((button: HTMLElement) => {
 		const undertext = button.getAttribute("data-undertext");
 		modal.querySelector("h3").innerText = title;
 		modal.querySelector("img").setAttribute("src", img);
+		// @ts-expect-error
 		modal.querySelector(".undertext").innerText = undertext;
 		modal.classList.add("open");
 	});
