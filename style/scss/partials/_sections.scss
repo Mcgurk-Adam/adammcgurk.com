@@ -47,8 +47,14 @@ section.home-sections {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
-		width: 300px;
+		width: 250px;
 		margin-bottom: 75px;
+		border-radius: 8px;
+		transition: 250ms box-shadow;
+		padding: 50px 20px;
+		&:hover, &:active {
+			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+		}
 		h3 {
 			font-size: 22px;
 			margin-bottom: 20px;
@@ -63,23 +69,19 @@ section.home-sections {
 
 #project-container {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
 	.project-card {
 		width: 250px;
 		border-radius: 8px;
-		background-color: #fff;
 		padding: 50px 20px;
-		box-shadow: 1px 1px 6px rgba(0,0,0,.5);
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
 		margin-bottom: 40px;
 		transition: 250ms box-shadow;
 		&:hover, &:active {
-			box-shadow: 1px 1px 10px rgba(0,0,0,.5);
-		}
-		&:not(:last-child) {
-			margin-right: 40px;
+			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
 		}
 		h3 {
 			font-size: 22px;
@@ -94,7 +96,7 @@ section.home-sections {
 }
 
 #recipe-carousel {
-	max-width: 600px;
+	max-width: 800px;
 	width: 95%;
 	margin: 0 auto;
 	overflow-x: hidden;
@@ -148,17 +150,5 @@ section.home-sections {
 		line-height: 1.25;
 		font-size: 18px;
 		width: 95%;
-	}
-}
-
-@media all and (max-width: 600px) {
-	#project-container {
-		flex-flow: column nowrap;
-		align-items: center;
-		.project-card {
-			&:not(:last-child) {
-				margin-right: 0;
-			}
-		}
 	}
 }
