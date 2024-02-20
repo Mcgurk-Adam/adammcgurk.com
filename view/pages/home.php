@@ -4,7 +4,7 @@
         <h1>Welcome to adammcgurk.com</h1>
 	</section>
 
-    <section class="home-sections white">
+    <section class="home-sections">
         <h2>Professional Experience</h2>
         <div id="pro-experience-container">
             <div class="experience-card">
@@ -30,7 +30,7 @@
         </div>
     </section>
 
-    <section class="home-sections">
+    <section class="home-sections white">
         <h2>Projects</h2>
         <div id="project-container">
             <div class="project-card">
@@ -51,7 +51,7 @@
         </div>
     </section>
 
-    <section class="home-sections white">
+    <section class="home-sections">
         <h2>Recipes</h2>
         <div id="recipe-carousel">
             <?php foreach ($recipes as $recipe): ?>
@@ -67,11 +67,11 @@
         </div>
     </section>
 
-    <section class="home-sections" id="writing-hub">
+<!--    <section class="home-sections" id="writing-hub">
         <h2>Writing Hub</h2>
         <p>I love expressing myself through writing. My website is my canvas, featuring everything from fictional tales and tech articles to sports commentary and assorted musings. Explore my writing hub for a diverse collection of my works.</p>
         <a href="/writing-hub" title="Go to the writing hub" class="button yellow">Explore the writing hub</a>
-    </section>
+    </section>-->
 
 </main>
 
