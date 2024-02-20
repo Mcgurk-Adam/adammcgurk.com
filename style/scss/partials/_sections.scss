@@ -68,12 +68,16 @@ section.home-sections {
 		width: 250px;
 		border-radius: 8px;
 		background-color: #fff;
-		box-shadow: 1px 1px 15px rgba(0,0,0,.3);
 		padding: 50px 20px;
+		box-shadow: 1px 1px 6px rgba(0,0,0,.5);
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
 		margin-bottom: 40px;
+		transition: 250ms box-shadow;
+		&:hover {
+			box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+		}
 		&:not(:last-child) {
 			margin-right: 40px;
 		}
