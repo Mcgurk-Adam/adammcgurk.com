@@ -19,12 +19,15 @@
 	.inner {
 		background-color: #fff;
 		border-radius: 12px;
-		width: 500px;
+		width: 95%;
+		max-width: 500px;
 		padding: 50px;
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
 		position: relative;
+		max-height: 95%;
+		overflow-y: scroll;
 		button.close {
 			background-repeat: no-repeat;
 			background-size: 50px;
