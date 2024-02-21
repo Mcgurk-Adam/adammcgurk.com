@@ -8,10 +8,10 @@
 	z-index: 100;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	transition: 200ms all;
 	opacity: 0;
 	visibility: hidden;
+	padding-top: 50px;
 	&.open {
 		opacity: 1;
 		visibility: visible;
@@ -28,6 +28,7 @@
 		position: relative;
 		max-height: 95%;
 		overflow-y: scroll;
+		height: fit-content;
 		button.close {
 			background-repeat: no-repeat;
 			background-size: 50px;
