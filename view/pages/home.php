@@ -45,7 +45,7 @@
             </div>
             <div class="project-card">
                 <img src="/assets/dynamics-dev-hub-logo.svg" alt="DynamicsDevHub logo" title="DynamicsDevHub logo">
-                <h3>DynamicsDevHub</h3>
+                <h3>Dynamics Dev Hub</h3>
                 <a href="https://dynamicsdevhub.com/" title="DynamicsDevHub Link" class="button light-blue" target="_blank" rel="noopener">Visit Website</a>
             </div>
         </div>
