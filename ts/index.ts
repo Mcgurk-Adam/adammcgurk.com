@@ -40,7 +40,19 @@ modals.forEach((modal: HTMLElement) => {
 });
 const modalOpenButtons = document.querySelectorAll("[data-opens]");
 modalOpenButtons.forEach((button: HTMLElement) => {
-	button.addEventListener("click", () => {
+	button.addEventListener("mouseover", (ev: MouseEvent) => {
+		const queryOfModal = button.getAttribute("data-opens");
+		const modal = document.querySelector(queryOfModal);
+		const img = button.getAttribute("data-img");
+		modal.querySelector("img").setAttribute("src", img);
+	});
+	button.addEventListener("touchstart", (ev: TouchEvent) => {
+		const queryOfModal = button.getAttribute("data-opens");
+		const modal = document.querySelector(queryOfModal);
+		const img = button.getAttribute("data-img");
+		modal.querySelector("img").setAttribute("src", img);
+	});
+	button.addEventListener("click", (ev: MouseEvent) => {
 		const queryOfModal = button.getAttribute("data-opens");
 		const modal = document.querySelector(queryOfModal);
 		const title = button.getAttribute("data-title");

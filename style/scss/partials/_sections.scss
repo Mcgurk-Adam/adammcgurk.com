@@ -47,7 +47,7 @@ section.home-sections {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
-		width: 250px;
+		width: 300px;
 		margin-bottom: 75px;
 		border-radius: 8px;
 		transition: 250ms box-shadow;
@@ -72,7 +72,7 @@ section.home-sections {
 	flex-flow: row wrap;
 	justify-content: center;
 	.project-card {
-		width: 250px;
+		width: 300px;
 		border-radius: 8px;
 		padding: 50px 20px;
 		display: flex;
