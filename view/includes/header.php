@@ -39,7 +39,7 @@
 
 			</div>
 
-            <button type="button" class="special" id="close-mobile-button"></button>
+            <button type="button" class="special" id="close-mobile-button" aria-label="Mobile navigation close button"></button>
 
 		</nav>
 
