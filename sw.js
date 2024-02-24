@@ -1,4 +1,4 @@
-const CACHE_NAME = "v4";
+const CACHE_NAME = "v5";
 const urlsToCache = [
     "/assets/checkmark.svg",
     "/assets/twitter.svg",
