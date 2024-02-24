@@ -51,6 +51,8 @@ modalOpenButtons.forEach((button: HTMLElement) => {
 		const modal = document.querySelector(queryOfModal);
 		const img = button.getAttribute("data-img");
 		modal.querySelector("img").setAttribute("src", img);
+	}, {
+		passive: true,
 	});
 	button.addEventListener("click", (ev: MouseEvent) => {
 		const queryOfModal = button.getAttribute("data-opens");
