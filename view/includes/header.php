@@ -10,11 +10,11 @@
 		<noscript>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&family=Unica+One&display=swap">
 		</noscript>
+        <link rel="preload" href="/assets/hero.webp" as="image">
 		<link href="/style/style.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.ico">
 		<meta name="description" content="Explore my projects and background and learn how to work with me!">
-
 	</head>
 
 	<header>
