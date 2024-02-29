@@ -29,9 +29,6 @@ if (empty($_SERVER['REQUEST_URI']) && $argv[1] === 'recipe') {
 if (file_exists($pagePath)) {
 	require_once 'view/includes/header.php';
 	require_once $pagePath;
-	if (strpos($pagePath, 'blog') !== false) {
-		require_once 'view/includes/blog-footer.php';
-	}
 	require_once 'view/includes/footer.php';
 } else {
 	return false;
