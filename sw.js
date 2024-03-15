@@ -8,6 +8,7 @@ const urlsToCache = [
     "/assets/devto.svg",
     "/assets/hero.webp",
     "/assets/close.svg",
+    "/assets/AdamHeadshot.jpg",
 ];
 
 self.addEventListener("install", event => {

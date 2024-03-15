@@ -1,26 +1,15 @@
-figure.polaroid {
-
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	max-width: 285px;
-	border: 15px solid white;
-	border-radius: 15px;
-	transform: rotate(5deg);
-	box-shadow: 1px 1px 28px rgba(0,0,0,.3);
+#contact {
+	max-width: 1100px;
+	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 50px;
+}
 
-	img {
-		border-radius: 2px;
-	}
-
-	figcaption {
-		width: 100%;
-		text-align: center;
-		background-color: #fff;
-		padding-top: 15px;
-	}
-
+.headshot {
+	border-radius: 50%;
+	max-width: 250px;
+	width: 95%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 }

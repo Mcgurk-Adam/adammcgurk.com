@@ -189,6 +189,25 @@
 			"butter",
 			"bread",
 			"southern"
+		],
+		"ingredients": [
+			"1 1/2 cups buttermilk",
+			"4 eggs",
+			"4 tbs honey",
+			"1 3/4 cups fine cornmeal (medium grind is acceptable, large won't work)",
+			"1 tbs baking powder",
+			"1 tsp salt",
+			"3/4 tsp baking soda",
+			"1/3 cups white sugar",
+			"2 sticks melted butter",
+			"3 cups all purpose flour"
+		],
+		"steps": [
+			"Mix all ingredients in a large mixing bowl except butter and flour",
+			"Pour the melted butter into the mixture and mix",
+			"Pour the flour into the mixture and mix",
+			"Butter down (you can also use cooking spray) a large cast iron skillet and pour the mixture in",
+			"Bake at 375 for 30-35 minutes or until a toothpick comes out clean"
 		]
 	},
 	{
@@ -335,6 +354,47 @@
 			"chicken-wings",
 			"buffalo-sauce",
 			"spicy"
+		],
+		"steps": [
+			"Combine your buttermilk and pickle juice and drop your chicken wings in the mixture",
+			"Let the wings sit in the mixture for at least 30 minutes, but up to 24 hours",
+			"Combine the rest of the dry ingredients in a ziploc or paper bag and shake to mix",
+			"Take your wings out of the buttermilk mixture and drop them in the bag with the dry ingredients, shake vigorously until the wings are well coated, and set to the side",
+			"Set a small pot on your stove on low to medium heat and combine your hot sauce and butter",
+			"Stir the sauce until the butter is melted and the sauce is well combined",
+			"Add the rest of the buffalo sauce ingredients and stir until well combined",
+			"Let it just barely bubble on low heat. If it separates, that's OK, just stir it back together",
+			"Now, return to your chicken wings. There are a bunch of options, you can oil fry them, smoke them, or air fry them. If you're oil frying them, heat your oil to 375 and fry them for 10-12 minutes, continually flipping until they're done. If you're smoking them, smoke them at 250 for about 1 hour, continuously flipping every 20 minutes until done. If you're air frying them, air fry them at 375 for 25ish minutes, flipping until they're golden brown and crispy",
+			"Once your wings are done, toss them in your buffalo sauce and serve with your favorite dipping sauces and veggies"
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Buffalo Sauce",
+				"sectionIngredients": [
+					"3/4 cup of Frank's Red Hot Sauce",
+					"1 stick of cold butter",
+					"1/4 tsp worcestershire sauce",
+					"2 tbs white vinegar",
+					"1/2 tsp garlic powder",
+					"1/4 tsp cayenne pepper",
+					"2 tsp cracked sea salt"
+				]
+			},
+			{
+				"sectionTitle": "Chicken Wings",
+				"sectionIngredients": [
+					"1 1/2 cups buttermilk (approx)",
+					"1 cup pickle juice (approx)",
+					"About 2 pounds of chicken wings",
+					"About 2/3 cup cornstarch (not exact, just enough to coat the wings)",
+					"2 tsp salt",
+					"2 tsp pepper",
+					"1 tsp garlic powder",
+					"1 tsp onion powder",
+					"2 tsp paprika",
+					"1/2 tsp cayenne pepper"
+				]
+			}
 		]
 	},
 	{
