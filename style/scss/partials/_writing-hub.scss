@@ -88,6 +88,13 @@ hr {
 			width: 95%;
 		}
 	}
+	+ hr {
+		margin: 30px auto;
+		height: 1px;
+		width: 1100px;
+		max-width: 50%;
+		background-color: var(--gray-3);
+	}
 }
 
 .blog-post {

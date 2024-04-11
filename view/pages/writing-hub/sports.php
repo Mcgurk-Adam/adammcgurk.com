@@ -11,10 +11,11 @@
                 <img src="<?=$url?>.webp" title="<?=$article['title']?>" alt="<?=$article['imageAlt']?>">
             </div>
             <div class="words">
-                <h3><a href="/writing-hub/sports/<?=$article['title']?>" title="<?=$article['title']?>"><?=$article['title']?></a></h3>
-                <p><?=$article['subtext']?></p>
+                <h3><a href="/writing-hub/sports/<?=$implodedTitle?>" title="<?=$article['title']?>"><?=$article['title']?></a></h3>
+                <p><?=$article['subtitle']?></p>
             </div>
         </section>
+        <hr>
     <?php endforeach; ?>
 
 </main>
