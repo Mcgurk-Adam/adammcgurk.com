@@ -15,5 +15,8 @@
 # other ignores
 node_modules/
 vendor/
+env.php
+
+# Do not ignore the following
 !.gitignore
 !sw.js
