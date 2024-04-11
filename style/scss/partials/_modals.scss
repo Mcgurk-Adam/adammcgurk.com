@@ -77,3 +77,15 @@
 		}
 	}
 }
+
+@media all and (max-width: 500px) {
+	.modal {
+		padding-top: 0;
+		.inner {
+			width: 100%;
+			border-radius: 0;
+			height: 100%;
+			max-height: 100%;
+		}
+	}
+}
