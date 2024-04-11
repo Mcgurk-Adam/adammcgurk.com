@@ -77,12 +77,16 @@
 
 <div class="modal" id="experience-modal">
     <div class="inner">
-        <button type="button" class="close special"></button>
-        <a href="" title="" target="_blank" rel="noopener" class="img-a"><img src="" alt="Logo" title="Logo"></a>
-        <a href="" title="" target="_blank" rel="noopener" class="name"></a>
-        <p class="undertext"></p>
-        <ul class="points">
-            <li></li>
-        </ul>
+        <div class="top">
+            <button type="button" class="close special"></button>
+            <a href="" title="" target="_blank" rel="noopener" class="img-a"><img src="" alt="Logo" title="Logo"></a>
+            <a href="" title="" target="_blank" rel="noopener" class="name"></a>
+            <p class="undertext"></p>
+        </div>
+        <div class="scrollable-body">
+            <ul class="points">
+                <li></li>
+            </ul>
+        </div>
     </div>
 </div>
