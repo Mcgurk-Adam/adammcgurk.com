@@ -1,5 +1,6 @@
 const recipeCards = document.querySelectorAll(".recipe-blog-card");
 const recipeSearch: HTMLInputElement = document.getElementById("recipe-search") as HTMLInputElement;
+recipeSearch.focus();
 recipeSearch.addEventListener("input", (ev:InputEvent) => {
     const currentSearch:string = recipeSearch.value ?? "";
     recipeCards.forEach((card: HTMLDivElement) => {
