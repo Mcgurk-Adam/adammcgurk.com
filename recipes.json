@@ -465,6 +465,14 @@
 			"marinated",
 			"spicy",
 			"dinner"
+		],
+		"ingredients": [
+			"",
+			""
+		],
+		"steps": [
+			"",
+			""
 		]
 	},
 	{
@@ -477,6 +485,14 @@
 			"steak",
 			"marinated",
 			"dinner"
+		],
+		"ingredients": [
+			"",
+			""
+		],
+		"steps": [
+			"Combine all the ingredients besides the steak in a bowl or a gallon ziploc bag and mix well",
+			"Add the steak to the marinade and let sit for at least 30 minutes (probably at least 2 hours)"
 		]
 	},
 	{
