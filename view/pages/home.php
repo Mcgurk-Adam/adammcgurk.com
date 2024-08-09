@@ -36,7 +36,7 @@
             <div class="project-card">
                 <img src="/assets/cloud-kill-switch-logo.svg" alt="Cloud Kill Switch logo" title="Cloud Kill Switch logo">
                 <h3>Cloud Kill Switch</h3>
-                <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button red" target="_blank" rel="noopener">Visit Website</a>
+                <a href="https://cloudkillswitch.com/" title="Cloud Kill Switch Link" class="button light-blue" target="_blank" rel="noopener">Visit Website</a>
             </div>
             <div class="project-card">
                 <img src="/assets/optimize-mark.svg" alt="OptimizeFonts logo" title="OptimizeFonts logo">
@@ -44,9 +44,9 @@
                 <a href="https://optimizefonts.com/" title="OptimizeFonts Link" class="button yellow" target="_blank" rel="noopener">Visit Website</a>
             </div>
             <div class="project-card">
-                <img src="/assets/dynamics-dev-hub-logo.svg" alt="DynamicsDevHub logo" title="DynamicsDevHub logo">
-                <h3>Dynamics Dev Hub</h3>
-                <a href="https://dynamicsdevhub.com/" title="DynamicsDevHub Link" class="button light-blue" target="_blank" rel="noopener">Visit Website</a>
+                <img src="/assets/quitplanetfitnesslogo.svg" alt="Quit Planet Fitness logo" title="Quit Planet Fitness logo">
+                <h3>Quit Planet Fitness</h3>
+                <a href="https://quitplanetfitness.com/" title="Quit Planet Fitness Link" class="button red" target="_blank" rel="noopener">Visit Website</a>
             </div>
         </div>
     </section>

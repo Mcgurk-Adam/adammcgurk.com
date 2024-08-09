@@ -119,6 +119,44 @@
 			"pasta",
 			"chicken",
 			"italian"
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Chicken",
+				"sectionIngredients": [
+					"2-3 pounds chicken breast, sliced and pounded into cutlets",
+					"1/2 cup of cornstarch",
+					"1 tbsp of garlic powder",
+					"1 tbsp of onion powder",
+					"1 tbsp of smoked paprika",
+					"1 tbsp of sea salt",
+					"1 tbsp of black pepper",
+					"1/2 tsp of cayenne pepper"
+				]
+			},
+			{
+				"sectionTitle": "Sauce",
+				"sectionIngredients": [
+					"1 lb of pasta of your choice (spaghetti doesn't work great for this, we typically use Gemelli)",
+					"10 oz Cherry tomatoes (can use a little more or a little less, about the size of the medium container at the grocery store)",
+					"1 large shallot or two medium sized shallots, chopped",
+					"6-8 cloves of garlic, minced (or chopped is fine too)",
+					"1/2 tsp of red pepper flakes",
+					"1 cup of heavy cream",
+					"About 14 oz of chicken broth",
+					"1 tbsp of cornstarch",
+					"1/4 cup fresh chopped basil (1 tbsp dry)",
+					"1/4 cup fresh chopped parsley (1 tbsp dry)",
+					"1 tsp dry oregano",
+					"1 tsp dry thyme",
+					"1/3 cup fresh grated Parmesean Reggiano (regular parm is fine too)",
+					"1 1/2 cups of fresh spinach"
+				]
+			}
+		],
+		"steps": [
+			"Combine your spices in the chicken section into a gallon ziploc bag and shake to combine",
+			"Add your chicken to the bag and shake to coat"
 		]
 	},
 	{

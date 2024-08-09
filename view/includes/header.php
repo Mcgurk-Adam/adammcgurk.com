@@ -34,15 +34,15 @@
 				<img src="/assets/logo.svg" alt="A nifty little logo for my McGurk brand" title="McGurk" class="logo">
 			</a>
 
-			<div id="nav-links">
-
-				<a href="/writing-hub" title="Blog">Writing Hub</a>
-                <a href="/recipes" title="Adam's Recipes">Recipes</a>
-                <a href="/contact" title="Contact Adam">Contact</a>
-
-			</div>
-
-            <button type="button" class="special" id="close-mobile-button" aria-label="Mobile navigation close button"></button>
+<!--			<div id="nav-links">-->
+<!---->
+<!--				<a href="/writing-hub" title="Blog">Writing Hub</a>-->
+<!--                <a href="/recipes" title="Adam's Recipes">Recipes</a>-->
+<!--                <a href="/contact" title="Contact Adam">Contact</a>-->
+<!---->
+<!--			</div>-->
+<!---->
+<!--            <button type="button" class="special" id="close-mobile-button" aria-label="Mobile navigation close button"></button>-->
 
 		</nav>
 
