@@ -643,5 +643,29 @@
 			"After the spices are incorporated, add in the finishing ingredients and blend until incorporated",
 			"Now you can use this marinade for chicken, pork, or beef. I like to marinate my meat for at least 24 hours, but you can do it for as little as 4 hours. The longer the better though! For jerk, poke holes in the meat before marinating."
 		]
+	},
+	{
+		"title": "Pancakes",
+		"description": "The fluffiest, best pancake recipe you'll ever have",
+		"image": "pancakes.webp",
+		"imageAlt": "A table with a stack of pancakes with butter, syrup, blueberries, and chocolate chips",
+		"ingredients": [
+			"2 1/2 cups of all purpose flour",
+			"3 tablespoons of sugar",
+			"2 tsp of kosher salt",
+			"1 tsp baking powder",
+			"1 tsp baking soda",
+			"2 1/2 cups of buttermilk",
+			"1 stick of melted butter",
+			"2 eggs, whites and yolks separated"
+		],
+		"steps": [
+			"Combine the flour, sugar, salt, baking soda, baking powder, whisk together, and set to the side.",
+			"Combine the buttermilk, butter, and the egg yolks and set to the side.",
+			"Slowly add the wet ingredients to the dry ingredients and gently stir with a rubber spatula. Be sure to not overmix, this is IMPORTANT! It's okay if there are lumps.",
+			"Pour the egg whites into the mixture and gently fold them in.",
+			"Let the mixture sit for about 10 minutes. This is optional, but does help.",
+			"Heat up your pan, and throw some butter on the pan. Drop about a 1/4 cup of batter onto the pan and cook until bubbles form on the top. If you want to add blueberries or chocolate chips, drop them onto your pancake before flipping while the batter is still pretty wet."
+		]
 	}
 ]
