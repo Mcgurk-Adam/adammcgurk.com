@@ -37,6 +37,7 @@
     <div class="tabs">
         <div class="tab active" data-tab="ingredients">Ingredients</div>
         <div class="tab" data-tab="steps">Steps</div>
+        <div class="tab" data-tab="recipe-ai">Recipe AI <img src="/assets/sparkle-icon.svg" class="tab-icon" alt="AI Sparkles" title="AI Sparkle Icon"></div>
     </div>
     <div id="mobile-ingredients" class="mobile-recipe-body active">
 		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
@@ -63,6 +64,7 @@
         <?php endforeach; ?>
         </ol>
     </div>
+    <div id="mobile-recipe-ai" class="mobile-recipe-body"></div>
 </div>
 
 <script>

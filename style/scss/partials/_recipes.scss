@@ -223,7 +223,7 @@ ol {
 		top: 70px;
 		z-index: 50;
 		.tab {
-			width: 50%;
+			width: 33.3%;
 			height: 100%;
 			display: flex;
 			justify-content: center;
@@ -234,6 +234,14 @@ ol {
 			border-bottom: 2px solid var(--gray-3);
 			transition: 150ms all;
 			cursor: pointer;
+			.tab-icon {
+				height: 30px;
+				width: auto;
+			}
+			&:nth-child(2) {
+				border-right: 2px solid var(--gray-4);
+				border-left: 2px solid var(--gray-4);
+			}
 			&.active {
 				background-color: var(--gray-1);
 				border-bottom: 4px solid var(--yellow-1);

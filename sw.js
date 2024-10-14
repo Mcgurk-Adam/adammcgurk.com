@@ -27,7 +27,11 @@ self.addEventListener("fetch", event => {
                     if (response) {
                         return response;
                     }
-                    return fetch(event.request);
+                    try {
+                        return fetch(event.request);
+                    } catch (e) {
+                        console.log(`Failed with error ${e.message} on file ${event.request.url}`);
+                    }
                 }
             )
     );
