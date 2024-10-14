@@ -149,13 +149,13 @@
 					"1/4 cup fresh chopped parsley (1 tbsp dry)",
 					"1 tsp dry oregano",
 					"1 tsp dry thyme",
-					"1/3 cup fresh grated Parmesean Reggiano (regular parm is fine too)",
+					"1/3 cup fresh grated Parmigano Reggiano (regular parm is fine too)",
 					"1 1/2 cups of fresh spinach"
 				]
 			}
 		],
 		"steps": [
-			"Combine your spices in the chicken section into a gallon ziploc bag and shake to combine",
+			"Combine your spices in the chicken section into a gallon ziploc bag (or paper bag or something else similar) and shake to combine",
 			"Add your chicken to the bag and shake to coat"
 		]
 	},
@@ -649,6 +649,10 @@
 		"description": "The fluffiest, best pancake recipe you'll ever have",
 		"image": "pancakes.webp",
 		"imageAlt": "A table with a stack of pancakes with butter, syrup, blueberries, and chocolate chips",
+		"tags": [
+			"breakfast",
+			"pancakes"
+		],
 		"ingredients": [
 			"2 1/2 cups of all purpose flour",
 			"3 tablespoons of sugar",
