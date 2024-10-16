@@ -35,11 +35,11 @@
 
 <div class="recipe-mobile">
     <div class="tabs">
-        <div class="tab active" data-tab="ingredients">Ingredients</div>
+        <div class="tab" data-tab="ingredients">Ingredients</div>
         <div class="tab" data-tab="steps">Steps</div>
-        <div class="tab" data-tab="recipe-ai">Recipe AI <img src="/assets/sparkle-icon.svg" class="tab-icon" alt="AI Sparkles" title="AI Sparkle Icon"></div>
+        <div class="tab active" data-tab="recipe-ai">Recipe AI <img src="/assets/sparkle-icon.svg" class="tab-icon" alt="AI Sparkles" title="AI Sparkle Icon"></div>
     </div>
-    <div id="mobile-ingredients" class="mobile-recipe-body active">
+    <div id="mobile-ingredients" class="mobile-recipe-body">
 		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
             <?php if (gettype($ingredient) === 'array'): ?>
                 <h3><?=$ingredient['sectionTitle']?></h3>
@@ -64,18 +64,33 @@
         <?php endforeach; ?>
         </ol>
     </div>
-    <div id="mobile-recipe-ai" class="mobile-recipe-body"></div>
+    <div id="mobile-recipe-ai" class="mobile-recipe-body active" data-track-click="clicked on ai tab">
+        <form id="recipe-ai-input-container" method="POST" action="/ai/chat">
+            <textarea name="chat-message" id="chat-input"></textarea>
+            <div id="button-container">
+                <button type="submit" class="special"></button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>
     const tabs = document.querySelectorAll('.tab');
     const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             tabs.forEach(tab => tab.classList.remove('active'));
             mobileRecipeBodies.forEach(body => body.classList.remove('active'));
             tab.classList.add('active');
             document.querySelector(`#mobile-${tab.dataset.tab}`).classList.add('active');
+            if (tab.dataset.tab === 'recipe-ai') {
+                document.querySelector('#chat-input').focus();
+            }
         });
+    });
+    const chatInput = document.getElementById("chat-input");
+    chatInput.addEventListener("input", () => {
+        chatInput.style.height = "auto";
+        chatInput.style.height = (chatInput.scrollHeight) + "px";
     });
 </script>

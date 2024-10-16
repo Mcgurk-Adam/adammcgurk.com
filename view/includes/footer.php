@@ -21,6 +21,25 @@
 
 </footer>
 
+<script>
+    function trackEvent(eventName) {
+        if (fathom) {
+            fathom.trackEvent(eventName);
+        } else {
+            console.log(`Would have logged an event to Fathom called ${eventName}`);
+        }
+    }
+    const eventsToPotentiallyTrack = ["click", "touchstart", "input", "blur", "drop", "focus"];
+    eventsToPotentiallyTrack.forEach((eventName) => {
+        const eventsToTrack = document.querySelectorAll(`[data-track-${eventName}]`);
+        eventsToTrack.forEach((element) => {
+            element.addEventListener(eventName, () => {
+                trackEvent(element.getAttribute(`data-track-${eventName}`));
+            });
+        });
+    });
+</script>
+
 <script src="/js/build.js"></script>
 
 </body>
