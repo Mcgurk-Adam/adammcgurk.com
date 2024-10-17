@@ -31,6 +31,7 @@
 			<?php endforeach; ?>
         </ol>
     </div>
+    <button class="special" id="desktop-recipe-ai-button"></button>
 </div>
 
 <div class="recipe-mobile">
@@ -89,8 +90,5 @@
         });
     });
     const chatInput = document.getElementById("chat-input");
-    chatInput.addEventListener("input", () => {
-        chatInput.style.height = "auto";
-        chatInput.style.height = (chatInput.scrollHeight) + "px";
-    });
+    chatInput.addEventListener("input", () => chatInput.style.height = (chatInput.scrollHeight) + "px");
 </script>
