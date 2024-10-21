@@ -102,10 +102,13 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	padding-bottom: 20px;
 	h1 {
 		color: #fff;
 		font-size: clamp(25px, 6vw, 50px);
+		margin-bottom: 20px;
+	}
+	.resize {
+		display: none;
 	}
 }
 
@@ -421,6 +424,20 @@ ol {
 	}
 	.recipe-mobile {
 		display: flex;
+	}
+}
+
+@media all and (min-width: 767px) {
+	.recipe-header {
+		position: relative;
+	}
+	.resize {
+		display: block !important;
+		height: 10px;
+		cursor: row-resize;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
 	}
 }
 

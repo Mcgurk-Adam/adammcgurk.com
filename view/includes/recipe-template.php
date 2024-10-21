@@ -1,5 +1,6 @@
 <div class="recipe-header" style="background-image: url('/assets/recipes/<?=$singleRecipe['image']?>')">
     <h1><?=$singleRecipe['title']?></h1>
+    <div class="resize"></div>
 </div>
 
 <div class="recipe-desktop">
@@ -132,6 +133,19 @@
         document.querySelector('#mobile-recipe-ai-onboard-flow').classList.remove('active');
         document.querySelector('#mobile-recipe-ai-enter-api-key').classList.add('active');
     });
+    const resizer = document.querySelector(".resize");
+    resizer.addEventListener("mousedown", function(e) {
+        window.addEventListener("mousemove", resize);
+        window.addEventListener("mouseup", () => {
+            window.removeEventListener("mousemove", resize);
+        });
+    });
+    function resize(e) {
+        const recipeHeader = document.querySelector(".recipe-header");
+        const rect = recipeHeader.getBoundingClientRect();
+        const newHeight = e.clientY - rect.top;
+        recipeHeader.style.height = newHeight + "px";
+    }
 </script>
 
 <script src="/js/recipe-chat.js"></script>
