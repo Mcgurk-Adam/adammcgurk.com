@@ -279,7 +279,7 @@ ol {
 		min-height: 500px;
 		height: fit-content;
 		padding: 20px;
-		&#mobile-recipe-ai-onboard-flow {
+		&.special-bodies {
 			h3 {
 				font-size: 35px;
 				margin-bottom: 20px;
@@ -287,6 +287,27 @@ ol {
 				img {
 					height: 45px;
 					width: auto;
+				}
+			}
+			p {
+				margin-bottom: 10px;
+			}
+		}
+		form#own-api-key-form {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			width: 100%;
+			button[type=submit] {
+				margin-top: 10px;
+				width: 95%;
+				max-width: 300px;
+			}
+			&:invalid {
+				button[type=submit] {
+					opacity: .2;
+					cursor: not-allowed;
+					pointer-events: none;
 				}
 			}
 		}
