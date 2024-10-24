@@ -135,6 +135,7 @@
     });
     const resizer = document.querySelector(".resize");
     resizer.addEventListener("mousedown", function(e) {
+        trackEvent("resizing recipe header");
         window.addEventListener("mousemove", resize);
         window.addEventListener("mouseup", () => {
             window.removeEventListener("mousemove", resize);
