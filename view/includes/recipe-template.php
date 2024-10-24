@@ -3,6 +3,12 @@
     <div class="resize"></div>
 </div>
 
+<script>
+    window.RECIPE_NAME = "<?=$singleRecipe['title']?>";
+    window.RECIPE_INGREDIENTS = <?=json_encode($singleRecipe['ingredients']);?>;
+    window.RECIPE_STEPS = <?=json_encode($singleRecipe['steps']);?>;
+</script>
+
 <div class="recipe-desktop">
     <div id="desktop-ingredients">
         <h2>Ingredients</h2>
@@ -73,7 +79,7 @@
                 <h3>Welcome to Recipe AI!</h3>
             </div>
         </div>
-        <form id="recipe-ai-input-container" method="POST" action="/ai/chat">
+        <form id="recipe-ai-input-container">
             <textarea name="chat-message" id="chat-input" placeholder="Ask a question about this recipe!" required></textarea>
             <div id="button-container">
                 <button type="submit" class="special"></button>
@@ -101,6 +107,7 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 <script>
     const tabs = document.querySelectorAll('.tab');
     const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');

@@ -333,6 +333,36 @@ ol {
 				height: 100%;
 				width: 100%;
 			}
+			#mobile-chat-messages {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: flex-end;
+				padding: 20px;
+				overflow-y: scroll;
+				position: relative;
+				.user-message {
+					border-top-left-radius: 12px;
+					border-top-right-radius: 12px;
+					border-bottom-left-radius: 12px;
+					background-color: var(--gray-3);
+					padding: 10px;
+					color: var(--heading-color);
+					width: 75%;
+					margin-bottom: 20px;
+				}
+				.assistant-message {
+					align-self: flex-start;
+					margin-bottom: 20px;
+					color: var(--heading-color);
+					width: 90%;
+					&::before {
+						content: "";
+						background-image: url(/assets/sparkle-icon.svg);
+						background-repeat: no-repeat;
+						background-size: 20px;
+					}
+				}
+			}
 		}
 		form#recipe-ai-input-container {
 			width: calc(100% - 40px);
@@ -388,6 +418,11 @@ ol {
 					background-image: url(/assets/arrow-up.svg);
 					cursor: pointer;
 					transition: 150ms all;
+					&:disabled {
+						opacity: .3;
+						cursor: not-allowed;
+						pointer-events: none;
+					}
 					&:active {
 						transform: scale(.95);
 						opacity: .9;
