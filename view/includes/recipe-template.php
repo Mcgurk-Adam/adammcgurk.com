@@ -80,6 +80,10 @@
             </div>
         </div>
         <form id="recipe-ai-input-container">
+            <div id="loading-slide" class="visible">
+                <p>Recipe AI is thinking</p>
+                <img src="/assets/white-load-dots.svg" alt="loading" title="loading">
+            </div>
             <textarea name="chat-message" id="chat-input" placeholder="Ask a question about this recipe!" required></textarea>
             <div id="button-container">
                 <button type="submit" class="special"></button>
@@ -107,7 +111,7 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
 <script>
     const tabs = document.querySelectorAll('.tab');
     const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');
