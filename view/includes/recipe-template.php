@@ -83,7 +83,7 @@
             </div>
         </div>
         <form id="recipe-ai-input-container">
-            <div id="loading-slide" class="visible">
+            <div id="loading-slide">
                 <p>Recipe AI is thinking</p>
                 <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
             </div>
