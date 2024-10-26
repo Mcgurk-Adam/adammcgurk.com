@@ -35,7 +35,7 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     const rawQuestionElement = mobileChatForm.querySelector(`[name="chat-message"]`) as HTMLTextAreaElement;
     const rawQuestion = rawQuestionElement.value.trim();
     if (!rawQuestion || rawQuestion.length === 0) {
-        return;
+        return false;
     }
     mobileChatButton.setAttribute("disabled", "true");
     loadingSlide.classList.add("visible");
@@ -49,7 +49,8 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
         console.log("something went wrong when trying to send the question to the server - ", e);
         showToast("Something went wrong.", "error");
         mobileChatButton.removeAttribute("disabled");
-        return;
+        loadingSlide.classList.remove("visible");
+        return false;
     }
     chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
     chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
