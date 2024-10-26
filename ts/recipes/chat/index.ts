@@ -1,7 +1,7 @@
 
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
 window.addEventListener("load", () => {
-    const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.name}`);
+    const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.title}`);
     if (!chatHistory) {
         return;
     }
@@ -63,7 +63,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
     const apiKey = localStorage.getItem("open-ai-key");
     const recipeIngredients: string[] = window.RECIPE.ingredients;
     const recipeSteps: string[] = window.RECIPE.steps;
-    const recipeName: string = window.RECIPE.name;
+    const recipeName: string = window.RECIPE.title;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
     const history: {role:"assistant"|"user", content: string}[] = [];
     messagesAlreadyExisting.forEach((message: HTMLElement) => {
