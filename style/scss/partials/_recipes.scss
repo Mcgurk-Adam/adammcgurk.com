@@ -102,10 +102,13 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	padding-bottom: 20px;
 	h1 {
 		color: #fff;
 		font-size: clamp(25px, 6vw, 50px);
+		margin-bottom: 20px;
+	}
+	.resize {
+		display: none;
 	}
 }
 
@@ -155,6 +158,28 @@
 		font-size: 18px;
 		&::marker {
 			font-size: 25px;
+		}
+	}
+	#desktop-recipe-ai-button {
+		width: 65px;
+		height: 65px;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background-repeat: no-repeat;
+		background-position-y: 11px;
+		background-position-x: center;
+		background-size: 40px;
+		background-image: url(/assets/green-sparkle-icon.svg);
+		border: 3px solid var(--main-green);
+		cursor: pointer;
+		transition: 150ms all;
+		&:active {
+			transform: scale(.95);
+			opacity: .9;
 		}
 	}
 }
@@ -219,11 +244,10 @@ ol {
 		display: flex;
 		background-color: var(--gray-3);
 		position: sticky;
-		position: -webkit-sticky;
 		top: 70px;
 		z-index: 50;
 		.tab {
-			width: 50%;
+			width: 33.3%;
 			height: 100%;
 			display: flex;
 			justify-content: center;
@@ -234,6 +258,14 @@ ol {
 			border-bottom: 2px solid var(--gray-3);
 			transition: 150ms all;
 			cursor: pointer;
+			.tab-icon {
+				height: 30px;
+				width: auto;
+			}
+			&:nth-child(2) {
+				border-right: 2px solid var(--gray-4);
+				border-left: 2px solid var(--gray-4);
+			}
 			&.active {
 				background-color: var(--gray-1);
 				border-bottom: 4px solid var(--yellow-1);
@@ -250,6 +282,194 @@ ol {
 		min-height: 500px;
 		height: fit-content;
 		padding: 20px;
+		&.special-bodies {
+			h3 {
+				font-size: 35px;
+				margin-bottom: 20px;
+				display: flex;
+				img {
+					height: 45px;
+					width: auto;
+				}
+			}
+			p {
+				margin-bottom: 10px;
+			}
+		}
+		form#own-api-key-form {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			width: 100%;
+			button[type=submit] {
+				margin-top: 10px;
+				width: 95%;
+				max-width: 300px;
+			}
+			&:invalid {
+				button[type=submit] {
+					opacity: .2;
+					cursor: not-allowed;
+					pointer-events: none;
+				}
+			}
+		}
+		#mobile-chat-message-container {
+			position: absolute;
+			top: 0;
+			height: calc(100% - 95px);
+			width: calc(100% - 40px);
+			overflow-y: scroll;
+			#mobile-chat-messages {
+				&:empty + #mobile-chat-empty-state {
+					display: flex;
+				}
+			}
+			&:has(#mobile-chat-messages:empty) {
+				overflow-y: hidden;
+			}
+			#mobile-chat-empty-state {
+				display: none;
+				flex-flow: column nowrap;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+			}
+			#mobile-chat-messages {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: flex-end;
+				padding: 20px;
+				overflow-y: scroll;
+				position: relative;
+				.user-message {
+					border-top-left-radius: 12px;
+					border-top-right-radius: 12px;
+					border-bottom-left-radius: 12px;
+					background-color: var(--gray-3);
+					padding: 10px;
+					color: var(--heading-color);
+					max-width: 65%;
+					width: fit-content;
+					margin-bottom: 20px;
+				}
+				.assistant-message {
+					align-self: flex-start;
+					margin-bottom: 20px;
+					color: var(--text-color);
+					width: 80%;
+					&::before {
+						content: "Recipe AI";
+						background-image: url(/assets/sparkle-icon.svg);
+						background-repeat: no-repeat;
+						background-size: 30px;
+						display: flex;
+						width: 100%;
+						height: 30px;
+						background-position-x: 66px;
+						align-items: center;
+						color: var(--heading-color);
+						margin-bottom: 5px;
+						font-family: "Kanit",sans-serif;
+					}
+				}
+			}
+		}
+		form#recipe-ai-input-container {
+			width: calc(100% - 40px);
+			min-height: 55px;
+			border-radius: 50px;
+			background-color: var(--gray-2);
+			padding: 10px 0;
+			box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			bottom: 30px;
+			#loading-slide {
+				height: 15px;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				visibility: hidden;
+				opacity: 0;
+				transition: 150ms all;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: flex-start;
+				&.visible {
+					visibility: visible;
+					opacity: 1;
+					top: -20px;
+					left: 10px;
+				}
+				p {
+					margin-right: 10px;
+					color: var(--gray-4);
+					font-size: 14px;
+				}
+				img {
+					height: 5px;
+				}
+			}
+			&:invalid {
+				button {
+					opacity: .2;
+					cursor: not-allowed;
+					pointer-events: none;
+				}
+			}
+			textarea {
+				width: calc(100% - 65px);
+				background-color: var(--gray-2);
+				padding-left: 25px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				height: 40px;
+				overflow-y: hidden;
+				transition: 150ms all;
+				font-size: 17px;
+				&:focus {
+					outline: none;
+					&::placeholder {
+						color: transparent;
+					}
+				}
+			}
+			#button-container {
+				height: 100%;
+				width: 55px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-self: end;
+				margin-bottom: 5px;
+				margin-right: 5px;
+				button {
+					height: 30px;
+					width: 30px;
+					border-radius: 30px;
+					background-color: #27AB83;
+					background-position: center;
+					background-size: 25px;
+					background-repeat: no-repeat;
+					background-image: url(/assets/arrow-up.svg);
+					cursor: pointer;
+					transition: 150ms all;
+					&:disabled {
+						opacity: .3;
+						cursor: not-allowed;
+						pointer-events: none;
+					}
+					&:active {
+						transform: scale(.95);
+						opacity: .9;
+					}
+				}
+			}
+		}
 		ol li {
 			margin-bottom: 10px;
 			font-size: 16px;
@@ -279,6 +499,20 @@ ol {
 	}
 	.recipe-mobile {
 		display: flex;
+	}
+}
+
+@media all and (min-width: 767px) {
+	.recipe-header {
+		position: relative;
+	}
+	.resize {
+		display: block !important;
+		height: 10px;
+		cursor: row-resize;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
 	}
 }
 
