@@ -41,7 +41,7 @@
 			<?php endforeach; ?>
         </ol>
     </div>
-    <button class="special" id="desktop-recipe-ai-button"></button>
+    <button class="special" id="desktop-recipe-ai-button" style="display: none;"></button>
 </div>
 
 <div class="recipe-mobile">
