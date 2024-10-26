@@ -1,6 +1,6 @@
 
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
-const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-messages-container");
+const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
 window.addEventListener("load", () => {
     const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.title}`);
     if (!chatHistory) {
@@ -69,7 +69,6 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
 
 const sendQuestionToServer = async (question: string): Promise<string> => {
     const apiKey = localStorage.getItem("open-ai-key");
-    const recipeIngredients: string[] = window.RECIPE.ingredients;
     const recipeSteps: string[] = window.RECIPE.steps;
     const recipeName: string = window.RECIPE.title;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
@@ -79,7 +78,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         const content = message.innerText;
         history.push({role, content});
     });
-    const fullRecipePartOfPrompt: string = `RECIPE NAME: ${recipeName} INGREDIENTS: ${recipeIngredients.join("|")} STEPS: ${recipeSteps.join("|")}`;
+    const fullRecipePartOfPrompt: string = `RECIPE NAME: ${recipeName} INGREDIENTS: ${getRecipeIngredients()} STEPS: ${recipeSteps.join("|")}`;
     const apiRequest = await fetch("https://recipe-ai.adammcgurk.com", {
         method: "POST",
         headers: {
@@ -119,4 +118,16 @@ function createChatMessageElement(role:"user"|"assistant", message: string, useH
     }
     messageContainer.innerText = message;
     return messageContainer;
+}
+
+function getRecipeIngredients() {
+    const rawIngredients = window.RECIPE.ingredients;
+    if (typeof rawIngredients[0] === "string") {
+        return rawIngredients.join("|");
+    }
+    let fullIngredientString = "";
+    rawIngredients.forEach((ingredientObject:{sectionTitle:string, sectionIngredients: string[]}) => {
+        fullIngredientString += `${ingredientObject.sectionTitle.toUpperCase()}: ${ingredientObject.sectionIngredients.join("|")} `;
+    });
+    return fullIngredientString;
 }

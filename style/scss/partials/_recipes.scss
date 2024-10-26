@@ -359,6 +359,9 @@ ol {
 					margin-bottom: 20px;
 					color: var(--text-color);
 					width: 80%;
+					ul, ol {
+						list-style-position: inside;
+					}
 					&::before {
 						content: "Recipe AI";
 						background-image: url(/assets/sparkle-icon.svg);
