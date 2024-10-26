@@ -1,14 +1,19 @@
 
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
+const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-messages-container");
 window.addEventListener("load", () => {
-    const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.name}`);
+    const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.title}`);
     if (!chatHistory) {
         return;
     }
     const chatHistoryParsed = JSON.parse(chatHistory) as {role:"assistant"|"user", content: string}[];
+    if (chatHistoryParsed.length === 0) {
+        return;
+    }
     chatHistoryParsed.forEach((message) => {
         chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
     });
+    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
 });
 
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
@@ -43,6 +48,8 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     let messageReturned: string;
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
     chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
+    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    rawQuestionElement.blur();
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
@@ -54,6 +61,7 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     }
     chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
     chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
+    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
     mobileChatButton.removeAttribute("disabled");
     loadingSlide.classList.remove("visible");
     return false;
@@ -63,7 +71,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
     const apiKey = localStorage.getItem("open-ai-key");
     const recipeIngredients: string[] = window.RECIPE.ingredients;
     const recipeSteps: string[] = window.RECIPE.steps;
-    const recipeName: string = window.RECIPE.name;
+    const recipeName: string = window.RECIPE.title;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
     const history: {role:"assistant"|"user", content: string}[] = [];
     messagesAlreadyExisting.forEach((message: HTMLElement) => {
