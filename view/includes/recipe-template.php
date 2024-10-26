@@ -4,9 +4,12 @@
 </div>
 
 <script>
-    window.RECIPE_NAME = "<?=$singleRecipe['title']?>";
-    window.RECIPE_INGREDIENTS = <?=json_encode($singleRecipe['ingredients']);?>;
-    window.RECIPE_STEPS = <?=json_encode($singleRecipe['steps']);?>;
+    window.RECIPE = {
+        title: "<?=$singleRecipe['title']?>",
+        ingredients: <?=json_encode($singleRecipe['ingredients']);?>,
+        steps: <?=json_encode($singleRecipe['steps']);?>,
+        image: "/assets/recipes/<?=$singleRecipe['image']?>"
+    };
 </script>
 
 <div class="recipe-desktop">

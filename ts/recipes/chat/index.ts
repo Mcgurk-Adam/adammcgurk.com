@@ -1,3 +1,16 @@
+
+const chatMessageContainer = document.getElementById("mobile-chat-messages");
+window.addEventListener("load", () => {
+    const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.name}`);
+    if (!chatHistory) {
+        return;
+    }
+    const chatHistoryParsed = JSON.parse(chatHistory) as {role:"assistant"|"user", content: string}[];
+    chatHistoryParsed.forEach((message) => {
+        chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
+    });
+});
+
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
 useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
     ev.preventDefault();
@@ -12,8 +25,8 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
         console.log("something went wrong when trying to save the API key - ", e);
         showToast("Something went wrong.", "error");
     }
+    return false;
 });
-const chatMessageContainer = document.getElementById("mobile-chat-messages");
 const mobileChatForm = document.querySelector("form#recipe-ai-input-container");
 const mobileChatButton = mobileChatForm.querySelector("button[type=submit]");
 const loadingSlide = document.getElementById("loading-slide");
@@ -38,18 +51,18 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
         mobileChatButton.removeAttribute("disabled");
         return;
     }
-    const markdownConverter = new showdown.Converter();
-    chatMessageContainer.appendChild(createChatMessageElement("assistant", markdownConverter.makeHtml(messageReturned), true));
+    chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
     chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
     mobileChatButton.removeAttribute("disabled");
     loadingSlide.classList.remove("visible");
+    return false;
 });
 
 const sendQuestionToServer = async (question: string): Promise<string> => {
     const apiKey = localStorage.getItem("open-ai-key");
-    const recipeIngredients: string[] = window.RECIPE_INGREDIENTS;
-    const recipeSteps: string[] = window.RECIPE_STEPS;
-    const recipeName: string = window.RECIPE_NAME;
+    const recipeIngredients: string[] = window.RECIPE.ingredients;
+    const recipeSteps: string[] = window.RECIPE.steps;
+    const recipeName: string = window.RECIPE.name;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
     const history: {role:"assistant"|"user", content: string}[] = [];
     messagesAlreadyExisting.forEach((message: HTMLElement) => {
@@ -70,8 +83,21 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
             history,
         }),
     });
+    if (!apiRequest.ok) {
+        throw new Error("API request failed - status code is " + apiRequest.status + " and message is " + await apiRequest.text());
+    }
     const response = await apiRequest.json();
-    return response.response;
+    const markdownConverter = new showdown.Converter();
+    history.push({
+        "role": "user",
+        "content": question,
+    });
+    history.push({
+        "role": "assistant",
+        "content": markdownConverter.makeHtml(response.response),
+    });
+    localStorage.setItem(`recipe-chat-${recipeName}`, JSON.stringify(history));
+    return markdownConverter.makeHtml(response.response);
 };
 
 function createChatMessageElement(role:"user"|"assistant", message: string, useHTML: boolean = false) {
