@@ -82,7 +82,7 @@
                 <h3>Welcome to Recipe AI!</h3>
             </div>
         </div>
-        <form id="recipe-ai-input-container">
+        <form id="recipe-ai-input-container" onsubmit="return false;">
             <div id="loading-slide">
                 <p>Recipe AI is thinking</p>
                 <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
@@ -105,7 +105,7 @@
         <h3>Use my own API Key</h3>
         <p>If you want to get started using RecipeAI for no additional cost, enter your API key below.</p>
         <p>If you don't have one and want one, go to this link <a href="https://platform.openai.com/api-keys" title="OpenAI's api key dashboard" rel="noopener" target="_blank">https://platform.openai.com/api-keys</a> to signup for an account and create an API key.</p>
-        <form id="own-api-key-form">
+        <form id="own-api-key-form" onsubmit="return false;">
             <label>OpenAI Key (hidden for your protection)
                 <input type="password" id="open-ai-api-key" name="open-ai-api-key" placeholder="sk-proj-..." required>
             </label>
