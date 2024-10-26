@@ -29,6 +29,7 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     rawQuestionElement.value = "";
     let messageReturned: string;
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
+    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {

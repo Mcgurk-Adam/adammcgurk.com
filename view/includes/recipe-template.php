@@ -82,7 +82,7 @@
         <form id="recipe-ai-input-container">
             <div id="loading-slide" class="visible">
                 <p>Recipe AI is thinking</p>
-                <img src="/assets/white-load-dots.svg" alt="loading" title="loading">
+                <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
             </div>
             <textarea name="chat-message" id="chat-input" placeholder="Ask a question about this recipe!" required></textarea>
             <div id="button-container">

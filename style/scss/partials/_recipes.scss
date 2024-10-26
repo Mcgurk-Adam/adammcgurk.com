@@ -360,7 +360,7 @@ ol {
 					color: var(--text-color);
 					width: 80%;
 					&::before {
-						content: "";
+						content: "Recipe AI";
 						background-image: url(/assets/sparkle-icon.svg);
 						background-repeat: no-repeat;
 						background-size: 30px;
@@ -371,6 +371,7 @@ ol {
 						align-items: center;
 						color: var(--heading-color);
 						margin-bottom: 5px;
+						font-family: "Kanit",sans-serif;
 					}
 				}
 			}
@@ -406,6 +407,10 @@ ol {
 				p {
 					margin-right: 20px;
 					color: var(--gray-4);
+					font-size: 14px;
+				}
+				img {
+					height: 5px;
 				}
 			}
 			&:invalid {
