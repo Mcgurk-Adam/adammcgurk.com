@@ -117,6 +117,9 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         }),
     });
     if (!apiRequest.ok) {
+        if (apiRequest.status === 401 || apiRequest.status === 403) {
+            localStorage.removeItem(OPEN_AI_KEY_STORAGE_CONST);
+        }
         throw new Error("API request failed - status code is " + apiRequest.status + " and message is " + await apiRequest.text());
     }
     const response = await apiRequest.json();
