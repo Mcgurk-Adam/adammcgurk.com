@@ -10,6 +10,7 @@
         steps: <?=json_encode($singleRecipe['steps']);?>,
         image: "/assets/recipes/<?=$singleRecipe['image']?>"
     };
+    window.AI_SERVER_URL = "https://recipe-ai.adammcgurk.com";
 </script>
 
 <div class="recipe-desktop">
@@ -41,7 +42,15 @@
 			<?php endforeach; ?>
         </ol>
     </div>
-    <button class="special" id="desktop-recipe-ai-button" style="display: none;"></button>
+    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
+    <dialog id="desktop-ai-chatbot">
+        <header></header>
+        <div></div>
+        <form id="desktop-recipe-ai-form">
+            <textarea name="chat-message" id="desktop-chat-input" placeholder="Ask a question about this recipe!" required></textarea>
+            <button type="submit" class="special"></button>
+        </form>
+    </dialog>
 </div>
 
 <div class="recipe-mobile">
@@ -75,7 +84,7 @@
         <?php endforeach; ?>
         </ol>
     </div>
-    <div id="mobile-recipe-ai" class="mobile-recipe-body" data-track-click="clicked on ai tab" style="position: relative;">
+    <div id="mobile-recipe-ai" class="mobile-recipe-body" data-track-click="clicked on mobile ai tab" style="position: relative;">
         <div id="mobile-chat-message-container">
             <div id="mobile-chat-messages"></div>
             <div id="mobile-chat-empty-state">
@@ -131,6 +140,7 @@
                     document.querySelector('#mobile-recipe-ai-onboard-flow').classList.add('active');
                 } else {
                     document.querySelector('#mobile-recipe-ai').classList.add('active');
+                    scrollMobileChatWindow();
                 }
             } else {
                 document.querySelector(`#mobile-${tab.dataset.tab}`).classList.add('active');

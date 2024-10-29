@@ -1,6 +1,32 @@
-
+const OPEN_AI_KEY_STORAGE_CONST = "open-ai-key";
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
 const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
+const desktopRecipeAiButton = document.getElementById("desktop-recipe-ai-button");
+const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
+
+function scrollMobileChatWindow() {
+    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
+    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+}
+desktopRecipeAiButton.addEventListener("click", () => {
+    const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
+    if (!apiKey || apiKey.length === 0) {
+        //
+        return;
+    }
+    desktopAiChatbot.show();
+});
+document.addEventListener("keydown", (ev: KeyboardEvent) => {
+    if (ev.key === "Escape" && desktopAiChatbot.open) {
+        desktopAiChatbot.close();
+        return;
+    }
+    const cmdK = (ev.metaKey && ev.key === "k") || (ev.ctrlKey && ev.key === "k");
+    if (cmdK && !desktopAiChatbot.open) {
+        desktopAiChatbot.show();
+        return;
+    }
+});
 window.addEventListener("load", () => {
     const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.title}`);
     if (!chatHistory) {
@@ -13,7 +39,7 @@ window.addEventListener("load", () => {
     chatHistoryParsed.forEach((message) => {
         chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
     });
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    scrollMobileChatWindow();
 });
 
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
@@ -21,7 +47,7 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
     ev.preventDefault();
     try {
         const apiKey = (document.getElementById("open-ai-api-key") as HTMLInputElement).value;
-        localStorage.setItem("open-ai-key", apiKey);
+        localStorage.setItem(OPEN_AI_KEY_STORAGE_CONST, apiKey);
         const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');
         mobileRecipeBodies.forEach(body => body.classList.remove('active'));
         document.querySelector('#mobile-recipe-ai').classList.add('active');
@@ -47,8 +73,7 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     rawQuestionElement.value = "";
     let messageReturned: string;
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
-    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    scrollMobileChatWindow();
     rawQuestionElement.blur();
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
@@ -60,15 +85,14 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
         return false;
     }
     chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
-    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    scrollMobileChatWindow();
     mobileChatButton.removeAttribute("disabled");
     loadingSlide.classList.remove("visible");
     return false;
 });
 
 const sendQuestionToServer = async (question: string): Promise<string> => {
-    const apiKey = localStorage.getItem("open-ai-key");
+    const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
     const recipeSteps: string[] = window.RECIPE.steps;
     const recipeName: string = window.RECIPE.title;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
@@ -79,7 +103,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         history.push({role, content});
     });
     const fullRecipePartOfPrompt: string = `RECIPE NAME: ${recipeName} INGREDIENTS: ${getRecipeIngredients()} STEPS: ${recipeSteps.join("|")}`;
-    const apiRequest = await fetch("https://recipe-ai.adammcgurk.com", {
+    const apiRequest = await fetch(window.AI_SERVER_URL, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
