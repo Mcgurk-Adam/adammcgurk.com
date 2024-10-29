@@ -75,6 +75,7 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
     scrollMobileChatWindow();
     rawQuestionElement.blur();
+    rawQuestionElement.style.height = "40px";
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
