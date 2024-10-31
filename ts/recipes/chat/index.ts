@@ -3,6 +3,27 @@ const chatMessageContainer = document.getElementById("mobile-chat-messages");
 const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
 const desktopRecipeAiButton = document.getElementById("desktop-recipe-ai-button");
 const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
+const desktopChatForm = desktopAiChatbot.querySelector("form");
+const desktopChatSubmitButton = desktopChatForm.querySelector("button[type=submit]") as HTMLButtonElement;
+const desktopChatInput = desktopAiChatbot.querySelector("textarea");
+desktopChatForm.addEventListener("submit", (ev: SubmitEvent) => {
+    ev.preventDefault();
+    const rawQuestion = desktopChatInput.value.trim();
+    if (!rawQuestion || rawQuestion.length === 0) {
+        return false;
+    }
+    desktopChatSubmitButton.setAttribute("disabled", "true");
+    desktopChatInput.value = "";
+    let messageReturned: string;
+    desktopChatInput.blur();
+    desktopChatInput.style.height = "100%";
+});
+desktopChatInput.addEventListener("keydown", (ev:KeyboardEvent) => {
+    if (ev.key === "Enter") {
+        ev.preventDefault();
+        desktopChatSubmitButton.click();
+    }
+});
 
 function scrollMobileChatWindow() {
     chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
@@ -11,7 +32,7 @@ function scrollMobileChatWindow() {
 desktopRecipeAiButton.addEventListener("click", () => {
     const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
     if (!apiKey || apiKey.length === 0) {
-        //
+        // need to do the no auth flow
         return;
     }
     desktopAiChatbot.show();

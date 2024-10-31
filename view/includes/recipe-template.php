@@ -43,12 +43,20 @@
         </ol>
     </div>
     <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
-    <dialog id="desktop-ai-chatbot">
-        <header></header>
+    <dialog id="desktop-ai-chatbot" open>
+        <div class="header">
+            <div class="title-container">
+                <img src="/assets/green-sparkle-icon.svg" alt="green sparkles" title="green sparkles">
+                <h3>Recipe AI</h3>
+            </div>
+            <button class="special close" onclick="document.getElementById('desktop-ai-chatbot').close()"></button>
+        </div>
         <div></div>
         <form id="desktop-recipe-ai-form">
-            <textarea name="chat-message" id="desktop-chat-input" placeholder="Ask a question about this recipe!" required></textarea>
-            <button type="submit" class="special"></button>
+            <textarea name="chat-message" id="desktop-chat-input" placeholder="Ask a question about this recipe!" autofocus required></textarea>
+            <div class="button-container">
+                <button type="submit" class="special"></button>
+            </div>
         </form>
     </dialog>
 </div>
