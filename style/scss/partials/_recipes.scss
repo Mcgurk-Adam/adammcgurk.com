@@ -343,40 +343,6 @@ ol {
 				padding: 20px;
 				overflow-y: scroll;
 				position: relative;
-				.user-message {
-					border-top-left-radius: 12px;
-					border-top-right-radius: 12px;
-					border-bottom-left-radius: 12px;
-					background-color: var(--gray-3);
-					padding: 10px;
-					color: var(--heading-color);
-					max-width: 65%;
-					width: fit-content;
-					margin-bottom: 20px;
-				}
-				.assistant-message {
-					align-self: flex-start;
-					margin-bottom: 20px;
-					color: var(--text-color);
-					width: 80%;
-					ul, ol {
-						list-style-position: inside;
-					}
-					&::before {
-						content: "Recipe AI";
-						background-image: url(/assets/sparkle-icon.svg);
-						background-repeat: no-repeat;
-						background-size: 30px;
-						display: flex;
-						width: 100%;
-						height: 30px;
-						background-position-x: 66px;
-						align-items: center;
-						color: var(--heading-color);
-						margin-bottom: 5px;
-						font-family: "Kanit",sans-serif;
-					}
-				}
 			}
 		}
 		form#recipe-ai-input-container {
@@ -390,33 +356,6 @@ ol {
 			justify-content: space-between;
 			position: absolute;
 			bottom: 30px;
-			#loading-slide {
-				height: 15px;
-				width: 100%;
-				position: absolute;
-				top: 0;
-				visibility: hidden;
-				opacity: 0;
-				transition: 150ms all;
-				display: flex;
-				flex-flow: row nowrap;
-				align-items: center;
-				justify-content: flex-start;
-				&.visible {
-					visibility: visible;
-					opacity: 1;
-					top: -20px;
-					left: 10px;
-				}
-				p {
-					margin-right: 10px;
-					color: var(--gray-4);
-					font-size: 14px;
-				}
-				img {
-					height: 5px;
-				}
-			}
 			&:invalid {
 				button {
 					opacity: .2;
@@ -495,6 +434,67 @@ ol {
 		}
 	}
 }
+.loading-slide {
+	height: 15px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: 150ms all;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		top: -20px;
+		left: 10px;
+	}
+	p {
+		margin-right: 10px;
+		color: var(--gray-4);
+		font-size: 14px;
+	}
+	img {
+		height: 5px;
+	}
+}
+.user-message {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	background-color: var(--gray-3);
+	padding: 10px;
+	color: var(--heading-color);
+	max-width: 65%;
+	width: fit-content;
+	margin-bottom: 20px;
+}
+.assistant-message {
+	align-self: flex-start;
+	margin-bottom: 20px;
+	color: var(--text-color);
+	width: 80%;
+	ul, ol {
+		list-style-position: inside;
+	}
+	&::before {
+		content: "Recipe AI";
+		background-image: url(/assets/sparkle-icon.svg);
+		background-repeat: no-repeat;
+		background-size: 30px;
+		display: flex;
+		width: 100%;
+		height: 30px;
+		background-position-x: 66px;
+		align-items: center;
+		color: var(--heading-color);
+		margin-bottom: 5px;
+		font-family: "Kanit",sans-serif;
+	}
+}
 
 @media all and (max-width: 767px) {
 	.recipe-desktop {
@@ -533,6 +533,35 @@ ol {
 	height: calc(100vh - 175px);
 	&[open] {
 		display: flex;
+	}
+	#desktop-chat-message-container {
+		position: absolute;
+		top: 70px;
+		height: calc(100% - 170px);
+		width: 100%;
+		overflow-y: scroll;
+		#desktop-chat-messages {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: flex-end;
+			padding: 20px;
+			overflow-y: scroll;
+			position: relative;
+			&:empty + #desktop-chat-empty-state {
+				display: flex;
+			}
+		}
+		&:has(#desktop-chat-messages:empty) {
+			overflow-y: hidden;
+		}
+		#desktop-chat-empty-state {
+			display: none;
+			flex-flow: column nowrap;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+		}
 	}
 	.header {
 		width: 100%;
@@ -573,8 +602,8 @@ ol {
 			border-radius: 6px;
 			resize: none;
 			&:active {
-				transform: scale(.95);
-				opacity: .9;
+				transform: scale(.98);
+				opacity: .7;
 			}
 		}
 	}
@@ -589,6 +618,7 @@ ol {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		--button-container-width: 65px;
+		box-shadow: 0 -2px 1px -1px rgba(0, 0, 0, 0.1);
 		textarea {
 			height: 100%;
 			border-radius: 12px;

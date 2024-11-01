@@ -1,11 +1,11 @@
 const OPEN_AI_KEY_STORAGE_CONST = "open-ai-key";
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
-const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
 const desktopRecipeAiButton = document.getElementById("desktop-recipe-ai-button");
 const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
 const desktopChatForm = desktopAiChatbot.querySelector("form");
 const desktopChatSubmitButton = desktopChatForm.querySelector("button[type=submit]") as HTMLButtonElement;
 const desktopChatInput = desktopAiChatbot.querySelector("textarea");
+const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
 desktopChatForm.addEventListener("submit", (ev: SubmitEvent) => {
     ev.preventDefault();
     const rawQuestion = desktopChatInput.value.trim();
@@ -25,9 +25,15 @@ desktopChatInput.addEventListener("keydown", (ev:KeyboardEvent) => {
     }
 });
 
-function scrollMobileChatWindow() {
-    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
+function scrollChatWindow() {
+    const mobileChatMessageContainer = document.getElementById("mobile-chat-messages");
+    mobileChatMessageContainer.scrollTop = mobileChatMessageContainer.scrollHeight;
+    const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
     topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
+    desktopChatMessageContainer.scrollTop = desktopChatMessageContainer.scrollHeight;
+    const topLevelDesktopChatMessageContainer = document.getElementById("desktop-chat-message-container");
+    topLevelDesktopChatMessageContainer.scrollTop = topLevelDesktopChatMessageContainer.scrollHeight;
 }
 desktopRecipeAiButton.addEventListener("click", () => {
     const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
@@ -59,8 +65,9 @@ window.addEventListener("load", () => {
     }
     chatHistoryParsed.forEach((message) => {
         chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
+//        desktopChatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
     });
-    scrollMobileChatWindow();
+    scrollChatWindow();
 });
 
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
@@ -79,22 +86,24 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
     }
     return false;
 });
-const mobileChatForm = document.querySelector("form#recipe-ai-input-container");
-const mobileChatButton = mobileChatForm.querySelector("button[type=submit]");
-const loadingSlide = document.getElementById("loading-slide");
-mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
+
+async function handleSubmittedForm(ev: Event) {
     ev.preventDefault();
-    const rawQuestionElement = mobileChatForm.querySelector(`[name="chat-message"]`) as HTMLTextAreaElement;
+    const currentSubmittingForm = ev.target as HTMLFormElement;
+    const rawQuestionElement = currentSubmittingForm.querySelector("textarea") as HTMLTextAreaElement;
+    const chatButton = currentSubmittingForm.querySelector("button[type=submit]") as HTMLButtonElement;
+    const loadingSlide = currentSubmittingForm.parentElement.querySelector(".loading-slide") as HTMLElement;
     const rawQuestion = rawQuestionElement.value.trim();
+    const chatMessageContainer = currentSubmittingForm.parentElement.id === "desktop-ai-chatbot" ? document.getElementById("desktop-chat-messages") : document.getElementById("mobile-chat-messages");
     if (!rawQuestion || rawQuestion.length === 0) {
         return false;
     }
-    mobileChatButton.setAttribute("disabled", "true");
+    chatButton.setAttribute("disabled", "true");
     loadingSlide.classList.add("visible");
     rawQuestionElement.value = "";
     let messageReturned: string;
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
-    scrollMobileChatWindow();
+    scrollChatWindow();
     rawQuestionElement.blur();
     rawQuestionElement.style.height = "40px";
     try {
@@ -102,16 +111,16 @@ mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
     } catch (e) {
         console.log("something went wrong when trying to send the question to the server - ", e);
         showToast("Something went wrong.", "error");
-        mobileChatButton.removeAttribute("disabled");
+        chatButton.removeAttribute("disabled");
         loadingSlide.classList.remove("visible");
         return false;
     }
     chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
-    scrollMobileChatWindow();
-    mobileChatButton.removeAttribute("disabled");
+    scrollChatWindow();
+    chatButton.removeAttribute("disabled");
     loadingSlide.classList.remove("visible");
     return false;
-});
+}
 
 const sendQuestionToServer = async (question: string): Promise<string> => {
     const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);

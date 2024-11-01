@@ -51,7 +51,16 @@
             </div>
             <button class="special close" onclick="document.getElementById('desktop-ai-chatbot').close()"></button>
         </div>
-        <div></div>
+        <div id="desktop-chat-message-container">
+            <div id="desktop-chat-messages"></div>
+            <div id="desktop-chat-empty-state">
+                <h3>Welcome to Recipe AI!</h3>
+            </div>
+        </div>
+        <div class="loading-slide">
+            <p>Recipe AI is thinking</p>
+            <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
+        </div>
         <form id="desktop-recipe-ai-form">
             <textarea name="chat-message" id="desktop-chat-input" placeholder="Ask a question about this recipe!" autofocus required></textarea>
             <div class="button-container">
@@ -99,11 +108,11 @@
                 <h3>Welcome to Recipe AI!</h3>
             </div>
         </div>
+        <div class="loading-slide">
+            <p>Recipe AI is thinking</p>
+            <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
+        </div>
         <form id="recipe-ai-input-container" onsubmit="return false;">
-            <div id="loading-slide">
-                <p>Recipe AI is thinking</p>
-                <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
-            </div>
             <textarea name="chat-message" id="chat-input" placeholder="Ask a question about this recipe!" required></textarea>
             <div id="button-container">
                 <button type="submit" class="special"></button>
