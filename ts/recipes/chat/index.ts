@@ -1,27 +1,13 @@
 const OPEN_AI_KEY_STORAGE_CONST = "open-ai-key";
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
-const desktopRecipeAiButton = document.getElementById("desktop-recipe-ai-button");
 const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
-const desktopChatForm = desktopAiChatbot.querySelector("form");
-const desktopChatSubmitButton = desktopChatForm.querySelector("button[type=submit]") as HTMLButtonElement;
-const desktopChatInput = desktopAiChatbot.querySelector("textarea");
-const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
-desktopChatForm.addEventListener("submit", (ev: SubmitEvent) => {
-    ev.preventDefault();
-    const rawQuestion = desktopChatInput.value.trim();
-    if (!rawQuestion || rawQuestion.length === 0) {
-        return false;
-    }
-    desktopChatSubmitButton.setAttribute("disabled", "true");
-    desktopChatInput.value = "";
-    let messageReturned: string;
-    desktopChatInput.blur();
-    desktopChatInput.style.height = "100%";
+["#mobile-recipe-ai form", "#desktop-ai-chatbot form"].forEach((selector) => {
+    document.querySelector(selector).addEventListener("submit", async (ev: SubmitEvent) => await handleSubmittedForm(ev));
 });
-desktopChatInput.addEventListener("keydown", (ev:KeyboardEvent) => {
+desktopAiChatbot.querySelector("textarea").addEventListener("keydown", (ev:KeyboardEvent) => {
     if (ev.key === "Enter") {
         ev.preventDefault();
-        desktopChatSubmitButton.click();
+        (desktopAiChatbot.querySelector("form button[type=submit]") as HTMLButtonElement).click();
     }
 });
 
@@ -35,7 +21,7 @@ function scrollChatWindow() {
     const topLevelDesktopChatMessageContainer = document.getElementById("desktop-chat-message-container");
     topLevelDesktopChatMessageContainer.scrollTop = topLevelDesktopChatMessageContainer.scrollHeight;
 }
-desktopRecipeAiButton.addEventListener("click", () => {
+document.getElementById("desktop-recipe-ai-button").addEventListener("click", () => {
     const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
     if (!apiKey || apiKey.length === 0) {
         // need to do the no auth flow
