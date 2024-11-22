@@ -627,6 +627,7 @@ ol {
 			color: var(--text-color);
 			padding: 5px 10px;
 			width: calc(100% - calc(var(--button-container-width) + 10px));
+			resize: none;
 			&::placeholder {
 				color: var(--gray-4);
 			}
