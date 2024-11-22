@@ -373,6 +373,9 @@ ol {
 				overflow-y: hidden;
 				transition: 150ms all;
 				font-size: 17px;
+				&.reset {
+					height: 40px;
+				}
 				&:focus {
 					outline: none;
 					&::placeholder {
@@ -628,6 +631,9 @@ ol {
 			padding: 5px 10px;
 			width: calc(100% - calc(var(--button-container-width) + 10px));
 			resize: none;
+			&.reset {
+				height: 100%;
+			}
 			&::placeholder {
 				color: var(--gray-4);
 			}

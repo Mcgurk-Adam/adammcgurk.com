@@ -166,6 +166,7 @@
     });
     const chatInput = document.getElementById("chat-input");
     chatInput.addEventListener("input", () => {
+        chatInput.classList.remove("reset");
         chatInput.style.height = "auto";
         chatInput.style.height = (chatInput.scrollHeight) + "px";
     });

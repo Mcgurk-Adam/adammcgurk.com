@@ -91,7 +91,7 @@ async function handleSubmittedForm(ev: Event) {
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
     scrollChatWindow();
     rawQuestionElement.blur();
-    rawQuestionElement.style.height = "40px";
+    rawQuestionElement.classList.add("reset");
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
