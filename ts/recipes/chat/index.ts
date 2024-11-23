@@ -51,7 +51,8 @@ window.addEventListener("load", () => {
     }
     chatHistoryParsed.forEach((message) => {
         chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
-//        desktopChatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
+        const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
+        desktopChatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
     });
     scrollChatWindow();
 });
