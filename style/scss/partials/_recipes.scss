@@ -468,18 +468,20 @@ ol {
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
 	border-bottom-left-radius: 12px;
-	background-color: var(--gray-3);
+	background-color: var(--gray-2);
 	padding: 10px;
 	color: var(--heading-color);
 	max-width: 65%;
 	width: fit-content;
 	margin-bottom: 20px;
+	font-weight: 300;
 }
 .assistant-message {
 	align-self: flex-start;
 	margin-bottom: 20px;
 	color: var(--text-color);
 	width: 80%;
+	font-weight: 300;
 	ul, ol {
 		list-style-position: inside;
 		font-size: 16px;
@@ -503,11 +505,13 @@ ol {
 		display: flex;
 		width: 100%;
 		height: 30px;
-		background-position-x: 66px;
+		background-position-x: 75px;
 		align-items: center;
 		color: var(--heading-color);
 		margin-bottom: 5px;
 		font-family: "Kanit",sans-serif;
+		font-weight: 400;
+		font-size: 18px;
 	}
 }
 
@@ -562,15 +566,11 @@ ol {
 			padding: 20px;
 			overflow-y: scroll;
 			position: relative;
-			.assistant-message {
-				&::before {
-					font-size: 18px;
-					font-weight: 500;
-					background-position-x: 76px;
+			&:empty {
+				padding: 0;
+				+ #desktop-chat-empty-state {
+					display: flex;
 				}
-			}
-			&:empty + #desktop-chat-empty-state {
-				display: flex;
 			}
 		}
 		&:has(#desktop-chat-messages:empty) {
@@ -583,6 +583,30 @@ ol {
 			justify-content: center;
 			height: 100%;
 			width: 100%;
+			h3 {
+				margin-bottom: 20px;
+			}
+			.suggested-questions {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				width: 100%;
+				button {
+					height: 30px;
+					border-radius: 50px;
+					padding: 0 10px;
+					background-color: transparent;
+					border: 2px solid var(--text-color);
+					cursor: pointer;
+					width: fit-content;
+					margin-bottom: 10px;
+					transition: 150ms all;
+					&:active {
+						transform: scale(.98);
+						opacity: .9;
+					}
+				}
+			}
 		}
 	}
 	.header {

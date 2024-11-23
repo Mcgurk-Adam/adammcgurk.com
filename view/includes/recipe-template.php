@@ -55,6 +55,11 @@
             <div id="desktop-chat-messages"></div>
             <div id="desktop-chat-empty-state">
                 <h3>Welcome to Recipe AI!</h3>
+                <div class="suggested-questions">
+                    <?php foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
+                        <button type="button" class="special" data-question="<?=$question['content']?>"><?=$question['title']?></button>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
         <div class="loading-slide">
@@ -106,6 +111,11 @@
             <div id="mobile-chat-messages"></div>
             <div id="mobile-chat-empty-state">
                 <h3>Welcome to Recipe AI!</h3>
+<!--                <div class="suggested-questions">-->
+<!--					--><?php //foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
+<!--                        <button type="button" class="special" data-question="--><?php //=$question['content']?><!--">--><?php //=$question['title']?><!--</button>-->
+<!--					--><?php //endforeach; ?>
+<!--                </div>-->
             </div>
         </div>
         <div class="loading-slide">
@@ -157,7 +167,7 @@
                     document.querySelector('#mobile-recipe-ai-onboard-flow').classList.add('active');
                 } else {
                     document.querySelector('#mobile-recipe-ai').classList.add('active');
-                    scrollMobileChatWindow();
+                    scrollChatWindow();
                 }
             } else {
                 document.querySelector(`#mobile-${tab.dataset.tab}`).classList.add('active');
@@ -189,6 +199,18 @@
         const newHeight = e.clientY - rect.top;
         recipeHeader.style.height = newHeight + "px";
     }
+    const allSuggestedQuestions = document.querySelectorAll(".suggested-questions button");
+    allSuggestedQuestions.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const question = e.target.dataset.question;
+            const mainContainer = e.target.parentElement.parentElement.parentElement.parentElement;
+            console.log(mainContainer);
+            const currentChatInput = mainContainer.querySelector("form textarea");
+            const currentChatButton = mainContainer.querySelector("form button[type=submit]");
+            currentChatInput.value = question;
+            currentChatButton.click();
+        });
+    });
 </script>
 
 <script src="/js/recipe-chat.js"></script>
