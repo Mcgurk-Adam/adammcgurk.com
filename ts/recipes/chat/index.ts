@@ -30,9 +30,12 @@ document.getElementById("desktop-recipe-ai-button").addEventListener("click", ()
     desktopAiChatbot.show();
 });
 document.addEventListener("keydown", (ev: KeyboardEvent) => {
-    if (ev.key === "Escape" && desktopAiChatbot.open) {
-        desktopAiChatbot.close();
-        return;
+    if (ev.key === "Escape") {
+        if (document.activeElement.id === "desktop-chat-input") {
+            document.activeElement.blur();
+        } else if (desktopAiChatbot.open) {
+            desktopAiChatbot.close();
+        }
     }
     const cmdK = (ev.metaKey && ev.key === "k") || (ev.ctrlKey && ev.key === "k");
     if (cmdK && !desktopAiChatbot.open) {

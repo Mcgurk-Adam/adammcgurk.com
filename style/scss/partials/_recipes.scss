@@ -72,6 +72,7 @@
 			}
 			a {
 				color: var(--heading-color);
+				font-weight: 400;
 			}
 		}
 		p {
@@ -117,7 +118,10 @@
 	width: 100%;
 	flex-flow: row nowrap;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 50px auto;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
 	#desktop-steps, #desktop-ingredients {
 		display: flex;
 		flex-flow: column nowrap;
@@ -229,7 +233,7 @@ ol {
 		color: var(--text-color);
 		&::marker {
 			color: var(--heading-color);
-			font-weight: 500;
+			font-weight: 400;
 		}
 	}
 }
@@ -662,6 +666,10 @@ ol {
 		justify-content: space-between;
 		--button-container-width: 65px;
 		box-shadow: 0 -2px 1px -1px rgba(0, 0, 0, 0.1);
+		position: relative;
+		.loading-slide {
+			left: 20px;
+		}
 		&:invalid {
 			button[type=submit] {
 				opacity: .2;
