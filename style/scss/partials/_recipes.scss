@@ -637,10 +637,9 @@ ol {
 		.close {
 			height: 40px;
 			width: 40px;
-			border: 2px solid var(--heading-color);
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 40px;
+			background-size: 35px;
 			background-image: url(/assets/close.svg);
 			transition: 150ms all;
 			background-color: transparent;
