@@ -699,5 +699,64 @@
 			"Heat up your pan, and throw some butter on the pan. Drop about a 1/4 cup of batter onto the pan and cook until bubbles form on the top. If you want to add blueberries or chocolate chips, drop them onto your pancake before flipping while the batter is still pretty wet."
 		],
 		"suggestedQuestions": []
+	},
+	{
+		"title": "Instant Pot Mississippi Roast",
+		"description": "A delicious, tangy, slow roasted beef",
+		"image": "mississippi-roast.webp",
+		"imageAlt": "A delicious looking roast with a tangy sauce and pepperocini peppers",
+		"tags": [
+			"dinner",
+			"roast",
+			"beef"
+		],
+		"ingredients": [
+			"3 pound chuck roast (it can be larger or smaller - doesn't change much)",
+			"1 cup of beef broth",
+			"1 packet of ranch seasoning (maybe about 2 tablespoons if you don't have the packet)",
+			"1 crushed beef bullion cube (or 2 or three if they're the small ones)",
+			"1 stick of butter",
+			"A few pepperocini peppers (optional) - however many is up to you and your spice preference!"
+		],
+		"steps": [
+			"Season your liberally roast however you want (I prefer just salt and pepper).",
+			"On the saute setting, sear your roast on all sides.",
+			"Deglaze the bottom of the pot with your beef broth, scraping up all the bits.",
+			"Add your roast back into the pot, put the stick of butter on top, and sprinkle on the crushed bullion cube and ranch seasoning.",
+			"Add in however many pepperocini peppers (and the associated juice) you want.",
+			"Set your Instant Pot to meat/stew (or manual) for 90 minutes.",
+			"Let it naturally release, then shred up the beef."
+		]
+	},
+	{
+		"title": "Biscuits and Gravy",
+		"description": "A delicious, southern breakfast classic",
+		"image": "biscuits-and-gravy.webp",
+		"imageAlt": "A cast iron pan of white sausage gravy, surrounded by biscuits",
+		"tags": [
+			"breakfast",
+			"biscuits",
+			"gravy"
+		],
+		"ingredients": [
+			"1 roll of biscuits (or make your own)",
+			"1 pound of ground breakfast sausage (I prefer maple, but go with your preference)",
+			"1 stick of butter",
+			"1/3 heaping cup of flour",
+			"1 cup of heavy cream",
+			"1 cup of milk (I prefer whole, but any of them work)"
+		],
+		"steps": [
+			"Preheat oven to 350",
+			"Heat up a cast iron pan and break up and cook your breakfast sausage until browned",
+			"cube/break up your stick of butter and spread it throughout the pan",
+			"Add in your flour and stir until the butter/flour mixture is well combined with the sausage",
+			"Put your biscuits in the oven, and cook according to the pacakge",
+			"Add in your heavy cream and milk and stir until well combined",
+			"Crack in a ton of black pepper, and add some salt here too",
+			"Let the gravy simmer until it thickens up",
+			"Serve the gravy over the biscuits!"
+		],
+    "suggestedQuestions": []
 	}
 ]
