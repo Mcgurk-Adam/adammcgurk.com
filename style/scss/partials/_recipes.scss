@@ -122,6 +122,7 @@
 	background-color: #fff;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	border-radius: 6px;
+	min-height: 500px;
 	#desktop-steps, #desktop-ingredients {
 		display: flex;
 		flex-flow: column nowrap;
@@ -150,9 +151,11 @@
 	}
 	hr {
 		margin-top: 50px;
-		height: 500px;
 		width: 2px;
 		background-color: var(--gray-2);
+		max-height: 500px;
+		height: 50%;
+		min-height: 300px;
 	}
 	#desktop-steps {
 		width: 60%;
