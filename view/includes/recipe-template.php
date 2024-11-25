@@ -10,6 +10,7 @@
         steps: <?=json_encode($singleRecipe['steps']);?>,
         image: "/assets/recipes/<?=$singleRecipe['image']?>"
     };
+    window.AI_SERVER_URL = "https://recipe-ai.adammcgurk.com";
 </script>
 
 <div class="recipe-desktop">
@@ -41,7 +42,37 @@
 			<?php endforeach; ?>
         </ol>
     </div>
-    <button class="special" id="desktop-recipe-ai-button" style="display: none;"></button>
+    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
+    <dialog id="desktop-ai-chatbot">
+        <div class="header">
+            <div class="title-container">
+                <img src="/assets/green-sparkle-icon.svg" alt="green sparkles" title="green sparkles">
+                <h3>Recipe AI</h3>
+            </div>
+            <button class="special close" onclick="document.getElementById('desktop-ai-chatbot').close()"></button>
+        </div>
+        <div id="desktop-chat-message-container">
+            <div id="desktop-chat-messages"></div>
+            <div id="desktop-chat-empty-state">
+                <h3>Welcome to Recipe AI!</h3>
+                <div class="suggested-questions">
+                    <?php foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
+                        <button type="button" class="special" data-question="<?=$question['content']?>"><?=$question['title']?></button>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <form id="desktop-recipe-ai-form">
+            <div class="loading-slide">
+                <p>Recipe AI is thinking</p>
+                <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
+            </div>
+            <textarea name="chat-message" id="desktop-chat-input" placeholder="Ask a question about this recipe!" autofocus required></textarea>
+            <div class="button-container">
+                <button type="submit" class="special"></button>
+            </div>
+        </form>
+    </dialog>
 </div>
 
 <div class="recipe-mobile">
@@ -75,18 +106,23 @@
         <?php endforeach; ?>
         </ol>
     </div>
-    <div id="mobile-recipe-ai" class="mobile-recipe-body" data-track-click="clicked on ai tab" style="position: relative;">
+    <div id="mobile-recipe-ai" class="mobile-recipe-body" data-track-click="clicked on mobile ai tab" style="position: relative;">
         <div id="mobile-chat-message-container">
             <div id="mobile-chat-messages"></div>
             <div id="mobile-chat-empty-state">
                 <h3>Welcome to Recipe AI!</h3>
+<!--                <div class="suggested-questions">-->
+<!--					--><?php //foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
+<!--                        <button type="button" class="special" data-question="--><?php //=$question['content']?><!--">--><?php //=$question['title']?><!--</button>-->
+<!--					--><?php //endforeach; ?>
+<!--                </div>-->
             </div>
         </div>
+        <div class="loading-slide">
+            <p>Recipe AI is thinking</p>
+            <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
+        </div>
         <form id="recipe-ai-input-container" onsubmit="return false;">
-            <div id="loading-slide">
-                <p>Recipe AI is thinking</p>
-                <img src="/assets/gray-load-dots.svg" alt="loading" title="loading">
-            </div>
             <textarea name="chat-message" id="chat-input" placeholder="Ask a question about this recipe!" required></textarea>
             <div id="button-container">
                 <button type="submit" class="special"></button>
@@ -131,6 +167,7 @@
                     document.querySelector('#mobile-recipe-ai-onboard-flow').classList.add('active');
                 } else {
                     document.querySelector('#mobile-recipe-ai').classList.add('active');
+                    scrollChatWindow();
                 }
             } else {
                 document.querySelector(`#mobile-${tab.dataset.tab}`).classList.add('active');
@@ -139,6 +176,7 @@
     });
     const chatInput = document.getElementById("chat-input");
     chatInput.addEventListener("input", () => {
+        chatInput.classList.remove("reset");
         chatInput.style.height = "auto";
         chatInput.style.height = (chatInput.scrollHeight) + "px";
     });
@@ -161,6 +199,22 @@
         const newHeight = e.clientY - rect.top;
         recipeHeader.style.height = newHeight + "px";
     }
+    const allSuggestedQuestions = document.querySelectorAll(".suggested-questions button");
+    allSuggestedQuestions.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const question = e.target.dataset.question;
+            const mainContainer = e.target.parentElement.parentElement.parentElement.parentElement;
+            console.log(mainContainer);
+            const currentChatInput = mainContainer.querySelector("form textarea");
+            const currentChatButton = mainContainer.querySelector("form button[type=submit]");
+            currentChatInput.value = question;
+            currentChatButton.click();
+        });
+    });
+    window.addEventListener("load", () => {
+        const desktopContainer = document.querySelector(".recipe-desktop");
+        desktopContainer.querySelector("hr").style.height = Math.floor(desktopContainer.getBoundingClientRect().height / 2) + "px";
+    });
 </script>
 
 <script src="/js/recipe-chat.js"></script>

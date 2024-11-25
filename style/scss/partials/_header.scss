@@ -2,7 +2,6 @@ $header_height: 70px;
 $header_side_margin: 20px;
 
 header {
-
 	height: $header_height;
 	-webkit-position: fixed;
 	position: fixed;
@@ -13,7 +12,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	z-index: 999;
-
+	box-shadow: 0 2px 8px -1px rgba(0, 0, 0, .1);
 	.logo {
 		height: 70px;
 		width: auto;

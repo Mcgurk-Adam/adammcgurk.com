@@ -14,12 +14,22 @@
 			"1/2 cup of sea salt",
 			"1/3 cup of coarse ground black pepper",
 			"1/4 cup of garlic powder",
-			"1/8 cup of smoked paprika"
+			"2 tablespoons of smoked paprika"
 		],
 		"steps": [
 			"Combine all ingredients together in your dish of choice. I like to use a mason jar.",
 			"Stir until well combined. I'll typically shake the jar to mix it up.",
 			"Apply liberally!"
+		],
+		"suggestedQuestions": [
+			{
+				"title": "Double It",
+				"content": "Can you please double this recipe?"
+			},
+			{
+				"title": "Other additions",
+				"content": "What else can I add to this rub to enhance it?"
+			}
 		]
 	},
 	{
@@ -31,7 +41,8 @@
 			"dessert",
 			"holidays",
 			"pie"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Instant Pot Pot Roast",
@@ -85,7 +96,8 @@
 			"Close and seal your Instant Pot and set it to manual for 95 minutes.",
 			"If you have time, let it naturally release. It will probably take about 45 minutes. If not, you can force the release.",
 			"Enjoy! It also makes great leftovers heated up in the microwave."
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Popcorn Seasoning",
@@ -106,7 +118,8 @@
 			"Combine all ingredients together in your dish of choice. I like to use a mason jar.",
 			"Stir until well combined. I'll typically shake the jar to mix it up.",
 			"Apply liberally!"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Chicken Florentine",
@@ -157,7 +170,8 @@
 		"steps": [
 			"Combine your spices in the chicken section into a gallon ziploc bag (or paper bag or something else similar) and shake to combine",
 			"Add your chicken to the bag and shake to coat"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "One Pot Cajun Pasta",
@@ -190,7 +204,8 @@
 			"Add in half your cajun seasoning and allow to cook until pasta is al dente",
 			"Turn off the heat and stir in the cheese until fully incorporated. Add in the rest of your cajun seasoning",
 			"Sprinkle your chopped parsley on and serve hot!"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Birria Tacos",
@@ -215,7 +230,8 @@
 			"Remove the meat from the pot and shred it in a bowl with some of the consomme from the pot",
 			"Dip your tortillas in the consomme and fry them in a pan",
 			"Add your shredded beef and cheese to the tortillas, and fold them over, frying them on both sides"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Cast Iron Cornbread",
@@ -246,7 +262,8 @@
 			"Pour the flour into the mixture and mix",
 			"Butter down (you can also use cooking spray) a large cast iron skillet and pour the mixture in",
 			"Bake at 375 for 30-35 minutes or until a toothpick comes out clean"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Taco Seasoning",
@@ -273,7 +290,8 @@
 			"Combine all ingredients together in your dish of choice. I like to use a mason jar.",
 			"Stir until well combined. I'll typically shake the jar to mix it up.",
 			"Apply liberally in taco soup, enchiladas, tacos, etc..."
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Salmon with Avocado Salsa",
@@ -330,7 +348,8 @@
 			"Roughly chop your avocados and put them in a small bowl",
 			"Take the rest of your salsa ingredients and mix them into your avocados and mix it well, trying not to mash the avocados too much",
 			"When the salmon is done, serve with the salsa on top"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Shrimp Tacos",
@@ -380,7 +399,8 @@
 					"Taco sized corn tortillas"
 				]
 			}
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Buffalo Wings",
@@ -433,7 +453,8 @@
 					"1/2 tsp cayenne pepper"
 				]
 			}
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Bacon Treats",
@@ -459,7 +480,8 @@
 			"Do this for all of your tater tots and bacon slices",
 			"Put them on a baking sheet, crack some black pepper on all of them, and bake for 20-25 minutes or until the bacon is crispy",
 			"Remove from the oven, and transfer to a paper towel to soak up some of the grease and immediately top with some cracked sea salt"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Fondant Potatoes",
@@ -490,7 +512,8 @@
 			"Pour in your chicken broth, and add your aromatics around the pan",
 			"Cook for about 45 minutes, or until your potatoes are fork tender",
 			"Serve hot! Mash with a fork and pour some of the fond on top for a delicious bite!"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Chipotle Chicken",
@@ -511,11 +534,12 @@
 		"steps": [
 			"",
 			""
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Marinated Skirt Steak",
-		"description": "A citrus-y, mexican, marinated skirt steak",
+		"description": "A citrus-y, mexican style, marinated skirt steak",
 		"image": "skirt-steak.webp",
 		"imageAlt": "A sliced, seared skirt steak on a plate surrounded by different citruses and spices",
 		"tags": [
@@ -531,7 +555,8 @@
 		"steps": [
 			"Combine all the ingredients besides the steak in a bowl or a gallon ziploc bag and mix well",
 			"Add the steak to the marinade and let sit for at least 30 minutes (probably at least 2 hours)"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Award-Winning Chili",
@@ -588,7 +613,8 @@
 			"Add in the three cans of beans and stir to combine.",
 			"Let simmer another 45 minutes to an hour.",
 			"Enjoy with your favorite toppings, such as cheddar cheese, sour cream, or maybe fritos corn chips!"
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Jerk Marinade",
@@ -642,11 +668,12 @@
 			"Add the spices to the marinade base and blend until incorporated",
 			"After the spices are incorporated, add in the finishing ingredients and blend until incorporated",
 			"Now you can use this marinade for chicken, pork, or beef. I like to marinate my meat for at least 24 hours, but you can do it for as little as 4 hours. The longer the better though! For jerk, poke holes in the meat before marinating."
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Buttermilk Pancakes",
-		"description": "The fluffiest, best pancake recipe you'll ever have",
+		"description": "The best, fluffiest pancake recipe you'll ever have",
 		"image": "pancakes.webp",
 		"imageAlt": "A table with a stack of pancakes with butter, syrup, blueberries, and chocolate chips",
 		"tags": [
@@ -670,7 +697,8 @@
 			"Pour the egg whites into the mixture and gently fold them in.",
 			"Let the mixture sit for about 10 minutes. This is optional, but does help.",
 			"Heat up your pan, and throw some butter on the pan. Drop about a 1/4 cup of batter onto the pan and cook until bubbles form on the top. If you want to add blueberries or chocolate chips, drop them onto your pancake before flipping while the batter is still pretty wet."
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Instant Pot Mississippi Roast",
@@ -728,6 +756,7 @@
 			"Crack in a ton of black pepper, and add some salt here too",
 			"Let the gravy simmer until it thickens up",
 			"Serve the gravy over the biscuits!"
-		]
+		],
+    "suggestedQuestions": []
 	}
 ]

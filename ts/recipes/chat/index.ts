@@ -1,6 +1,48 @@
-
+const OPEN_AI_KEY_STORAGE_CONST = "open-ai-key";
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
-const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
+const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
+["#mobile-recipe-ai form", "#desktop-ai-chatbot form"].forEach((selector) => {
+    document.querySelector(selector).addEventListener("submit", async (ev: SubmitEvent) => await handleSubmittedForm(ev));
+});
+desktopAiChatbot.querySelector("textarea").addEventListener("keydown", (ev:KeyboardEvent) => {
+    if (ev.key === "Enter") {
+        ev.preventDefault();
+        (desktopAiChatbot.querySelector("form button[type=submit]") as HTMLButtonElement).click();
+    }
+});
+
+function scrollChatWindow() {
+    const mobileChatMessageContainer = document.getElementById("mobile-chat-messages");
+    mobileChatMessageContainer.scrollTop = mobileChatMessageContainer.scrollHeight;
+    const topLevelMobileChatMessageContainer = document.getElementById("mobile-chat-message-container");
+    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
+    desktopChatMessageContainer.scrollTop = desktopChatMessageContainer.scrollHeight;
+    const topLevelDesktopChatMessageContainer = document.getElementById("desktop-chat-message-container");
+    topLevelDesktopChatMessageContainer.scrollTop = topLevelDesktopChatMessageContainer.scrollHeight;
+}
+document.getElementById("desktop-recipe-ai-button").addEventListener("click", () => {
+    const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
+    if (!apiKey || apiKey.length === 0) {
+        // need to do the no auth flow
+        return;
+    }
+    desktopAiChatbot.show();
+});
+document.addEventListener("keydown", (ev: KeyboardEvent) => {
+    if (ev.key === "Escape") {
+        if (document.activeElement.id === "desktop-chat-input") {
+            document.activeElement.blur();
+        } else if (desktopAiChatbot.open) {
+            desktopAiChatbot.close();
+        }
+    }
+    const cmdK = (ev.metaKey && ev.key === "k") || (ev.ctrlKey && ev.key === "k");
+    if (cmdK && !desktopAiChatbot.open) {
+        desktopAiChatbot.show();
+        return;
+    }
+});
 window.addEventListener("load", () => {
     const chatHistory = localStorage.getItem(`recipe-chat-${window.RECIPE.title}`);
     if (!chatHistory) {
@@ -12,8 +54,10 @@ window.addEventListener("load", () => {
     }
     chatHistoryParsed.forEach((message) => {
         chatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
+        const desktopChatMessageContainer = document.getElementById("desktop-chat-messages");
+        desktopChatMessageContainer.appendChild(createChatMessageElement(message.role, message.content, message.role === "assistant"));
     });
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    scrollChatWindow();
 });
 
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
@@ -21,7 +65,7 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
     ev.preventDefault();
     try {
         const apiKey = (document.getElementById("open-ai-api-key") as HTMLInputElement).value;
-        localStorage.setItem("open-ai-key", apiKey);
+        localStorage.setItem(OPEN_AI_KEY_STORAGE_CONST, apiKey);
         const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');
         mobileRecipeBodies.forEach(body => body.classList.remove('active'));
         document.querySelector('#mobile-recipe-ai').classList.add('active');
@@ -32,43 +76,44 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
     }
     return false;
 });
-const mobileChatForm = document.querySelector("form#recipe-ai-input-container");
-const mobileChatButton = mobileChatForm.querySelector("button[type=submit]");
-const loadingSlide = document.getElementById("loading-slide");
-mobileChatForm.addEventListener("submit", async (ev: SubmitEvent) => {
+
+async function handleSubmittedForm(ev: Event) {
     ev.preventDefault();
-    const rawQuestionElement = mobileChatForm.querySelector(`[name="chat-message"]`) as HTMLTextAreaElement;
+    const currentSubmittingForm = ev.target as HTMLFormElement;
+    const rawQuestionElement = currentSubmittingForm.querySelector("textarea") as HTMLTextAreaElement;
+    const chatButton = currentSubmittingForm.querySelector("button[type=submit]") as HTMLButtonElement;
+    const loadingSlide = currentSubmittingForm.parentElement.querySelector(".loading-slide") as HTMLElement;
     const rawQuestion = rawQuestionElement.value.trim();
+    const chatMessageContainer = currentSubmittingForm.parentElement.id === "desktop-ai-chatbot" ? document.getElementById("desktop-chat-messages") : document.getElementById("mobile-chat-messages");
     if (!rawQuestion || rawQuestion.length === 0) {
         return false;
     }
-    mobileChatButton.setAttribute("disabled", "true");
+    chatButton.setAttribute("disabled", "true");
     loadingSlide.classList.add("visible");
     rawQuestionElement.value = "";
     let messageReturned: string;
     chatMessageContainer.appendChild(createChatMessageElement("user", rawQuestion));
-    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
+    scrollChatWindow();
     rawQuestionElement.blur();
+    rawQuestionElement.classList.add("reset");
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
         console.log("something went wrong when trying to send the question to the server - ", e);
         showToast("Something went wrong.", "error");
-        mobileChatButton.removeAttribute("disabled");
+        chatButton.removeAttribute("disabled");
         loadingSlide.classList.remove("visible");
         return false;
     }
     chatMessageContainer.appendChild(createChatMessageElement("assistant", messageReturned, true));
-    chatMessageContainer.scrollTop = chatMessageContainer.scrollHeight;
-    topLevelMobileChatMessageContainer.scrollTop = topLevelMobileChatMessageContainer.scrollHeight;
-    mobileChatButton.removeAttribute("disabled");
+    scrollChatWindow();
+    chatButton.removeAttribute("disabled");
     loadingSlide.classList.remove("visible");
     return false;
-});
+}
 
 const sendQuestionToServer = async (question: string): Promise<string> => {
-    const apiKey = localStorage.getItem("open-ai-key");
+    const apiKey = localStorage.getItem(OPEN_AI_KEY_STORAGE_CONST);
     const recipeSteps: string[] = window.RECIPE.steps;
     const recipeName: string = window.RECIPE.title;
     const messagesAlreadyExisting = document.querySelectorAll("[data-message]:not(:last-child)");
@@ -79,7 +124,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         history.push({role, content});
     });
     const fullRecipePartOfPrompt: string = `RECIPE NAME: ${recipeName} INGREDIENTS: ${getRecipeIngredients()} STEPS: ${recipeSteps.join("|")}`;
-    const apiRequest = await fetch("https://recipe-ai.adammcgurk.com", {
+    const apiRequest = await fetch(window.AI_SERVER_URL, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -92,6 +137,9 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         }),
     });
     if (!apiRequest.ok) {
+        if (apiRequest.status === 401 || apiRequest.status === 403) {
+            localStorage.removeItem(OPEN_AI_KEY_STORAGE_CONST);
+        }
         throw new Error("API request failed - status code is " + apiRequest.status + " and message is " + await apiRequest.text());
     }
     const response = await apiRequest.json();
