@@ -211,6 +211,10 @@
             currentChatButton.click();
         });
     });
+    window.addEventListener("load", () => {
+        const desktopContainer = document.querySelector(".recipe-desktop");
+        desktopContainer.querySelector("hr").style.height = Math.floor(desktopContainer.getBoundingClientRect().height / 2) + "px";
+    });
 </script>
 
 <script src="/js/recipe-chat.js"></script>
