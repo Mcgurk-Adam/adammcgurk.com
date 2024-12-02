@@ -519,6 +519,9 @@ ol {
 }
 
 @media all and (max-width: 767px) {
+	.no-mobile {
+		display: none;
+	}
 	.recipe-desktop {
 		display: none;
 	}
@@ -528,6 +531,9 @@ ol {
 }
 
 @media all and (min-width: 767px) {
+	.no-desktop {
+		display: none;
+	}
 	.recipe-header {
 		position: relative;
 	}

@@ -1,7 +1,9 @@
 <div class="recipe-header" style="background-image: url('/assets/recipes/<?=$singleRecipe['image']?>')">
-    <h1><?=$singleRecipe['title']?></h1>
+    <h1 class="no-desktop"><?=$singleRecipe['title']?></h1>
     <div class="resize"></div>
 </div>
+
+<h1 class="no-mobile" style="margin-top: 50px;"><?=$singleRecipe['title']?></h1>
 
 <script>
     window.RECIPE = {
