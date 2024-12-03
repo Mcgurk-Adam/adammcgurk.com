@@ -38,9 +38,9 @@
 
 			<div id="nav-links">
 
+                <a href="/" title="Go to the home page">Home</a>
 				<a href="/writing-hub" title="Blog">Writing Hub</a>
                 <a href="/recipes" title="Adam's Recipes">Recipes</a>
-                <a href="/contact" title="Contact Adam">Contact</a>
 
 			</div>
 

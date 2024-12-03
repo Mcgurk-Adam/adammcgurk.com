@@ -1,7 +1,9 @@
 <div class="recipe-header" style="background-image: url('/assets/recipes/<?=$singleRecipe['image']?>')">
-    <h1><?=$singleRecipe['title']?></h1>
+    <h1 class="no-desktop"><?=$singleRecipe['title']?></h1>
     <div class="resize"></div>
 </div>
+
+<h1 class="no-mobile" style="margin-top: 50px;"><?=$singleRecipe['title']?></h1>
 
 <script>
     window.RECIPE = {
@@ -187,11 +189,16 @@
     });
     const resizer = document.querySelector(".resize");
     resizer.addEventListener("mousedown", function(e) {
-        trackEvent("resizing recipe header");
-        window.addEventListener("mousemove", resize);
-        window.addEventListener("mouseup", () => {
-            window.removeEventListener("mousemove", resize);
-        });
+        try {
+            trackEvent("resizing recipe header");
+        } catch (e) {
+            // die silently
+        } finally {
+            window.addEventListener("mousemove", resize);
+            window.addEventListener("mouseup", () => {
+                window.removeEventListener("mousemove", resize);
+            });
+        }
     });
     function resize(e) {
         const recipeHeader = document.querySelector(".recipe-header");

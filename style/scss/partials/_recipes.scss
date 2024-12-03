@@ -519,6 +519,9 @@ ol {
 }
 
 @media all and (max-width: 767px) {
+	.no-mobile {
+		display: none;
+	}
 	.recipe-desktop {
 		display: none;
 	}
@@ -528,6 +531,9 @@ ol {
 }
 
 @media all and (min-width: 767px) {
+	.no-desktop {
+		display: none;
+	}
 	.recipe-header {
 		position: relative;
 	}
@@ -546,7 +552,7 @@ ol {
 	position: fixed;
 	bottom: 20px;
 	left: calc(100% - 405px);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+	box-shadow: 0 4px 8px 6px rgba(0,0,0,.1);
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: space-between;
