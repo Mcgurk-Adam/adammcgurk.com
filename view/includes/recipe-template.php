@@ -189,11 +189,16 @@
     });
     const resizer = document.querySelector(".resize");
     resizer.addEventListener("mousedown", function(e) {
-        trackEvent("resizing recipe header");
-        window.addEventListener("mousemove", resize);
-        window.addEventListener("mouseup", () => {
-            window.removeEventListener("mousemove", resize);
-        });
+        try {
+            trackEvent("resizing recipe header");
+        } catch (e) {
+            // die silently
+        } finally {
+            window.addEventListener("mousemove", resize);
+            window.addEventListener("mouseup", () => {
+                window.removeEventListener("mousemove", resize);
+            });
+        }
     });
     function resize(e) {
         const recipeHeader = document.querySelector(".recipe-header");
