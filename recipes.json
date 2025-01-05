@@ -758,5 +758,43 @@
 			"Serve the gravy over the biscuits!"
 		],
     "suggestedQuestions": []
+	},
+	{
+		"title": "One pot spaghetti sauce",
+		"description": "A delicious, meaty, tomato sauce for spaghetti",
+		"image": "spaghetti-sauce.webp",
+		"imageAlt": "A plate of spaghetti with a delicious meaty sauce",
+		"tags": [
+			"dinner",
+			"sauce",
+			"pasta",
+			"italian"
+		],
+		"ingredients": [
+			"Sea Salt",
+			"Cracked black pepper",
+			"1 lb of ground beef",
+			"1/2 lb of bacon",
+			"1 large onion",
+			"5-6 sprigs of fresh thyme (optional)",
+			"6-8 cloves of garlic",
+			"2 tsp oregano",
+			"1 can (28 oz) crushed tomatoes",
+			"1 can (15 oz) tomato sauce",
+			"1 can (6 oz) tomato paste",
+			"1/2 teaspoon sugar",
+			"6-8 large basil leaves (optional)",
+			"1 parmesan rind (optional)"
+		],
+		"steps": [
+			"Chop bacon and brown in pot. Remove bacon and set to the side. Leave the bacon grease in the pot.",
+			"Add in your ground beef and brown. Sprinkle in a little salt at this time (about 1/2 tsp) to season in layers.",
+			"Once the beef is browned, add in onions. Sprinkle in a little bit more salt, and if using fresh thyme, add those leaves in now.",
+			"Once the onions are translucent and fragrant, add in garlic for about 1-2 minutes.",
+			"Add in the oregano, and stir to combine.",
+			"Add in the crushed tomatoes, tomato sauce, and tomato paste. Stir to combine.",
+			"Sprinkle in the sugar, and a little more salt, and add pepper in now. About 1-2 teaspoons depending on preference. If using fresh basil and parmesan rind, add in now",
+			"Cover and let cook for about 30 minutes. If using instant pot, cook on slow cook for at least 30 minutes."
+		]
 	}
 ]
