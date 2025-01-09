@@ -796,5 +796,34 @@
 			"Sprinkle in the sugar, and a little more salt, and add pepper in now. About 1-2 teaspoons depending on preference. If using fresh basil and parmesan rind, add in now",
 			"Cover and let cook for about 30 minutes. If using instant pot, cook on slow cook for at least 30 minutes."
 		]
+	},
+	{
+		"title": "Smoky Chipotle Salsa",
+		"description": "A smoky, spicy, delicious red salsa",
+		"image": "chipotle-salsa.webp",
+		"imageAlt": "",
+		"tags": [
+			"salsa",
+			"spicy",
+			"mexican"
+		],
+		"ingredients": [
+			"1 16oz can fire roasted diced tomatoes with green chilis (spice level dependent on preference)",
+			"1/4 yellow onion, pulled apart",
+			"4-5 large cloves garlic",
+			"1/4 cup chopped fresh cilantro",
+			"1 chipotle pepper in adobo sauce, roughly chopped",
+			"1 tsp adobo sauce",
+			"1/2 tsp white sugar",
+			"1/2 tsp salt",
+			"1/4 tsp black pepper",
+			"1/2 juicy lime",
+			"1/2 tsp dried oregano",
+			"1/2 tsp cumin"
+		],
+		"steps": [
+			"Get your 1/4 onion and pull apart the layers/petals. Drop your onion and garlic onto a pan on high heat until they develop a light char. Shouldn't take more than 5 minutes, tossing around pan frequently",
+			"Add all ingredients to a blender and blend until it reaches desired consistency. For me that usually happens with a few pulses and a few seconds of blending"
+		]
 	}
 ]
