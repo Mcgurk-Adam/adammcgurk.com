@@ -44,7 +44,7 @@
 			<?php endforeach; ?>
         </ol>
     </div>
-    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
+    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button" style="display: none !important;"></button>
     <dialog id="desktop-ai-chatbot">
         <div class="header">
             <div class="title-container">
