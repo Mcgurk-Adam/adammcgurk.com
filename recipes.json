@@ -138,6 +138,7 @@
 				"sectionTitle": "Chicken",
 				"sectionIngredients": [
 					"2-3 pounds chicken breast, sliced and pounded into cutlets",
+					"2 cups buttermilk (or enough to fully submerge your chicken)",
 					"1/2 cup of cornstarch",
 					"1 tbsp of garlic powder",
 					"1 tbsp of onion powder",
@@ -151,7 +152,7 @@
 				"sectionTitle": "Sauce",
 				"sectionIngredients": [
 					"1 lb of pasta of your choice (spaghetti doesn't work great for this, we typically use Gemelli)",
-					"10 oz Cherry tomatoes (can use a little more or a little less, about the size of the medium container at the grocery store)",
+					"10 oz Cherry tomatoes, sliced (can use a little more or a little less, about the size of the medium container at the grocery store)",
 					"1 large shallot or two medium sized shallots, chopped",
 					"6-8 cloves of garlic, minced (or chopped is fine too)",
 					"1/2 tsp of red pepper flakes",
@@ -168,8 +169,18 @@
 			}
 		],
 		"steps": [
-			"Combine your spices in the chicken section into a gallon ziploc bag (or paper bag or something else similar) and shake to combine",
-			"Add your chicken to the bag and shake to coat"
+			"Pour your buttermilk into a bowl or a ziploc bag and add your chicken. Let it sit for at least 30 minutes, but up to 24 hours. After marination, remove the chicken from the buttermilk and let it sit on a paper towel to dry.",
+			"Combine your spices in the chicken section into a gallon ziploc bag (or paper bag or something else similar), add your dried chicken, and shake to cover chicken in spiced cornstarch.",
+			"In a large pan combine equal parts butter and olive oil on medium heat. Once the butter starts to foam, add in your chicken and cook until it develops a nice crust. Don't overcook.",
+			"Remove the chicken from the pan and set it aside.",
+			"(At this point, drop your pasta in boiling water and cook until al dente, it should finish around the same time as the sauce.)",
+			"Add your tomatoes, shallots, garlic, and red pepper flakes to the pan. Cook until the shallots are translucent.",
+			"Combine the chicken broth with the cornstarch and add it to the pan. Scrape the bottom of the pan to get all the fond.",
+			"Add in your heavy cream and all of your herbs and bring to a simmer.",
+			"Add in your cheese and stir until fully incorporated, and let cook for about 5 more minutes",
+			"Add in your spinach and let it wilt (should be quick 1-2 minutes at most)",
+			"Add your chicken back to the sauce just enough to warm it, and turn off the heat (or turn it on the 'warm' setting if your stove has that).",
+			"Enjoy with more fresh parm on top!"
 		],
 		"suggestedQuestions": []
 	},
@@ -533,7 +544,7 @@
 			"1/8 cup olive oil",
 			"juice from 1 juicy lime",
 			"4-5 cloves of garlic",
-			"1/4 cup washed fresh cilantro",
+			"1/4 cup washed fresh cilantro;",
 			"1/2 tsp sea salt",
 			"1/2 tsp black pepper",
 			"1/2 tsp cumin",
