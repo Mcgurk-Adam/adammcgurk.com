@@ -8,6 +8,9 @@
     <div id="recipe-card-container">
 		<?php foreach ($recipes as $recipe): ?>
 			<?php
+            if (empty($recipe['ingredients']) || empty($recipe['steps'])) {
+                continue;
+            }
 			$implodedTitle = implode('-', explode(' ', strtolower($recipe['title'])));
 			$url = '/recipes/' . $implodedTitle;
 			?>
