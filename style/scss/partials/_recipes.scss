@@ -41,6 +41,23 @@
 	justify-content: center;
 }
 
+#empty-recipe-state {
+	display: none;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 95%;
+	margin: 0 auto;
+	img {
+		margin-bottom: 20px;
+		max-width: 95%;
+		width: 400px;
+	}
+	p {
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
 .recipe-blog-card {
 	max-width: 500px;
 	margin-right: 20px;

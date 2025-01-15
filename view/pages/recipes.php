@@ -26,6 +26,10 @@
             </div>
 		<?php endforeach; ?>
     </div>
+    <div id="empty-recipe-state">
+        <img src="/assets/not-found-illustration.svg" title="Not found" alt="Woman in front of empty folder">
+        <p>Sorry, no recipes resembling that name! Delete your search and try again.</p>
+    </div>
 </main>
 
 <script src="/js/recipes.js"></script>
