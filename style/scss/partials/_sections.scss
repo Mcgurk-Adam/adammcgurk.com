@@ -35,21 +35,17 @@ section.home-sections {
 	}
 }
 
-#pro-experience-container {
-	max-width: 1200px;
-	width: 95%;
+.home-card-container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin: 0 auto;
-	.experience-card {
+	.home-card {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
 		width: 300px;
-		margin-bottom: 75px;
 		border-radius: 8px;
-		transition: 250ms box-shadow;
+		transition: 450ms all;
 		padding: 50px 20px;
 		&:hover, &:active {
 			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
@@ -62,36 +58,16 @@ section.home-sections {
 			height: 75px;
 			width: auto;
 			margin-bottom: 20px;
+		}
+		a.button:hover, button:hover {
+			opacity: .95;
 		}
 	}
 }
 
-#project-container {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	.project-card {
-		width: 300px;
-		border-radius: 8px;
-		padding: 50px 20px;
-		display: flex;
-		flex-flow: column nowrap;
-		align-items: center;
-		margin-bottom: 40px;
-		transition: 250ms box-shadow;
-		&:hover, &:active {
-			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
-		}
-		h3 {
-			font-size: 22px;
-			margin-bottom: 20px;
-		}
-		img {
-			height: 75px;
-			width: auto;
-			margin-bottom: 20px;
-		}
-	}
+.animated-away {
+	opacity: 0;
+	transform: translateY(-80px);
 }
 
 #recipe-carousel {
