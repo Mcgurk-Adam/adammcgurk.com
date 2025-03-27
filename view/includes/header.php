@@ -20,6 +20,15 @@
         <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/script.js" data-site="KQXPWJXD" defer></script>
         <!-- / Fathom -->
+
+        <noscript>
+            <style>
+                .animated-away {
+                    opacity: 1 !important;
+                    transform: none !important;
+                }
+            </style>
+        </noscript>
 	</head>
 
 	<header>
