@@ -90,3 +90,65 @@
         </div>
     </div>
 </div>
+
+<script>
+    /**
+     * Home Card Animation
+     */
+    window.addEventListener("load", () => {
+        const cards = document.querySelectorAll(".home-card");
+        const observer = new IntersectionObserver(
+            entries => {
+                const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+                if (intersectingEntries.length === 1) {
+                    intersectingEntries[0].target.classList.remove("animated-away");
+                    observer.unobserve(intersectingEntries[0].target);
+                } else if (intersectingEntries.length > 1) {
+                    for (let i = 0; i < intersectingEntries.length; i++) {
+                        if (i === 0) {
+                            intersectingEntries[i].target.classList.remove("animated-away");
+                            observer.unobserve(intersectingEntries[i].target);
+                        } else {
+                            setTimeout(() => {
+                                intersectingEntries[i].target.classList.remove("animated-away");
+                                observer.unobserve(intersectingEntries[i].target);
+                            }, 125 * i);
+                        }
+                    }
+                }
+            },
+            { threshold: 0.5 } // Adjust threshold as needed
+        );
+
+        cards.forEach(card => observer.observe(card));
+    });
+    /**
+     * End Home Card Animation
+     */
+
+    /**
+     * Recipe Carousel Animation
+     */
+    const recipeCarousel = document.getElementById("recipe-carousel");
+    let happened = 0;
+    let cloneNumber = 0;
+    const animateCards = () => {
+        const cards = document.querySelectorAll('.recipe-teaser');
+        happened++;
+        cards.forEach((card) => {
+            let translateX = new WebKitCSSMatrix(getComputedStyle(card).transform).m41 - .5;
+            card.style.transform = `translate3d(${translateX}px, 0, 0)`;
+        });
+        if (happened !== 0 && happened % 500 === 0) {
+            const cardToClone = cards[cloneNumber];
+            const clone = cardToClone.cloneNode(true);
+            recipeCarousel.appendChild(clone);
+            cloneNumber++;
+        }
+        requestAnimationFrame(animateCards);
+    }
+    requestAnimationFrame(animateCards);
+    /**
+     * End Recipe Carousel Animation
+     */
+</script>
