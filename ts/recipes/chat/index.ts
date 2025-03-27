@@ -2,7 +2,7 @@ const OPEN_AI_KEY_STORAGE_CONST = "open-ai-key";
 const chatMessageContainer = document.getElementById("mobile-chat-messages");
 const desktopAiChatbot = document.getElementById("desktop-ai-chatbot") as HTMLDialogElement;
 ["#mobile-recipe-ai form", "#desktop-ai-chatbot form"].forEach((selector) => {
-    document.querySelector(selector).addEventListener("submit", async (ev: SubmitEvent) => await handleSubmittedForm(ev));
+    document.querySelector(selector).addEventListener("submit", async (ev: Event) => await handleSubmittedForm(ev));
 });
 desktopAiChatbot.querySelector("textarea").addEventListener("keydown", (ev:KeyboardEvent) => {
     if (ev.key === "Enter") {
@@ -32,7 +32,7 @@ document.getElementById("desktop-recipe-ai-button").addEventListener("click", ()
 document.addEventListener("keydown", (ev: KeyboardEvent) => {
     if (ev.key === "Escape") {
         if (document.activeElement.id === "desktop-chat-input") {
-            document.activeElement.blur();
+            (document.activeElement as HTMLElement).blur();
         } else if (desktopAiChatbot.open) {
             desktopAiChatbot.close();
         }
@@ -61,7 +61,7 @@ window.addEventListener("load", () => {
 });
 
 const useOwnApiKeyForm = document.getElementById("own-api-key-form") as HTMLFormElement;
-useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
+useOwnApiKeyForm.addEventListener("submit", (ev: Event) => {
     ev.preventDefault();
     try {
         const apiKey = (document.getElementById("open-ai-api-key") as HTMLInputElement).value;
@@ -69,9 +69,11 @@ useOwnApiKeyForm.addEventListener("submit", (ev: SubmitEvent) => {
         const mobileRecipeBodies = document.querySelectorAll('.mobile-recipe-body');
         mobileRecipeBodies.forEach(body => body.classList.remove('active'));
         document.querySelector('#mobile-recipe-ai').classList.add('active');
+        // @ts-ignore does exist
         showToast("API key saved!");
     } catch (e) {
         console.log("something went wrong when trying to save the API key - ", e);
+        // @ts-ignore does exist
         showToast("Something went wrong.", "error");
     }
     return false;
@@ -100,6 +102,7 @@ async function handleSubmittedForm(ev: Event) {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
         console.log("something went wrong when trying to send the question to the server - ", e);
+        // @ts-ignore does exist
         showToast("Something went wrong.", "error");
         chatButton.removeAttribute("disabled");
         loadingSlide.classList.remove("visible");
@@ -143,6 +146,7 @@ const sendQuestionToServer = async (question: string): Promise<string> => {
         throw new Error("API request failed - status code is " + apiRequest.status + " and message is " + await apiRequest.text());
     }
     const response = await apiRequest.json();
+    // @ts-ignore does exist
     const markdownConverter = new showdown.Converter();
     history.push({
         "role": "user",
