@@ -49,8 +49,9 @@ section.home-sections {
 		width: 300px;
 		margin-bottom: 75px;
 		border-radius: 8px;
-		transition: 250ms box-shadow;
+		transition: 250ms all;
 		padding: 50px 20px;
+		opacity: 1;
 		&:hover, &:active {
 			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
 		}
@@ -62,6 +63,9 @@ section.home-sections {
 			height: 75px;
 			width: auto;
 			margin-bottom: 20px;
+		}
+		button:hover {
+			opacity: .95;
 		}
 	}
 }
@@ -78,7 +82,7 @@ section.home-sections {
 		flex-flow: column nowrap;
 		align-items: center;
 		margin-bottom: 40px;
-		transition: 250ms box-shadow;
+		transition: 250ms all;
 		&:hover, &:active {
 			box-shadow: 1px 1px 4px rgba(0,0,0,.5);
 		}
@@ -91,7 +95,15 @@ section.home-sections {
 			width: auto;
 			margin-bottom: 20px;
 		}
+		a.button:hover {
+			opacity: .95;
+		}
 	}
+}
+
+.animated-away {
+	opacity: 0;
+	transform: translateY(-40px);
 }
 
 #recipe-carousel {
