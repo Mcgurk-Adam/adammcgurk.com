@@ -103,6 +103,8 @@ async function handleSubmittedForm(ev: Event) {
         rawQuestionElement.classList.remove("reset");
         rawQuestionElement.style.height = "auto";
         rawQuestionElement.style.height = (rawQuestionElement.scrollHeight) + "px";
+    } else {
+        rawQuestionElement.classList.add("reset");
     }
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
