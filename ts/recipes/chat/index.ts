@@ -99,6 +99,11 @@ async function handleSubmittedForm(ev: Event) {
     scrollChatWindow();
     rawQuestionElement.blur();
     rawQuestionElement.classList.add("reset");
+    if (rawQuestionElement.id === "chat-input") {
+        rawQuestionElement.classList.remove("reset");
+        rawQuestionElement.style.height = "auto";
+        rawQuestionElement.style.height = (rawQuestionElement.scrollHeight) + "px";
+    }
     try {
         messageReturned = await sendQuestionToServer(rawQuestion);
     } catch (e) {
