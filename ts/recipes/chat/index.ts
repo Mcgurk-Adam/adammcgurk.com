@@ -28,6 +28,7 @@ document.getElementById("desktop-recipe-ai-button").addEventListener("click", ()
         return;
     }
     desktopAiChatbot.show();
+    scrollChatWindow();
 });
 document.addEventListener("keydown", (ev: KeyboardEvent) => {
     if (ev.key === "Escape") {
