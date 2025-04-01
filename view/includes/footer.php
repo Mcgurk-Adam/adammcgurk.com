@@ -28,8 +28,8 @@
 
 <script>
     function trackEvent(eventName) {
-        if (fathom) {
-            fathom.trackEvent(eventName);
+        if (window.fathom) {
+            window.fathom.trackEvent(eventName);
         } else {
             console.log(`Would have logged an event to Fathom called ${eventName}`);
         }
