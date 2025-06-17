@@ -28,6 +28,7 @@ document.getElementById("desktop-recipe-ai-button").addEventListener("click", ()
         return;
     }
     desktopAiChatbot.show();
+    scrollChatWindow();
 });
 document.addEventListener("keydown", (ev: KeyboardEvent) => {
     if (ev.key === "Escape") {
@@ -173,12 +174,12 @@ function createChatMessageElement(role:"user"|"assistant", message: string, useH
 }
 
 function getRecipeIngredients() {
-    const rawIngredients = window.RECIPE.ingredients;
-    if (typeof rawIngredients[0] === "string") {
-        return rawIngredients.join("|");
+    if (typeof window.RECIPE.ingredients[0] === "string") {
+        return window.RECIPE.ingredients.join("|");
     }
+    const rawIngredientSections = window.RECIPE.ingredients as RecipeSection[];
     let fullIngredientString = "";
-    rawIngredients.forEach((ingredientObject:{sectionTitle:string, sectionIngredients: string[]}) => {
+    rawIngredientSections.forEach((ingredientObject: RecipeSection) => {
         fullIngredientString += `${ingredientObject.sectionTitle.toUpperCase()}: ${ingredientObject.sectionIngredients.join("|")} `;
     });
     return fullIngredientString;

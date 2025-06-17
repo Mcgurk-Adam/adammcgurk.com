@@ -1,5 +1,3 @@
-if (window.location.pathname === "/") {
-}
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const modals = document.querySelectorAll(".modal");
 document.addEventListener("keydown", (event: KeyboardEvent) => {

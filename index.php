@@ -1,5 +1,5 @@
 <?php
-$isHomepage = false;
+$IS_HOMEPAGE = false;
 $recipes = (json_decode(file_get_contents('recipes.json'), true));
 $sportsArticles = (json_decode(file_get_contents('sports-writing-hub.json'), true));
 shuffle($recipes);
@@ -20,7 +20,7 @@ if (empty($_SERVER['REQUEST_URI']) && $argv[1] === 'recipe') {
 	$explodedPath = array_filter($explodedPath, function($value) {return trim($value) !== '';});
 	$inlinedPath = implode('/', $explodedPath);
 	if ($_SERVER['REQUEST_URI'] === '/') {
-		$isHomepage = true;
+		$IS_HOMEPAGE = true;
 		$pagePath = 'view/pages/home.php';
 	} else {
 		if (in_array('/' . $inlinedPath, $recipeUrls)) {

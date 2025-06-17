@@ -5,6 +5,7 @@
 		"outFile": "../../../js/recipe-chat.js"
 	},
 	"files": [
+		"globals.d.ts",
 		"index.ts"
 	]
 }

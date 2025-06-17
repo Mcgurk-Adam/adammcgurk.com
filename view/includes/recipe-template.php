@@ -44,7 +44,7 @@
 			<?php endforeach; ?>
         </ol>
     </div>
-    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button" style="display: none !important;"></button>
+    <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
     <dialog id="desktop-ai-chatbot">
         <div class="header">
             <div class="title-container">
@@ -57,11 +57,11 @@
             <div id="desktop-chat-messages"></div>
             <div id="desktop-chat-empty-state">
                 <h3>Welcome to Recipe AI!</h3>
-                <div class="suggested-questions">
-                    <?php foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
-                        <button type="button" class="special" data-question="<?=$question['content']?>"><?=$question['title']?></button>
-                    <?php endforeach; ?>
-                </div>
+<!--                <div class="suggested-questions">-->
+<!--                    --><?php //foreach ($singleRecipe['suggestedQuestions'] as $question): ?>
+<!--                        <button type="button" class="special" data-question="--><?php //=$question['content']?><!--">--><?php //=$question['title']?><!--</button>-->
+<!--                    --><?php //endforeach; ?>
+<!--                </div>-->
             </div>
         </div>
         <form id="desktop-recipe-ai-form">
