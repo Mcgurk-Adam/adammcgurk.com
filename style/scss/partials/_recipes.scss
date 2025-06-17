@@ -396,7 +396,7 @@ ol {
 				transition: 150ms all;
 				font-size: 17px;
 				&.reset {
-					height: 40px;
+					height: 40px !important;
 				}
 				&:focus {
 					outline: none;

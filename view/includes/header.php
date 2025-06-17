@@ -10,7 +10,7 @@
 		<noscript>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&family=Unica+One&display=swap">
 		</noscript>
-        <?php if ($isHomepage): ?>
+        <?php if ($IS_HOMEPAGE): ?>
             <link rel="preload" href="/assets/hero.webp" as="image">
         <?php endif; ?>
 		<link href="/style/style.css" rel="stylesheet">
