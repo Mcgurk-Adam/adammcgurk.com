@@ -821,7 +821,7 @@
 		"title": "Smoky Chipotle Salsa",
 		"description": "A smoky, spicy, delicious red salsa",
 		"image": "chipotle-salsa.webp",
-		"imageAlt": "",
+		"imageAlt": "A salsa with a smoky, spicy, red color",
 		"tags": [
 			"salsa",
 			"spicy",
@@ -845,6 +845,49 @@
 			"Get your 1/4 onion and pull apart the layers/petals. Drop your onion and garlic onto a pan on high heat until they develop a light char. Shouldn't take more than 5 minutes, tossing around pan frequently",
 			"Add all ingredients to a blender and blend until it reaches desired consistency. For me that usually happens with a few pulses and a few seconds of blending",
 			"Enjoy with chips or on tacos!"
+		]
+	},
+	{
+		"title": "Berry stuffed croissant french toast",
+		"description": "Overstuffed fluffy croissants sitting in a beautiful custard.",
+		"image": "croissant-stuffed-french-toast.webp",
+		"imageAlt": "A plate of french toast with a croissant stuffed with berries",
+		"tags": [
+			"breakfast",
+			"french-toast",
+			"berries"
+		],
+		"ingredients": [
+			{
+				"sectionTitle": "Cream Cheese Filling",
+				"sectionIngredients": [
+					"8 oz cream cheese",
+					"1/4 cup sugar",
+					"1/2 cup diced strawberries",
+					"1/2 cup blueberries",
+					"1/2 cup raspberries",
+					"7-8 large croissants"
+				]
+			},
+			{
+				"sectionTitle": "Custard",
+				"sectionIngredients": [
+					"6 large eggs",
+					"1/2 cup heavy cream",
+					"1/2 cup milk",
+					"1/4 cup sugar",
+					"1 tablespoon vanilla extract",
+					"1/2 teaspoon salt"
+				]
+			}
+		],
+		"steps": [
+			"In a large mixing bowl, combine your custard ingredients and beat until combined. Set aside.",
+			"In a second bowl, combine your cream cheese and sugar and beat together until fully incorporated. Then fold in your fruit gently.",
+			"Cut a slit in the croissants and stuff them with the cream cheese and fruit mixture.",
+			"Place the stuffed croissants in a baking dish and pour the custard over the top. Let sit for at least 30 minutes, but preferably overnight.",
+			"Preheat your oven to 350 and bake for 45 minutes or until the custard is set.",
+			"If your croissants start to look too crispy, cover with foil so the custard can continue cooking"
 		]
 	}
 ]
