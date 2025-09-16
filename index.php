@@ -8,7 +8,10 @@ if (empty($_SERVER['REQUEST_URI']) && $argv[1] === 'recipe') {
 	$pagePath = 'view/includes/recipe-template.php';
 } else if (empty($_SERVER['REQUEST_URI']) && ($argv[1] === 'sports' || $argv[1] === 'fiction' || $argv[1] === 'technology' || $argv[1] === 'blog')) {
 	$article = json_decode($argv[2], true);
-	$pagePath = 'view/includes/recipe-template.php';
+	$pagePath = 'view/includes/article-template.php';
+} else if (empty($_SERVER['REQUEST_URI']) && isset($argv[1]) && strpos($argv[1], 'view/pages/') === 0) {
+	// This is a direct page file being built by build.sh
+	$pagePath = $argv[1];
 } else if (empty($_SERVER['REQUEST_URI']) && $argv[1] !== 'recipe' && $argv[1] !== 'sports' && $argv[1] !== 'fiction' && $argv[1] !== 'technology' && $argv[1] !== 'blog') {
 	$pagePath = $argv[1];
 } else {
