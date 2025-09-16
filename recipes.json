@@ -889,5 +889,38 @@
 			"Preheat your oven to 350 and bake for 45 minutes or until the custard is set.",
 			"If your croissants start to look too crispy, cover with foil so the custard can continue cooking"
 		]
+	},
+	{
+		"title": "Potato Bake",
+		"description": "A cheesy, chicken potato bacon casserole",
+		"image": "potato-bake.webp",
+		"imageAlt": "",
+		"tags": [
+			"bacon",
+			"dinner",
+			"potato"
+		],
+		"ingredients": [
+			"8-10 medium sized red potatoes, diced",
+			"2 chicken breasts, cubed with the fat trimmed off",
+			"1/4 cup olive oil",
+			"2 tbsp sea salt (regular is fine)",
+			"1 tbsp smoked paprika",
+			"1/2 tbsp black pepper",
+			"1/2 tbsp garlic powder",
+			"4-6 dashes of favorite hot sauce (I prefer cholula here)",
+			"2 cups cheddar cheese, shredded (don't use pre-shredded, it doesn't melt right)",
+			"1/2 pound bacon, diced",
+			"4-6 green onions, sliced"
+		],
+		"steps": [
+			"Preheat oven to 375",
+			"Combine potatoes and chicken in 9\"+13\" baking dish with olive oil, hot sauce, and spices. Toss together well.",
+			"Put the baking dish in the oven and cook for about 45ish minutes, until the potatoes and chicken are browned",
+			"Cook bacon in a pan until crispy. Drain and set to the side.",
+			"Combine green onions in bowl with bacon and shredded cheese. Toss all together to combine.",
+			"Once the potatoes and chicken are browned, put your cheese and bacon mixture on top. Cook for 5 additional minutes, until the cheese is fully melted.",
+			"Serve hot with optional sour cream."
+		]
 	}
 ]
