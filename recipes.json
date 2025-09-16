@@ -42,6 +42,12 @@
 			"holidays",
 			"pie"
 		],
+		"ingredients": [
+			"in progress"
+		],
+		"steps": [
+			"in progress"
+		],
 		"suggestedQuestions": []
 	},
 	{
@@ -569,8 +575,7 @@
 			"dinner"
 		],
 		"ingredients": [
-			"",
-			""
+			"in progress"
 		],
 		"steps": [
 			"Combine all the ingredients besides the steak in a bowl or a gallon ziploc bag and mix well",
@@ -746,7 +751,8 @@
 			"Add in however many pepperocini peppers (and the associated juice) you want.",
 			"Set your Instant Pot to meat/stew (or manual) for 90 minutes.",
 			"Let it naturally release, then shred up the beef."
-		]
+		],
+		"suggestedQuestions": []
 	},
 	{
 		"title": "Biscuits and Gravy",

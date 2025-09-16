@@ -8,8 +8,8 @@
 <script>
     window.RECIPE = {
         title: "<?=$singleRecipe['title']?>",
-        ingredients: <?=json_encode($singleRecipe['ingredients']);?>,
-        steps: <?=json_encode($singleRecipe['steps']);?>,
+        ingredients: <?=json_encode($singleRecipe['ingredients'] ?? []);?>,
+        steps: <?=json_encode($singleRecipe['steps'] ?? []);?>,
         image: "/assets/recipes/<?=$singleRecipe['image']?>"
     };
     window.AI_SERVER_URL = "https://recipe-ai.adammcgurk.com";
@@ -18,30 +18,34 @@
 <div class="recipe-desktop">
     <div id="desktop-ingredients">
         <h2>Ingredients</h2>
-		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
-			<?php if (gettype($ingredient) === 'array'): ?>
-                <h3><?=$ingredient['sectionTitle']?></h3>
-				<?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
-                    <div class="ingredient">
-                        <input type="checkbox">
-                        <span><?=$sectionIngredient?></span>
-                    </div>
-				<?php endforeach; ?>
-			<?php else: ?>
-                <div class="ingredient">
-                    <input type="checkbox">
-                    <span><?=$ingredient?></span>
-                </div>
-			<?php endif; ?>
-		<?php endforeach; ?>
+		<?php if (isset($singleRecipe['ingredients']) && is_array($singleRecipe['ingredients'])): ?>
+			<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
+				<?php if (gettype($ingredient) === 'array'): ?>
+	                <h3><?=$ingredient['sectionTitle']?></h3>
+					<?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
+	                    <div class="ingredient">
+	                        <input type="checkbox">
+	                        <span><?=$sectionIngredient?></span>
+	                    </div>
+					<?php endforeach; ?>
+				<?php else: ?>
+	                <div class="ingredient">
+	                    <input type="checkbox">
+	                    <span><?=$ingredient?></span>
+	                </div>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
     </div>
     <hr>
     <div id="desktop-steps">
         <h2>Steps</h2>
         <ol>
-			<?php foreach ($singleRecipe['steps'] as $step): ?>
-                <li><?=$step?></li>
-			<?php endforeach; ?>
+			<?php if (isset($singleRecipe['steps']) && is_array($singleRecipe['steps'])): ?>
+				<?php foreach ($singleRecipe['steps'] as $step): ?>
+	                <li><?=$step?></li>
+				<?php endforeach; ?>
+			<?php endif; ?>
         </ol>
     </div>
     <button class="special" id="desktop-recipe-ai-button" data-track-click="clicked on desktop ai button"></button>
@@ -84,28 +88,32 @@
         <div class="tab" data-tab="recipe-ai">Recipe AI <img src="/assets/sparkle-icon.svg" class="tab-icon" alt="AI Sparkles" title="AI Sparkle Icon"></div>
     </div>
     <div id="mobile-ingredients" class="mobile-recipe-body active">
-		<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
-            <?php if (gettype($ingredient) === 'array'): ?>
-                <h3><?=$ingredient['sectionTitle']?></h3>
-                <?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
-                    <div class="ingredient">
-                        <input type="checkbox">
-                        <span><?=$sectionIngredient?></span>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="ingredient">
-                    <input type="checkbox">
-                    <span><?=$ingredient?></span>
-                </div>
-            <?php endif; ?>
-		<?php endforeach; ?>
+		<?php if (isset($singleRecipe['ingredients']) && is_array($singleRecipe['ingredients'])): ?>
+			<?php foreach ($singleRecipe['ingredients'] as $ingredient): ?>
+	            <?php if (gettype($ingredient) === 'array'): ?>
+	                <h3><?=$ingredient['sectionTitle']?></h3>
+	                <?php foreach ($ingredient['sectionIngredients'] as $sectionIngredient): ?>
+	                    <div class="ingredient">
+	                        <input type="checkbox">
+	                        <span><?=$sectionIngredient?></span>
+	                    </div>
+	                <?php endforeach; ?>
+	            <?php else: ?>
+	                <div class="ingredient">
+	                    <input type="checkbox">
+	                    <span><?=$ingredient?></span>
+	                </div>
+	            <?php endif; ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
     </div>
     <div id="mobile-steps" class="mobile-recipe-body">
         <ol>
-        <?php foreach ($singleRecipe['steps'] as $step): ?>
-            <li><?=$step?></li>
-        <?php endforeach; ?>
+        <?php if (isset($singleRecipe['steps']) && is_array($singleRecipe['steps'])): ?>
+			<?php foreach ($singleRecipe['steps'] as $step): ?>
+	            <li><?=$step?></li>
+			<?php endforeach; ?>
+		<?php endif; ?>
         </ol>
     </div>
     <div id="mobile-recipe-ai" class="mobile-recipe-body" data-track-click="clicked on mobile ai tab" style="position: relative;">
