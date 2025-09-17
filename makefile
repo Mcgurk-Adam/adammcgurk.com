@@ -6,9 +6,11 @@ all:
 	@php -S localhost:3001 index.php &
 
 clean:
-	rm style/style.css
+	rm -f style/style.css
 	rm -rf js/ contact/ recipes/ writing-hub/
-	rm index.html
+	rm -f index.html
 
 build:
 	./build.sh
+
+fresh-build: clean build
