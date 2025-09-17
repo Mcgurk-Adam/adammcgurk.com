@@ -7,4 +7,5 @@ all:
 
 clean:
 	rm style/style.css
-	rm -rf js/
+	rm -rf js/ contact/ recipes/ writing-hub/
+	rm index.html
