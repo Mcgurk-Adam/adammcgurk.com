@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf build/
 rm -rf js
 npm install
 # compile css
@@ -35,3 +36,16 @@ cat recipes.json | jq -c '.[]' | while read i; do
 		fi
     php index.php recipe "$i" > "recipes/$NORMALIZED_PATH/index.html"
 done
+
+mkdir build/
+
+cp -r assets/ build/assets/
+cp -r recipes/ build/recipes/
+cp -r contact/ build/contact/
+cp -r writing-hub/ build/writing-hub/
+cp -r js/ build/js/
+mkdir build/style
+cp style/style.css build/style/style.css
+cp index.html build/index.html
+cp sw.js build/sw.js
+cp favicon.ico build/favicon.ico

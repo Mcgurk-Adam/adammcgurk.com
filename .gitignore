@@ -16,6 +16,7 @@
 node_modules/
 vendor/
 env.php
+build/
 
 # Do not ignore the following
 !.gitignore
