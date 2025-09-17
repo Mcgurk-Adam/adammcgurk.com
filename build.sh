@@ -37,8 +37,8 @@ cat recipes.json | jq -c '.[]' | while read i; do
     php index.php recipe "$i" > "recipes/$NORMALIZED_PATH/index.html"
 done
 
+# making build output directory
 mkdir build/
-
 cp -r assets/ build/assets/
 cp -r recipes/ build/recipes/
 cp -r contact/ build/contact/
