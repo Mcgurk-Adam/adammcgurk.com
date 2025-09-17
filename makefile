@@ -9,8 +9,12 @@ clean:
 	rm -f style/style.css
 	rm -rf js/ contact/ recipes/ writing-hub/
 	rm -f index.html
+	rm -rf build/
 
 build:
 	./build.sh
 
 fresh-build: clean build
+clean-build: clean build
+build-clean: clean build
+build-fresh: clean build
