@@ -27,11 +27,12 @@ do
 done
 
 # build recipes
-#cat recipes.json | jq -c '.[]' | while read i; do
-#    title=$(echo "$i" | jq -r '.title')
-#    NORMALIZED_PATH=$(echo "$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -d '\n')
-#		if [[ ! -d "recipes/$NORMALIZED_PATH/" ]]; then
-#			mkdir -p "recipes/$NORMALIZED_PATH"
-#		fi
-#    php index.php recipe "$i" > "recipes/$NORMALIZED_PATH/index.html"
-#done
+cat recipes.json | jq -c '.[]' | while read i; do
+    title=$(echo "$i" | jq -r '.title')
+    NORMALIZED_PATH=$(echo "$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -d '\n')
+	echo "$NORMALIZED_PATH"
+		if [[ ! -d "recipes/$NORMALIZED_PATH/" ]]; then
+			mkdir -p "recipes/$NORMALIZED_PATH"
+		fi
+    php index.php recipe "$i" > "recipes/$NORMALIZED_PATH/index.html"
+done
