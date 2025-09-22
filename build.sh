@@ -11,6 +11,9 @@ mkdir js
 node_modules/.bin/tsc -p ts/
 node_modules/.bin/tsc -p ts/recipes/
 node_modules/.bin/tsc -p ts/recipes/chat/
+composer install
+
+php build-recipe-json-file.php
 
 # build php pages
 for f in $(find view/pages -name '*.php')

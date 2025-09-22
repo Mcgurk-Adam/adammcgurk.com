@@ -10,6 +10,7 @@ clean:
 	rm -rf js/ contact/ recipes/ writing-hub/
 	rm -f index.html
 	rm -rf build/
+	rm -f recipes.json
 
 build:
 	./build.sh

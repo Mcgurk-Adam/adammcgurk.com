@@ -17,6 +17,7 @@ node_modules/
 vendor/
 env.php
 build/
+recipes.json
 
 # Do not ignore the following
 !.gitignore

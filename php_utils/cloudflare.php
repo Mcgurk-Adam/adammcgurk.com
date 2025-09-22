@@ -1,11 +1,8 @@
 <?php
 
-
-require_once "vendor/autoload.php";
-
 use GuzzleHttp\Client;
 
-function queryDb(string $sql, array $params): array {
+function queryDb(string $sql, array $params = []): array {
 	$cloudflareClientRequest = new Client();
 	$cloudflareResponse = $cloudflareClientRequest->request("POST", "https://api.cloudflare.com/client/v4/accounts/" . getenv('CLOUDFLARE_ACCOUNT_ID') . "/d1/database/" . getenv('CLOUDFLARE_DATABASE_ID') . "/query", [
 		"json" => [
