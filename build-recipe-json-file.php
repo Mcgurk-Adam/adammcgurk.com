@@ -1,7 +1,9 @@
 <?php
 
 require_once "vendor/autoload.php";
-require_once "env.php";
+if (file_exists('env.php')) {
+	require_once "env.php";
+}
 require_once "php_utils/cloudflare.php";
 
 echo "working";
@@ -38,5 +40,7 @@ foreach ($recipeJson as &$recipe) {
 	}, queryDb('SELECT question_title, question_content FROM recipe_suggested_questions WHERE recipe_id = ?', [$recipeId])['result'][0]['results']);
 }
 echo "done";
-unlink('recipes.json');
+if (file_exists('recipes.json')) {
+	unlink('recipes.json');
+}
 file_put_contents('recipes.json', json_encode($recipeJson));
