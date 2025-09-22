@@ -28,6 +28,12 @@ foreach ($recipeJson as &$recipe) {
 	$recipe['steps'] = array_map(function ($step) {
 		return $step['step_value'];
 	}, queryDb('SELECT step_value FROM recipe_steps WHERE recipe_id = ?', [$recipeId])['result'][0]['results']);
+	$recipe['suggestedQuestions'] = array_map(function ($suggestedQuestion) {
+		return [
+			'title' => $suggestedQuestion['question_title'],
+			'content' => $suggestedQuestion['question_content'],
+		];
+	}, queryDb('SELECT question_title, question_content FROM recipe_suggested_questions WHERE recipe_id = ?', [$recipeId])['result'][0]['results']);
 }
 
 unlink('test-recipes.json');
