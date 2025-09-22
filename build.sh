@@ -12,6 +12,8 @@ node_modules/.bin/tsc -p ts/
 node_modules/.bin/tsc -p ts/recipes/
 node_modules/.bin/tsc -p ts/recipes/chat/
 
+php build-recipe-json-file.php
+
 # build php pages
 for f in $(find view/pages -name '*.php')
 do
