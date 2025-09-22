@@ -1,47 +1,44 @@
 CREATE TABLE recipes (
-    id int NOT NULL AUTO_INCREMENT,
-    title varchar(255) NOT NULL,
-    image_name varchar(255) NOT NULL,
-    image_alt varchar(255) NOT NULL,
-    PRIMARY KEY (id)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    image_name TEXT NOT NULL,
+    image_alt TEXT NOT NULL
 );
 
 CREATE TABLE recipe_tags (
-    id int NOT NULL AUTO_INCREMENT,
-    tag_name varchar(100) NOT NULL,
-    recipe_id int NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
-    PRIMARY KEY (id)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tag_name TEXT NOT NULL,
+    recipe_id INTEGER NOT NULL,
+    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_suggested_questions (
-    id int NOT NULL AUTO_INCREMENT,
-    question_value TEXT NOT NULL,
-    recipe_id int NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
-    PRIMARY KEY (id)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    question_title TEXT NOT NULL,
+    question_content TEXT NOT NULL,
+    recipe_id INTEGER NOT NULL,
+    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_steps (
-    id int NOT NULL AUTO_INCREMENT,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     step_value TEXT NOT NULL,
-    recipe_id int NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
-    PRIMARY KEY (id)
+    recipe_id INTEGER NOT NULL,
+    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_ingredient_sections (
-    id int NOT NULL AUTO_INCREMENT,
-    section_name varchar(100) NOT NULL,
-    recipe_id int NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE,
-    PRIMARY KEY (id)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    section_name TEXT NOT NULL,
+    recipe_id INTEGER NOT NULL,
+    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_ingredients (
-    id int NOT NULL AUTO_INCREMENT,
-    ingredient_value varchar(255) NOT NULL,
-    section_id int DEFAULT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ingredient_value TEXT NOT NULL,
+    section_id INTEGER DEFAULT NULL,
+    recipe_id INTEGER DEFAULT NULL,
     FOREIGN KEY (section_id) REFERENCES recipe_ingredient_sections(id) ON DELETE SET NULL,
-    PRIMARY KEY (id)
+    FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
 );
