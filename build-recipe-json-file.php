@@ -4,7 +4,9 @@ require_once "vendor/autoload.php";
 require_once "env.php";
 require_once "php_utils/cloudflare.php";
 
-$recipeDbResponse = queryDb('SELECT id, title, image_name as image, image_alt as imageAlt, description FROM recipes');
+echo "working";
+echo "\n";
+$recipeDbResponse = queryDb('SELECT id, title, description, image_name as image, image_alt as imageAlt FROM recipes');
 $recipeJson = $recipeDbResponse['result'][0]['results'];
 
 foreach ($recipeJson as &$recipe) {
@@ -35,6 +37,6 @@ foreach ($recipeJson as &$recipe) {
 		];
 	}, queryDb('SELECT question_title, question_content FROM recipe_suggested_questions WHERE recipe_id = ?', [$recipeId])['result'][0]['results']);
 }
-
+echo "done";
 unlink('test-recipes.json');
 file_put_contents('test-recipes.json', json_encode($recipeJson));
