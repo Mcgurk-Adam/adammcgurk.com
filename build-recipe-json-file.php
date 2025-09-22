@@ -38,5 +38,5 @@ foreach ($recipeJson as &$recipe) {
 	}, queryDb('SELECT question_title, question_content FROM recipe_suggested_questions WHERE recipe_id = ?', [$recipeId])['result'][0]['results']);
 }
 echo "done";
-unlink('test-recipes.json');
-file_put_contents('test-recipes.json', json_encode($recipeJson));
+unlink('recipes.json');
+file_put_contents('recipes.json', json_encode($recipeJson));
