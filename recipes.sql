@@ -2,7 +2,8 @@ CREATE TABLE recipes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     image_name TEXT NOT NULL,
-    image_alt TEXT NOT NULL
+    image_alt TEXT NOT NULL,
+    description TEXT NOT NULL
 );
 
 CREATE TABLE recipe_tags (

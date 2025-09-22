@@ -21,7 +21,7 @@ foreach ($recipeJson as $recipe) {
 	# base recipe
 	echo 'inserting recipe #' . $i . ' into database';
 	echo "\n";
-	$responseFromDb = queryDb("INSERT INTO recipes (title, image_name, image_alt) VALUES (?, ?, ?)", [$recipe['title'], $recipe['image'], $recipe['imageAlt']]);
+	$responseFromDb = queryDb("INSERT INTO recipes (title, image_name, image_alt, description) VALUES (?, ?, ?, ?)", [$recipe['title'], $recipe['image'], $recipe['imageAlt'], $recipe['description']]);
 	echo 'inserted recipe #' . $i . ' into database';
 	echo "\n";
 	$recipeId = $responseFromDb['result'][0]['meta']['last_row_id'];
