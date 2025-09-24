@@ -12,7 +12,7 @@
         steps: <?=json_encode($singleRecipe['steps']);?>,
         image: "/assets/recipes/<?=$singleRecipe['image']?>"
     };
-    window.AI_SERVER_URL = "https://recipe-ai.adammcgurk.com";
+    window.AI_SERVER_URL = "https://recipe-ai.adammcgurk.com/chat";
 </script>
 
 <div class="recipe-desktop">
