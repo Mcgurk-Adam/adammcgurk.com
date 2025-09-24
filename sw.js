@@ -1,5 +1,4 @@
-// sw.js
-const CACHE_NAME = "v6";
+const CACHE_NAME = "v7";
 
 const PRECACHE = [
     "/assets/checkmark.svg",
@@ -13,29 +12,26 @@ const PRECACHE = [
     "/assets/AdamHeadshot.jpg",
 ];
 
-// Allowlisted cross-origin GETs to cache (stale-while-revalidate)
 const ALLOWLIST = [
-    // Google Fonts CSS + files
     /^https:\/\/fonts\.googleapis\.com\/css2\?/,
     /^https:\/\/fonts\.gstatic\.com\/.*/,
-
-    // Fathom script (NOT beacons)
     /^https:\/\/cdn\.usefathom\.com\/script\.js$/,
 ];
 
 self.addEventListener("install", (event) => {
-    event.waitUntil(caches.open(CACHE_NAME).then((c) => c.addAll(PRECACHE)));
+    event.waitUntil((async () => {
+        const c = await caches.open(CACHE_NAME);
+        await c.addAll(PRECACHE);
+    })());
     self.skipWaiting?.();
 });
 
 self.addEventListener("activate", (event) => {
-    event.waitUntil(
-        (async () => {
-            const keys = await caches.keys();
-            await Promise.all(keys.map((k) => (k === CACHE_NAME ? null : caches.delete(k))));
-            self.clients.claim?.();
-        })()
-    );
+    event.waitUntil((async () => {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((k) => k === CACHE_NAME ? null : caches.delete(k)));
+        self.clients.claim?.();
+    })());
 });
 
 self.addEventListener("fetch", (event) => {
@@ -44,44 +40,47 @@ self.addEventListener("fetch", (event) => {
 
     const url = new URL(req.url);
 
-    // Same-origin: cache-first
     if (url.origin === self.location.origin) {
         event.respondWith(cacheFirst(req));
         return;
     }
 
-    // Cross-origin: only cache if allowlisted (SWR)
     if (ALLOWLIST.some((rx) => rx.test(req.url))) {
         event.respondWith(staleWhileRevalidate(req));
         return;
     }
-
-    // Everything else: bypass
-    // (Let the network/CSP handle it; no respondWith)
 });
 
 async function cacheFirst(req) {
-    const cached = await caches.match(req);
-    if (cached) return cached;
+    const cache = await caches.open(CACHE_NAME);
+    const hit = await cache.match(req);
+    if (hit) return hit;
 
-    const res = await fetch(req);
-    if (res && res.ok) {
-        const cache = await caches.open(CACHE_NAME);
-        cache.put(req, res.clone());
+    const netRes = await fetch(req);
+    if (netRes && netRes.ok) {
+        const copy = netRes.clone();
+        await cache.put(req, copy);
     }
-    return res;
+    return netRes;
 }
 
 async function staleWhileRevalidate(req) {
-    const cached = await caches.match(req);
-    const networkPromise = fetch(req)
-        .then((res) => {
-            if (res && (res.ok || res.type === "opaque")) {
-                caches.open(CACHE_NAME).then((c) => c.put(req, res.clone()));
+    const cache = await caches.open(CACHE_NAME);
+    const cached = await cache.match(req);
+
+    const networkPromise = (async () => {
+        try {
+            const netRes = await fetch(req);
+            if (netRes && (netRes.ok || netRes.type === "opaque")) {
+                const copy = netRes.clone();
+                await cache.put(req, copy);
             }
-            return res;
-        })
-        .catch(() => cached || Promise.reject(new Error("offline")));
-    // Return cached immediately if present; otherwise wait for network.
+            return netRes;
+        } catch (e) {
+            if (cached) return cached;
+            throw e;
+        }
+    })();
+
     return cached || networkPromise;
 }
