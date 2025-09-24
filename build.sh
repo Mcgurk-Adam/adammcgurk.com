@@ -13,7 +13,7 @@ node_modules/.bin/tsc -p ts/recipes/
 node_modules/.bin/tsc -p ts/recipes/chat/
 composer install
 
-npx wrangler r2 object get "adammcgurk-com/recipes.json" --file "./recipes.json"
+npm run fetch:recipes
 
 # build php pages
 for f in $(find view/pages -name '*.php')
