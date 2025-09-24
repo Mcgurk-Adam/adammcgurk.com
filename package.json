@@ -5,6 +5,6 @@
     "wrangler": "^4.39.0"
   },
   "scripts": {
-    "fetch:recipes": "wrangler r2 object get adammcgurk-com/recipes.json --file ./recipes.json"
+    "fetch:recipes": "wrangler r2 object get adammcgurk-com/recipes.json --remote --file ./recipes.json"
   }
 }
