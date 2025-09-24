@@ -51,4 +51,5 @@ mkdir build/style
 cp style/style.css build/style/style.css
 cp index.html build/index.html
 cp sw.js build/sw.js
+cp _headers build/_headers
 cp favicon.ico build/favicon.ico
