@@ -1,5 +1,6 @@
-const CACHE_NAME = "v5";
-const urlsToCache = [
+const CACHE_NAME = "v7";
+
+const PRECACHE = [
     "/assets/checkmark.svg",
     "/assets/twitter.svg",
     "/assets/logo.svg",
@@ -11,43 +12,75 @@ const urlsToCache = [
     "/assets/AdamHeadshot.jpg",
 ];
 
-self.addEventListener("install", event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                return cache.addAll(urlsToCache);
-            })
-    );
+const ALLOWLIST = [
+    /^https:\/\/fonts\.googleapis\.com\/css2\?/,
+    /^https:\/\/fonts\.gstatic\.com\/.*/,
+    /^https:\/\/cdn\.usefathom\.com\/script\.js$/,
+];
+
+self.addEventListener("install", (event) => {
+    event.waitUntil((async () => {
+        const c = await caches.open(CACHE_NAME);
+        await c.addAll(PRECACHE);
+    })());
+    self.skipWaiting?.();
 });
 
-self.addEventListener("fetch", event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                    if (response) {
-                        return response;
-                    }
-                    try {
-                        return fetch(event.request);
-                    } catch (e) {
-                        console.log(`Failed with error ${e.message} on file ${event.request.url}`);
-                    }
-                }
-            )
-    );
+self.addEventListener("activate", (event) => {
+    event.waitUntil((async () => {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((k) => k === CACHE_NAME ? null : caches.delete(k)));
+        self.clients.claim?.();
+    })());
 });
 
-self.addEventListener("activate", event => {
-    const cacheWhitelist = [CACHE_NAME];
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
-    );
+self.addEventListener("fetch", (event) => {
+    const req = event.request;
+    if (req.method !== "GET") return;
+
+    const url = new URL(req.url);
+
+    if (url.origin === self.location.origin) {
+        event.respondWith(cacheFirst(req));
+        return;
+    }
+
+    if (ALLOWLIST.some((rx) => rx.test(req.url))) {
+        event.respondWith(staleWhileRevalidate(req));
+        return;
+    }
 });
+
+async function cacheFirst(req) {
+    const cache = await caches.open(CACHE_NAME);
+    const hit = await cache.match(req);
+    if (hit) return hit;
+
+    const netRes = await fetch(req);
+    if (netRes && netRes.ok) {
+        const copy = netRes.clone();
+        await cache.put(req, copy);
+    }
+    return netRes;
+}
+
+async function staleWhileRevalidate(req) {
+    const cache = await caches.open(CACHE_NAME);
+    const cached = await cache.match(req);
+
+    const networkPromise = (async () => {
+        try {
+            const netRes = await fetch(req);
+            if (netRes && (netRes.ok || netRes.type === "opaque")) {
+                const copy = netRes.clone();
+                await cache.put(req, copy);
+            }
+            return netRes;
+        } catch (e) {
+            if (cached) return cached;
+            throw e;
+        }
+    })();
+
+    return cached || networkPromise;
+}
