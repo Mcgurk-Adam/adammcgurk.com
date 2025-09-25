@@ -1,5 +1,6 @@
 <?php
 $IS_HOMEPAGE = false;
+$PRELOAD_ASSETS = [];
 $recipes = (json_decode(file_get_contents('recipes.json'), true));
 $sportsArticles = (json_decode(file_get_contents('sports-writing-hub.json'), true));
 shuffle($recipes);
@@ -21,11 +22,21 @@ if (empty($_SERVER['REQUEST_URI']) && $argv[1] === 'recipe') {
 	$inlinedPath = implode('/', $explodedPath);
 	if ($_SERVER['REQUEST_URI'] === '/') {
 		$IS_HOMEPAGE = true;
+		$PRELOAD_ASSETS[] = [
+			'fetchpriority' => 'high',
+			'type' => 'image',
+			'href' => '/assets/hero.webp',
+		];
 		$pagePath = 'view/pages/home.php';
 	} else {
 		if (in_array('/' . $inlinedPath, $recipeUrls)) {
 			$elementPosition = array_search('/' . $inlinedPath, $recipeUrls);
 			$singleRecipe = $recipes[$elementPosition];
+			$PRELOAD_ASSETS[] = [
+				'fetchpriority' => 'high',
+				'type' => 'image',
+				'href' => "/assets/recipes/{$singleRecipe['image']}"
+			];
 			$pagePath = 'view/includes/recipe-template.php';
 		} else {
 			$pagePath = 'view/pages/' . $inlinedPath .  '.php';

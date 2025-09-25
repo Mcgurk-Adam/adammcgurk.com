@@ -10,9 +10,14 @@
 		<noscript>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&family=Unica+One&display=swap">
 		</noscript>
-        <?php if ($IS_HOMEPAGE): ?>
-            <link rel="preload" href="/assets/hero.webp" as="image">
-        <?php endif; ?>
+        <?php foreach ($PRELOAD_ASSETS as $PRELOAD_ASSET): ?>
+            <link
+                    rel="preload"
+                    as="<?=$PRELOAD_ASSET['type']?>"
+                    href="<?=$PRELOAD_ASSET['href']?>"
+                    fetchpriority="<?=$PRELOAD_ASSET['fetchpriority'] ?? 'auto'?>"
+            >
+        <?php endforeach; ?>
 		<link href="/style/style.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.ico">
