@@ -14,7 +14,6 @@ node_modules/.bin/tsc -p ts/recipes/chat/
 composer install
 
 npm run fetch:recipes
-
 # build php pages
 for f in $(find view/pages -name '*.php')
 do
